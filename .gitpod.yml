@@ -1,0 +1,17 @@
+image: gitpod/workspace-full
+tasks:
+  - init: yarn install
+    command: echo "Please Define .env file if not exist"
+ports:
+  - port: 3000
+    onOpen: open-browser
+github:
+  prebuilds:
+    master: true
+    branches: false
+    pullRequests: false
+    pullRequestsFromForks: false
+    addCheck: false
+    addComment: false
+    addBadge: false
+    addLabel: false
