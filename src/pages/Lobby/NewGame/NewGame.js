@@ -1,45 +1,74 @@
 import React from "react";
-import { Button, Grid, Typography } from "@material-ui/core";
-//let's import what we need
+import { createGame } from "../../../api";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { selectGame, createGame } from "../../../store/gameSlice";
+import { generateGameId } from "../../../util/random";
+import { Button, Grid, Typography } from "@material-ui/core";
+import { selectPlayers } from "../../../store/playersSlice";
+import PlayerList from "../../../components/PlayerList";
+import _ from "lodash";
+import {
+  initialize,
+  resetGame,
+  selectId,
+  selectAudienceSize,
+} from "../../../store/gameSlice";
 
 export default function NewGame() {
-  // let's connect Redux to our Component
   const dispatch = useDispatch();
-  const { id, idError, idLoading } = useSelector(selectGame);
+  const history = useHistory();
+  const players = useSelector(selectPlayers);
+  const gameId = useSelector(selectId);
+  const audienceSize = useSelector(selectAudienceSize);
+
+  const createAndInitGame = () => {
+    const newGameId = generateGameId();
+    dispatch(resetGame());
+    dispatch(initialize(newGameId));
+    createGame(newGameId);
+    history.push(`/lobby/${newGameId}`);
+  };
 
   return (
-    <Grid container direction="row" justify="center" alignItems="center">
-      <Grid item>
-        <Typography color="textSecondary">welcome to</Typography>
-        <Typography variant="h4" style={{ marginBottom: 64 }}>
-          BattleStax
-        </Typography>
-        <Typography color="textSecondary">game code</Typography>
-        <Typography variant="h1" className="highlight">
-          {/* let's display the game id */}
-          {id || "----"}
-        </Typography>
-        <br />
-        {/* let's make our button create a new game*/}
-        <Button
-          disabled={idLoading}
-          onClick={() => {
-            dispatch(createGame());
-          }}
-          style={{ marginTop: 32, marginBottom: 32 }}
-          disableElevation
-          size="large"
-          variant="contained"
-          color="primary"
-        >
-          start new game
-        </Button>
-        {/* let's show an error message if there is one */}
-        {idError && (
-          <Typography color="textSecondary">Error: {idError}</Typography>
-        )}
+    <Grid container justify="center">
+      <Grid container direction="column" style={{ maxWidth: 1024 }}>
+        <Grid container style={{ flexGrow: 1 }} alignItems="center">
+          <Grid container direction="row" justify="center" alignItems="center">
+            <Grid item>
+              {_.isEmpty(players) && (
+                <Typography color="textSecondary">welcome to</Typography>
+              )}
+              {!_.isEmpty(players) && (
+                <Typography color="textSecondary">
+                  thanks for playing
+                </Typography>
+              )}
+              <Typography variant="h4" style={{ marginBottom: 64 }}>
+                BattleStax
+              </Typography>
+              <Typography color="textSecondary">game code</Typography>
+              <Typography variant="h1" className="highlight">
+                {gameId || "----"}
+              </Typography>
+              <br />
+              <Button
+                style={{ marginTop: 32 }}
+                disableElevation
+                onClick={createAndInitGame}
+                size="large"
+                variant="contained"
+                color="primary"
+              >
+                start new game
+              </Button>
+            </Grid>
+            <PlayerList
+              players={players}
+              audienceSize={audienceSize}
+              showScore={true}
+            />
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );

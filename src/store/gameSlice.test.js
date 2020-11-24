@@ -1,59 +1,48 @@
 import { generateGameId } from "../util/random";
-import fetchMock from "fetch-mock";
-import store from "./index";
+import constants from "../constants";
 import reducer, {
   initialState,
-  setId,
-  setIdLoading,
-  setIdError,
-  selectGame,
-  createGame,
+  initialize,
+  slice,
+  incrementAudienceSize,
+  setPlayer,
+  selectId,
+  selectPage,
+  selectAudienceSize,
+  selectPlayer,
 } from "./gameSlice";
 
 describe("game slice", () => {
-  afterEach(() => {
-    fetchMock.restore();
-  });
-
   it("should return the initial state on first run", () => {
     const nextState = initialState;
     const result = reducer(undefined, {});
     expect(result).toEqual(nextState);
   });
 
-  it("should set a game id", () => {
+  it("should reset the state", () => {
+    const nextState = initialState;
+    const result = reducer(null, slice.actions.reset());
+    expect(result).toEqual(nextState);
+  });
+
+  it("should initialize a game", () => {
     const gameId = generateGameId();
-    const nextState = reducer(initialState, setId(gameId));
+    const nextState = reducer(initialState, initialize(gameId));
     const rootState = { game: nextState };
-    expect(selectGame(rootState).id).toEqual(gameId);
+    expect(selectId(rootState)).toEqual(gameId);
+    expect(selectPage(rootState)).toEqual(constants.ADDING_PLAYERS_PAGE);
   });
 
-  it("should set the game id loading flag", () => {
-    const gameId = generateGameId();
-    const nextState = reducer(initialState, setIdLoading(true));
+  it("should add audience members", () => {
+    const nextState = reducer(initialState, incrementAudienceSize());
     const rootState = { game: nextState };
-    expect(selectGame(rootState).idLoading).toEqual(true);
+    expect(selectAudienceSize(rootState)).toEqual(1);
   });
 
-  it("should set the game id error", () => {
-    const nextState = reducer(initialState, setIdError("nope"));
+  it("should set the current player", () => {
+    const player = "CRW";
+    const nextState = reducer(initialState, setPlayer(player));
     const rootState = { game: nextState };
-    expect(selectGame(rootState).idError).toEqual("nope");
-  });
-
-  it("should create a new game", async () => {
-    fetchMock.postOnce("*", {
-      body: { documentId: "DANG" },
-    });
-    store.dispatch(createGame());
-    const initialState = store.getState();
-    expect(selectGame(initialState).idError).toEqual("");
-    expect(selectGame(initialState).idLoading).toEqual(true);
-    expect(selectGame(initialState).id).toEqual("");
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    const finalState = store.getState();
-    expect(selectGame(finalState).idError).toEqual("");
-    expect(selectGame(finalState).idLoading).toEqual(false);
-    expect(selectGame(finalState).id).toEqual("DANG");
+    expect(selectPlayer(rootState)).toEqual(player);
   });
 });

@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { BrowserRouter } from "react-router-dom";
 import App from "./components/App";
-import { theme } from "./theme";
+import { Provider } from "react-redux";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import { BrowserRouter } from "react-router-dom";
 import store from "./store";
+import { theme } from "./theme";
 import "./index.css";
 
 ReactDOM.render(

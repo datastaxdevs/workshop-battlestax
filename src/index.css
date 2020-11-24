@@ -1,13 +1,47 @@
-body,
 html,
-#root {
+body,
+#root,
+.app-root {
   height: 100%;
   width: 100%;
 }
 
-#root {
+#root,
+.app-root {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+}
+
+.highlight {
+  display: inline-block;
+  padding: 20px 20px 10px 20px;
+  background-color: #ffb74d;
+  color: #303030;
+}
+
+.small-highlight {
+  display: inline-block;
+  padding: 8px 8px 4px 8px;
+  background-color: #ffb74d;
+  color: #303030;
+}
+
+.score {
+  color: #81c784;
+}
+
+.vip {
+  font-size: 10px;
+  display: inline-block;
+  padding: 4px 4px 2px 4px;
+  background-color: #81c784;
+  color: #424242;
+}
+
+.loading-root {
+  height: 100%;
+}
+
+.brand {
+  width: 100px;
+  margin-bottom: 8px;
 }
