@@ -14,6 +14,8 @@
 
 In step 2 of the Battlestax tutorial, we will:
 
++ Create an Astra database to store game documents
+
 + Create test cases to check that our API call is working correctly
  
 + Build the API call to Astra to create a game document, based on the requirements from our test
@@ -27,10 +29,13 @@ We will also be making use of the Document API to connect to our Astra database.
 
 ## 🗓️ Table of Contents
 
-1. [Creating the `insertGame` Netlify endpoint](#1-creating-the-insertgame-netlify-endpoint)
-2. [Connect to Astra](#2-connect-to-astra)
-3. [Hook it all together](#3-hook-it-all-together)
-4. [Running TDD tests](#4-running-tdd-tests)
+1. [Create your Astra instance](#1-create-your-astra-instance)
+2. [Setup your environment](#2-setup-your-environment)
+3. [Creating the `insertGame` Netlify endpoint](#3-creating-the-insertgame-netlify-endpoint)
+4. [Connect to Astra](#4-connect-to-astra)
+5. [Hook it all together](#5-hook-it-all-together)
+6. [Running TDD tests](#6-running-tdd-tests)
+7. [Merge back to master](#7-merge-back-to-master)
 
 For a **FULL** code solution to this section **`right-click`** the image below and choose **`Open Link in New Tab`**.
 
@@ -38,9 +43,41 @@ For a **FULL** code solution to this section **`right-click`** the image below a
 
 **_Don't forget to SAVE your changes or enable autosave in GitPod._**
 
-## 1. Creating the `insertGame` Netlify endpoint
+## 1. Create your Astra instance
 
-Let's start building our basic `insertGame` serverless function, in the `function/insertGame.js` file. 
+`ASTRA` service is available at url [https://astra.datastax.com](https://dtsx.io/workshop). `ASTRA` is the simplest way to run Cassandra with zero operations at all - just push the button and get your cluster. `Astra` offers **5 Gb Tier Free Forever** and you **don't need a credit card** or anything to sign-up and use it. 
+
+|**✅ Step 1a. Register (if needed) and Sign In to Astra** :<br/>![.](./tutorial/line.png?raw=true)|
+|:---|
+||
+|<details><summary><i>🖱️ Click me to show details</i></summary><br/>You can use your `Github`, `Google` accounts or register with an `email`.<br/>Make sure to chose a password with minimum 8 characters, containing upper and lowercase letters, at least one number and special character<br/><br/>- [Registration Page](https://dtsx.io/workshop)<br/>![Registration Image](https://github.com/datastaxdevs/shared-assets/blob/master/astra/login-1000.png?raw=true)<br/><br/>- [Authentication Page](https://dtsx.io/workshop)<br/>![Login Image](https://github.com/datastaxdevs/shared-assets/blob/master/astra/signin-raw.png?raw=true)<br/></details>|
+
+|**✅ Step 1b. Choose the free plan and select your region**<br/>![.](./tutorial/line.png?raw=true)|
+|:---|
+||
+|<details><summary><i>🖱️ Click me to show details</i></summary><br/>![my-pic](https://github.com/datastaxdevs/shared-assets/blob/master/astra/choose-a-plan-1000-annotated.png?raw=true)<br/>- **Select the free tier**: 5GB storage, no obligation<br/>- **Select the region**: This is the region where your database will reside physically (choose one close to you or your users). For people in EMEA please use `europe-west-1` idea here is to reduce latency.<br/></details>|
+
+|**✅ Step 1c. Configure and create your database**<br/>![.](./tutorial/line.png?raw=true)|
+|:---|
+||
+|<details><summary><i>🖱️ Click me to show details</i></summary><br/>You will find below which values to enter for each field.<br/><br/>![my-pic](https://github.com/datastaxdevs/shared-assets/blob/master/astra/create-and-configure-annotated-1000.png?raw=true)<br/>- **Fill in the database name** - `battlestax_db.` While Astra allows you to fill in these fields with values of your own choosing, please follow our reccomendations to make the rest of the exercises easier to follow. If you don't, you are on your own! :)<br/>- **Fill in the keyspace name** - `battlestax`. It's really important that you use the name sa_index here in order for all the exercises to work well. We realize you want to be creative, but please just roll with this one today.<br/>- **Fill in the Database User name** - `battle_user`. Note the user name is case-sensitive. Please use the case we suggest here.<br/>- **Fill in the password** - `battle_password1`. Fill in both the password and the confirmation fields. Note that the password is also case-sensitive. Please use the case we suggest here.<br/>- **Create the database**. Review all the fields to make sure they are as shown, and click the **`Create Database`** button.<br/><br/>You will see your new database `Pending` in the Dashboard.<br/>![my-pic](https://github.com/datastaxdevs/shared-assets/blob/master/astra/dashboard-pending-1000.png?raw=true)<br/><br/>The status will change to `Active` when the database is ready, this will only take 2-3 minutes. You will also receive an email when it is ready.<br/></details>|
+
+## 2. Setup your environment
+
+**✅ Step 2a: Checkout expected branch**
+
+1. Switch to branch `step-2`
+* For this part of the tutorial, we will be working in step-2 branch. Switch branches by using the following command in the terminal
+
+📘 **Command to execute**
+
+`git checkout step-2`
+
+### [🔝](#%EF%B8%8F-table-of-contents)
+
+## 3. Creating the `insertGame` Netlify endpoint
+
+Now that we have our game document store, let's start building our basic `insertGame` serverless function, in the `function/insertGame.js` file. 
 
 First, we need to declare `gameId` and `gamePayload` variables. We know each game is associated with it's own unique game id, and during game play we can anticipate getting a payload from the user.
 
@@ -83,9 +120,9 @@ All this should statisfy our second test ( we need to get valid game id)
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
-## 2. Connect to Astra
+## 4. Connect to Astra
 
-The next thing we need to do is to connect to our Astra databasae. We are first going to import the JavaScript SDK library (`astrajs`) to create our Astra Client. We are going to give the Astra client our environment variable credentials to connect to the database, and create a document to store information about our game.
+The next thing we need to do is to connect to our Astra database. We are first going to import the JavaScript SDK library (`astrajs`) to create our Astra Client. We are going to give the Astra client our environment variable credentials to connect to the database, and create a document to store information about our game.
 
 Go [HERE](https://www.npmjs.com/package/@astrajs/collections) for more information on the on the JavaScript SDK library.
 
@@ -107,7 +144,7 @@ const gamesCollection = astraClient
 ```
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
-## 3. Hook it all together
+## 5. Hook it all together
 
 Finally, we are going to try to take all our configuration infomation stored in `gamesCollection` and provision a new game from it. If it works, we get back a HTTP status code of `200`. If it fails, we will get back a `500`. This should statify both test 1 and test 2.
 
@@ -138,7 +175,7 @@ For a **FULL** code solution to this section **`right-click`** the image below a
 
 [![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/2/files)
 
-## 4. Running TDD tests
+## 6. Running TDD tests
 
 The way we approach testing is by asking the question "What does our endpoint need to do?". We want our serverlesss function to provision a new game on Astra -- and we need provide the API with a random game code so this can work. Our endpoint needs to:
 
@@ -191,6 +228,17 @@ npm run test:functions
 📗 **Expected output**
 
 ![test functions output](./tutorial/step-1-test-functions.png)
+
+### [🔝](#%EF%B8%8F-table-of-contents)
+
+## 7. Merge back to master
+
+Now that we've updated our code we need to push these changes back to master and kick off an automated deploy in Netlify.
+
+📘 **Commands to execute**
+
+`git commit -m "Merging step2 into master"`<br/>
+`git push origin step-2`
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 

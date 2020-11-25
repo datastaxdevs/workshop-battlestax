@@ -33,11 +33,7 @@ In step 1 of the Battlestax tutorial, we will:
 
 📘 **Command to execute**
 
-```bash
-git checkout step-1
-```
-
-Expected output
+`git checkout step-1`
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
@@ -66,16 +62,13 @@ Be sure that the app you had running in the previous step has been shutdown (`Ct
 
 📘 **Command to execute**
 
-````bash
-npm run dev
-````
-
+`npm run dev`
 * This will give you the UI plus run the `helloWorld` function in the background.
 
 ### GitPod
 
-* See the **UI** running at: `https://8888-<your_uid>.<your_region>.gitpod.io`
-* See the **end point** at: `https://8888-<your_uid>.<your_region>.gitpod.io/.netlify/functions/helloWorld`
+* See the UI running at: `https://8888-<your_uid>.<your_region>.gitpod.io`
+* See the end point at: `https://8888-<your_uid>.<your_region>.gitpod.io/.netlify/functions/helloWorld`
 
 *_Notice the port, GitPod generated ID, and the GitPod region in the URL below at each arrow. This should automatically be generated for you when you run `npm run dev`. Just paste `/.netlify/functions/helloWorld` on to the end in order to get to the correct endpoint._*
 
@@ -85,20 +78,17 @@ npm run dev
 
 ### LOCAL
 
-* See the UI running at: [`localhost:8888`](localhost:8888)
-* See the end point at: [`localhost:8888/.netlify/functions/helloWorld`](localhost:8888/.netlify/functions/helloWorld)
+* See the UI running at: `localhost:8888`
+* See the end point at: `localhost:8888/.netlify/functions/helloWorld`
 
 ### You should see this output at the endpoint
-
-```json
-{ "hello":"world" }
-```
+`{"hello":"world"}`
 
 This is our **serverless** function giving us back the "Hello World" example.
 
 **✅ Step 2c: Run the existing unit tests**
 
-✔️ Have a look at the [`/test/helloWorld.test.js`](https://github.com/DataStax-Academy/battlestax/blob/step-1/test/insertGame.test.js) file, this does not do much at this point. This basically tests the `helloWorld` function to ensure that we get "world" in our response, and hence we would know that the function is working correctly.
+✔️ Have a look at the `/test/helloWorld.test.js` file, this does not do much at this point. This basically tests the `helloWorld` function to ensure that we get "world" in our response, and hence we would know that the function is working correctly.
 
 ✔️ The way we are going to approach writing our tests is by asking the question "What does our endpoint need to do?". We want our function to 
 create a new game on Astra (provision a new game) --  and we provide the API with a random game code so this can work.
@@ -121,7 +111,6 @@ Run the test to try it out:
 ```bash
 npm run test:functions
 ```
-
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
 **Click** below to move to the next section.
