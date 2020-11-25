@@ -237,9 +237,9 @@ Now that we've updated our code we need to push these changes back to master and
 
 📘 **Commands to execute**
 
+`git add functions/insertGame.js`<br/>
 `git commit -m "Merging step2 into master"`<br/>
-`git checkout master`<br/>
-`git merge step-2`
+`git push`<br/>
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
