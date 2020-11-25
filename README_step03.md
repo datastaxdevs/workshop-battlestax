@@ -22,8 +22,8 @@ In step 3 of the Battlestax tutorial, we will:
 ```
 
 An application's state is divided into "slices" that are corresponding to each feature set of the application. 
-Game state is saved in Astra and states writes go from the clients to the REST API (Netlify)
-Clients read state from the Astra database as well through the state loop
+Game state is saved in Astra and state writes go from the clients to the REST API (Netlify).
+Clients read state from the Astra database as well as through the state loop.
 The Lobby and Player clients stay connected, as once the state is updated, it will be propagated to all the clients.
 
 ![state-flow](./tutorial/state-flow.png)
@@ -35,24 +35,17 @@ git checkout step-3
 ```
 
 ## 🗓️ Table of Contents
+1. [Setup your environment](#2-setup-your-environment)
+2. [Building a `gameSlice`](#2-building-a-gameslice)
+3. [Generate an action and a selector](#3-generate-an-action-and-a-selector)
+4. [Create an Async Action](#4-create-an-async-action)
+5. [Running TDD tests](#5-running-tdd-tests)
 
-- [03. Create client State](#03-create-client-state)
-  - [Objectives](#objectives)
-  - [🗓️ Table of Contents](#️-table-of-contents)
-  - [1. Building a `gameSlice`](#1-building-a-gameslice)
-    - [🔝](#)
-  - [2. Generate an action and a selector](#2-generate-an-action-and-a-selector)
-    - [🔝](#-1)
-  - [3. Create an Async Action](#3-create-an-async-action)
-    - [🔝](#-2)
-  - [5. Running TDD tests](#5-running-tdd-tests)
-    - [🔝](#-3)
 
-## 1. Building a `gameSlice`
+## 2. Building a `gameSlice`
 
 Let's use the  Redux Toolkit to build out the game slice that will set the game code as part of the state. Redux Toolkit allows us to write shorter logic that's easier to read, while still following the same Redux behavior and data flow. Open the `src/store/gameSlice.js` file to see skeleton code we have provided to get you started.
 
-![gameSlice](./tutorial/gameSlice.png)
 
 Lets discuss some of the parameters in `createSlice`.
 
