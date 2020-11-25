@@ -5,7 +5,7 @@
 [![Actions Status](https://github.com/DataStax-Academy/battlestax/workflows/BattleStax%20Tests/badge.svg)](https://github.com/DataStax-Academy/battlestax/actions)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e265340f-c6a6-4d7b-b24c-438b87c67876/deploy-status)](https://app.netlify.com/sites/battlestax-tutorial/deploys)
 
-⚒️ [Create a mock REST API with Netlify functions](./README_step01.md) > 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ **[Connect to your Astra database](#)** |  ***next=>** 📚 [What is Redux](./README_Redux.md)*
+⚒️ [Create a mock REST API with Netlify functions](./README_step01.md) > 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ **[Connect to your Astra database](#)** |  ***next=>** 📚 [What is Redux and React](./README_Redux_React.md)*
 
 ## Objectives
 
@@ -196,4 +196,4 @@ npm run test:functions
 
 **Click** below to move to the next section.
 
-⚒️ [Create a mock REST API with Netlify functions](./README_step01.md) > 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ **[Connect to your Astra database](#)** |  ***next=>** 📚 [What is Redux](./README_Redux.md)*
+⚒️ [Create a mock REST API with Netlify functions](./README_step01.md) > 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ **[Connect to your Astra database](#)** |  ***next=>** 📚 [What is Redux and React](./README_Redux_React.md)*

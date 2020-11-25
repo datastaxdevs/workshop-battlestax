@@ -1,11 +1,11 @@
-# 03. Create client State
+# 03. Create client State with Redux
 
 [![License Apache2](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Discord](https://img.shields.io/discord/685554030159593522)](https://discord.com/widget?id=685554030159593522&theme=dark)
 [![Actions Status](https://github.com/DataStax-Academy/battlestax/workflows/BattleStax%20Tests/badge.svg)](https://github.com/DataStax-Academy/battlestax/actions) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e265340f-c6a6-4d7b-b24c-438b87c67876/deploy-status)](https://app.netlify.com/sites/battlestax-tutorial/deploys)
 
-⚒️ [Connect to your Astra database](./README_step02.md) > 📚 [What is Redux](./README_Redux.md) > ⚒️ **[Create client State](#)** |  **next=>** 📚 *[What is React](./README_React.md)*
+⚒️ [Connect to your Astra database](./README_step02.md) > 📚 [What is Redux and React](./README_Redux_React.md) > ⚒️ **[Create client State with Redux](#)** |  **next=>** ⚒️ *[Bind Redux to the User Interface](./README_step04.md)*
 
 ## Objectives 
 
@@ -165,12 +165,12 @@ Now, we can run our tests using `npm test src/store/gameSlice.test.js` to see th
 
 📗 **Expected output**
 
-<img src="https://github.com/DataStax-Academy/battlestax/blob/master/tutorial/slice-test.png" width="455" height="160">
+<img src="./tutorial/slice-test.png" width="455" height="160">
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
 **Click** below to move to the next section.
 
-⚒️ [Connect to your Astra database](./README_step02.md) > 📚 [What is Redux](./README_Redux.md) > ⚒️ **[Create client State](#)** |  **next=>** 📚 *[What is React](./README_React.md)*
+⚒️ [Connect to your Astra database](./README_step02.md) > 📚 [What is Redux and React](./README_Redux_React.md) > ⚒️ **[Create client State with Redux](#)** |  **next=>** ⚒️ *[Bind Redux to the User Interface](./README_step04.md)*
 
 

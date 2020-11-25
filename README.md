@@ -80,10 +80,9 @@ Brave yourselves, everybody goes to [https://battlestax-workshop.netlify.app/](h
   - 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md)
   - ⚒️ [Implement a CRUD Api in Astra](./README_step02.md) (*branch: `step-2`*)
 - **Step 3 - Client and State Management with Redux**
-  - 📚 [What is Redux](./README_Redux.md)  
-  - ⚒️ [Create Redux slice](./README_step03.md) (*branch: `step-3`*)
-- **Step 4 - React stuff**
-  - 📚 [What is React](./README_React.md)   
+  - 📚 [What is Redux and React](./README_Redux_React.md)  
+  - ⚒️ [Create client state with Redux](./README_step03.md) (*branch: `step-3`*)
+- **Step 4 - React stuff** 
   - ⚒️ [Bind Redux to the User Interface](./README_step04.md) (*branch: `step-4`*)
 - **What's NEXT ?** *(not the framework* 😈)
   - 📚 [Extra Resources and certifications](./README_Resources.md)   

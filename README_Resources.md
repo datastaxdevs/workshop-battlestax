@@ -16,4 +16,4 @@
 
 **Click** below to move to the next section.
 
-📚 [What can Netlify do for you](./README_Netlify.md) > ⚒️ [Create a mock REST API with Netlify functions](./README_step01.md) > 📚 **[What is DataStax Astra and Stargate](#)** |  ***next=>** ⚒️ [Connect to your Astra database](./README_step02.md)*
+⚒️ [Create client State with Redux](./README_step03.md) > ⚒️ [Bind Redux to the User Interface](./README_step04.md) > ⚒️ **[What's next](#)** | **next=>**  *[Share the love](./README_Ending.md)*
