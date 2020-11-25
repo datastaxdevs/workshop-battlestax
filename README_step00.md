@@ -78,13 +78,6 @@ After each commit a workflow is initialized to BUILD your project, EXECUTE tests
 
 *To code during the workshop you can either use **your laptop** or a **Cloud-based IDE** named [Gitpod](gitpod.io) with everything installed. **Here we explain the Gitpod way**.*
 
-### Option A - cloud-based GitPod *(recommended)*
-
-|**✅ Step 5_A1. Launch gitpod**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>Click to view the solution</i></summary><br/> ✔ Gitpod is a cloud based IDE based on Eclipse Theia very similar to VSCode. You need to authenticate with your github account but then GitPod will initialized you workspace, building the solution.To initialize your environment click on the button below (CTRL + Click to open in new tab)<br/>[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)<br/><br/>Target urls are dynamic and look like `https://<your_uid>.<your_region>.gitpod.io/#/workspace/battlestax`<br/>![Netlify Setup Example](./tutorial/gitpod-welcome.png?raw=true)</details>|
-
 
 |**✅ Step 5_A2. Define environment variables**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
@@ -106,24 +99,6 @@ After each commit a workflow is initialized to BUILD your project, EXECUTE tests
 # OR
 
 ### Option B - LOCAL development environment
-
-*To code during the workshop you can either use **your laptop** or a **Cloud-based IDE** named Gitpod. **Here we explain how to work locally**.*
-
-```diff
-+ Information : We assume people working locally are not beginners
-+ They should be autonomous to install a development environment.
-```
-
-Here is the list of tools you need:
-- [NodeJS 12.x+](https://nodejs.org/en/download/)
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- An IDE like [Visual Studio Code](https://code.visualstudio.com/Download) or [Jetbrain WebStorm](https://www.jetbrains.com/webstorm/download/#section=mac) or [Atom](https://atom.io/)
-
-
-|**✅ Step 5_B1. Clone the repository**![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>Click to view the solution</i></summary><br/> ✔  Clone **_your_** `BattleStax` repository to localhost, use the following command in your terminal to do so:<br/><br/>📘 **Command to execute**<br/>`git clone git@github.com:[your_github_id]/battlestax.git`<br/><br/>✔  Move to the proper directory<br/><br/>📘 **Command to execute**<br/>`cd battlestax`<br/></details>|
 
 |**✅ Step 5_B2. Define environment variables**![.](./tutorial/line.png?raw=true)|
 |:---|
