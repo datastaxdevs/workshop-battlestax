@@ -42,6 +42,19 @@ git checkout step-3
 5. [Running TDD tests](#5-running-tdd-tests)
 
 
+## 1. Setup your environment
+
+**✅ Step 1a: Checkout expected branch**
+
+1. Switch to branch `step-3`
+* For this part of the tutorial, we will be working in step-3 branch. Switch branches by using the following command in the terminal
+
+📘 **Command to execute**
+
+`git checkout step-3`
+
+### [🔝](#%EF%B8%8F-table-of-contents)
+
 ## 2. Building a `gameSlice`
 
 Let's use the  Redux Toolkit to build out the game slice that will set the game code as part of the state. Redux Toolkit allows us to write shorter logic that's easier to read, while still following the same Redux behavior and data flow. Open the `src/store/gameSlice.js` file to see skeleton code we have provided to get you started.
@@ -51,7 +64,20 @@ Lets discuss some of the parameters in `createSlice`.
 
 * `initialState` - The initial state value for this slice of state.
 * `name` - A string name for this slice of state. 
-* `reducers` - Functions that determine changes to an application's state. It uses the action it receives to determine this change. Redux relies heavily on reducer functions that take the previous state and an action in order to execute the next state.
+* `reducers` - Functions that determine changes to an application's state. It uses the action it receives to determine this change. Redux relies heavily on reducer functions that take the previous state and an action in order to execute the next state. We will be adding these shortly.
+
+```javascript
+export const slice = createSlice({
+  name: "game",
+  initialState,
+  reducers: {
+    // let's add a reducer that sets the game id
+    // let's add a reducer that sets an error message
+    // let's add a reducer that sets a loading state
+  },
+});
+```
+
 
 First, we need to create a reducer that will allow us to modify the game id: 
 
@@ -102,47 +128,53 @@ export const selectGame = (state) => state.game;
 
 ## 3. Create an Async Action
 
-Now we need to create an async action that generates a game id and saves it to Astra.
 
-📘 **Code to copy**
+
+Now we need to create an async action that generates a game id and saves it to Astra.
 
 ```javascript
 // let's create an asnyc action to create a new game
 export const createGame = () => {
   return async (dispatch) => {
     // let's set the id state back to the defaults
-    dispatch(setIdLoading(true));
-    dispatch(setIdError(""));
-    dispatch(setId(""));
-
     try {
       // let's generate a new game id
-      const gameId = generateGameId();
-
       // let's call our insert game netlify function
-      const res = await fetch(`/.netlify/functions/insertGame/${gameId}`, {
-        method: "POST",
-        body: JSON.stringify({ state: "initialized" }),
-      });
-      if (!res.ok) {
-        throw Error(res.statusText);
-      }
-
       // let's set the game id
-      const resJson = await res.json();
-      dispatch(setId(resJson.documentId));
     } catch (e) {
       // let's set the id error if there is one
-      dispatch(setIdError(e.message));
     }
-
     // let's set the id state to not loading
-    dispatch(setIdLoading(false));
   };
 };
 ```
 
-The complete `gameSlice.js` file should look like this:
+**✅ Step 3a: Set the id state back to the defaults**
+
+📘 **Code to copy**
+
+
+**✅ Step 3b: Generate a game code and insert it into Astra**
+
+📘 **Code to copy**
+
+**✅ Step 3c: Set the game id as part of state**
+
+📘 **Code to copy**
+
+**✅ Step 3d: Add error handling**
+
+📘 **Code to copy**
+
+**✅ Step 3e: Set id state to not loading**
+
+Once the try block has executed
+
+📘 **Code to copy**
+
+
+
+
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
