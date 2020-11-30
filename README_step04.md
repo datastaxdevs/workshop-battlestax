@@ -25,27 +25,28 @@ React is a popular open-source, front end, JavaScript library for building user 
 
 ![hooks](./tutorial/hooks.png)
 
-In this step we will be working with `/src/pages/lobby/NewGame/NewGame.js` on branch `step-4`
-
-```bash
-git checkout step-4
-```
-
-- [04. Connect your UI to your State](#04-connect-your-ui-to-your-state)
-  - [Objectives](#objectives)
-  - [1. Import our Redux artifacts](#1-import-our-redux-artifacts)
-    - [🔝](#)
-  - [2. Use hooks to connect our compoonent to our Redux Store](#2-use-hooks-to-connect-our-compoonent-to-our-redux-store)
-    - [🔝](#-1)
-  - [3. Updating the UI](#3-updating-the-ui)
-    - [🔝](#-2)
-  - [4. Running TDD tests](#4-running-tdd-tests)
-    - [🔝](#-3)
+## 🗓️ Table of Contents
+1. [Setup your environment](#1-setup-your-environment)
+2. [Import our Redux artifacts](#2-import-our-redux-artifacts)
+3. [Use hooks to connect our compoonent to our Redux Store](#3-use-hooks-to-connect-our-compoonent-to-our-redux-store)
+4. [Updating the UI](#4-updating-the-ui)
+5. [Running TDD tests](#5-running-tdd-tests)
 
 
-## 1. Import our Redux artifacts
+## 1. Setup your environment
 
-In order to bind our React component to our Redux store, we need to import the items that we need:
+**✅ Step 1a: Checkout expected branch**
+
+1. Switch to branch `step-4`
+* For this part of the tutorial, we will be working in step-4 branch. Switch branches by using the following command in the terminal
+
+📘 **Command to execute**
+
+`git checkout step-4`
+
+## 2. Import our Redux artifacts
+
+In this step we will be working with `/src/pages/lobby/NewGame/NewGame.js`.In order to bind our React component to our Redux store, we need to import the items that we need:
 
 📘 **Code to copy**
 
@@ -57,7 +58,7 @@ import { selectGame, createGame } from "../../../store/gameSlice";
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
-## 2. Use hooks to connect our compoonent to our Redux Store
+## 3. Use hooks to connect our compoonent to our Redux Store
 
 React Hooks allow you to access things like state, React lifecycle methods, and other goodies in function components that were previously only available in class components. 
 
@@ -77,7 +78,7 @@ const { id, idError, idLoading } = useSelector(selectGame);
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
-## 3. Updating the UI
+## 4. Updating the UI
 
 When our game id is set, we want to show it in the UI
 

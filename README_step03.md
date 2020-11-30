@@ -29,7 +29,7 @@ The Lobby and Player clients stay connected, as once the state is updated, it wi
 ![state-flow](./tutorial/state-flow.png)
 
 ## 🗓️ Table of Contents
-1. [Setup your environment](#2-setup-your-environment)
+1. [Setup your environment](#1-setup-your-environment)
 2. [Building a `gameSlice`](#2-building-a-gameslice)
 3. [Generate an action and a selector](#3-generate-an-action-and-a-selector)
 4. [Create an Async Action](#4-create-an-async-action)
