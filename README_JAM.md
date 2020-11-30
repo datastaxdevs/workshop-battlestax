@@ -169,20 +169,31 @@ Bye-bye infrastructure lock-in.
 
 Let us show you this one today
 
-## 3. Netlify, JAMStack automation
+## 3. Introduction to Netlify
 
 > *Source [https://www.netlify.com](https://www.netlify.com/)*
 
 ### 3.1 Netlify in a nutshell
 
+**Decoupling the frontend from the backend**: Unlike the large legacy apps, Jamstack projects neatly separate the frontend pages and UI from the backend apps and databases. Freed from backend servers, the frontend can then be deployed globally, directly to a CDN.
 
-**Decoupling the frontend from the backend**
->Unlike the large legacy apps, Jamstack projects neatly separate the frontend pages and UI from the backend apps and databases. Freed from backend servers, the frontend can then be deployed globally, directly to a CDN.
+**Dynamic content via APIs**: The global frontend uses Javascript and APIs to talk to backend services, allowing pages to be enhanced and personalized.
 
-**Dynamic content via APIs**
-> The global frontend uses Javascript and APIs to talk to backend services, allowing pages to be enhanced and personalized.
-
+*overview of netlify*
 ![ok](./tutorial/netlify.png)
+
+### 3.2 Soooooooooo What about today ?
+
+
+- We will have our code in GITHUB
+
+- Netlify is integrated with GITHUB, on new commit it will BUILD and deploy the SITE on the CDN
+
+- To code and commit to github we will use an IDE. You cacn use your own or we will provide you one in the Cloud called GIPOD.
+
+- The application we will deploy is BattleStax. This is not only static content but also a REST API retrieve Data from a DB. The DB will ne DataStax Astra.
+
+![Template CTRL click](./tutorial/tools.png?raw=true)
 
 
 ## 4. Want to learn more ?
