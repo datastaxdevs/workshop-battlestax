@@ -15,7 +15,7 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 
 ## 1. Create your `BattleStax` repository
 
-*The very first thing we want to do is create a copy of the BattleStax repository into **YOUR** GitHub account. This is important because as part of this workshop you will deploy the BattleStax application to production and will need your own repository to do so. The good thing is we've made this easy for you by creating a template you can use to quickly copy the repo.*
+*The very first thing we want to do is create a copy of the BattleStax repository into **YOUR** GitHub account. This is important because as part of this workshop you will deploy the BattleStax application to production and will need your own repository to do so. To do this we will fork the DataStax-Academy/battlestax repo.*
 
 |**✅ Step 1a. Launch the BattleStax repo into another tab**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
@@ -65,12 +65,6 @@ After each commit a workflow is initialized to BUILD your project, EXECUTE tests
 |:---|
 ||
 |<details><summary><i>🖱️ Click me to show details</i></summary><br/>Remember those variables when we configured **Netlify**? We need to add the same ones to our **GitHub** repository.<br/><br/>Within **YOUR** Battlestax repository click on **`Settings`** in the top toolbar, choose **`Secrets`** from the menu on the left, and finally click the **`New secret`** button on the top right of the page. Add a secret for each of the variables we used earlier.<br/><br/>You notice that those are the same as used by netlify. Github will populate them at deploy time.<br/>`ASTRA_DB_USERNAME=battle_user`<br/>`ASTRA_DB_PASSWORD=battle_password1`<br/>`ASTRA_DB_KEYSPACE=battlestax`<br/>`ASTRA_DB_ID=[check Step3b]`<br/>`ASTRA_DB_REGION=[check Step3b]`<br/>`GAMES_COLLECTION=games`<br/><br/>*That should look like:*<br/>![Netlify Setup Example](./tutorial/setup-github-1.png?raw=true)<br/></details>|
-
-
-|**✅ Step 4b. Test out an application build**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>Click to view the solution</i></summary><br/>✔ Using `git`, create a new branch and issue an empty commit, then push it to your repository.<br/><br/>📘 **Commands to execute**<br/>`git checkout -b test_pr`<br/>`git commit --allow-empty -m "New branch to test ci/cd"`<br/>`git push origin test_pr`<br/><br/>✔️ Using `Github UI`, merge your new branch to the master through a pull request.<br/><br/>Select your new branch in github<br/>![Netlify Setup Example](./tutorial/setup-github-2.png?raw=true)<br/><br/>Open a PR but click and `Compare & Pull request` button. for `test_pr` into `master`.<br/>![Netlify Setup Example](./tutorial/setup-github-3.png?raw=true)<br/><br/>Caution don't target the original master from DataStax-Academy but **YOUR** master![Netlify Setup Example](./tutorial/setup-github-4.png?raw=true)<br/><br/>Provide a comment and click `Create Pull Request`<br/>![Netlify Setup Example](./tutorial/setup-github-5.png?raw=true)<br/><br/>Your Pull request is now ready, let's merge it![Netlify Setup Example](./tutorial/setup-github-6.png?raw=true)<br/><br/>Click on `Merge Pull Request`<br/>![Netlify Setup Example](./tutorial/setup-github-7.png?raw=true)<br/><br/>Click on `Confirm Merge`<br/>![Netlify Setup Example](./tutorial/setup-github-8.png?raw=true)<br/><br/>Congratulations you are done here is what it look like <br/>![Netlify Setup Example](./tutorial/setup-github-9.png?raw=true)</p><br/>✔️ Browsing `Netlify`, see the ci/cd process rolling with tests deployment<br/>![Netlify Setup Example](./tutorial/setup-github-10.png?raw=true)<br/>You have access to lofs<br/>![Netlify Setup Example](./tutorial/setup-github-11.png?raw=true)<br/> Notice how the status moved from `deploying` to `published`</details>|
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 

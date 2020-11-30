@@ -113,14 +113,22 @@ exports.handler = async (event, context) => {
 
 ### GitPod
 
+Since we started the application in the foreground, we'll need to open another terminal window in GitPod to execute the next command. To do so, navigate to **`Terminal`** in the toolbar and choose **`New Terminal`** from the dropdown.
+
+![gitpod new terminal](./tutorial/gitpod-new-terminal.png)
+
+Using your new terminal, execute the following command to get your helloWorld endpoint then copy and paste the endpoint URL into your browser.
+
 📘 **Command to execute**
 
 `echo "$(gp url 8888)/.netlify/functions/helloWorld"`
 * This will give you the GitPod endpoint for access to your "helloWorld" function
 
+![gitpod helloWorld endpoint](./tutorial/gitpod-new-terminal-helloWorld-endpoint.png)
+
 * See the end point at: `https://8888-<your_uid>.<your_region>.gitpod.io/.netlify/functions/helloWorld`
 
-*_Notice the port, GitPod generated ID, and the GitPod region in the URL below at each arrow. This should automatically be generated for you when you run `npm run dev`. Just paste `/.netlify/functions/helloWorld` on to the end in order to get to the correct endpoint._*
+*_Notice the port, GitPod generated ID, and the GitPod region in the URL below at each arrow. This should automatically be generated for you when you run `npm run dev`. Just paste `/.netlify/functions/helloWorld` on to the end in order to get to the correct endpoint if for some reason the above command is not working for you._*
 
 📗 **Expected output**
 
@@ -165,6 +173,8 @@ npm run test:functions
 
 ## 3. Merge back to master
 
+**✅ Step 3a. Commit changes back to GitHub**
+
 Now that we've updated our code we need to push these changes back to master and kick off an automated deploy in Netlify. We'll do this by committing our changes locally, pushing them up to our repository, then creating a pull request to merge them back to master.
 
 📘 **Commands to execute**
@@ -173,18 +183,72 @@ Now that we've updated our code we need to push these changes back to master and
 `git commit -m "Merging step1 into master"`<br/>
 `git push`<br/>
 
-Once you've pushed your changes go back to your repository in GitHub and create a pull request to merge our step-1 branch changes into master.
+Once you've pushed your changes go back to your repository in GitHub and create a pull request to merge our step-1 branch changes into master. **_Ensure that you are merging back into your YOUR master branch_**.
 
-TODO: We need PR instructions
+**✅ Step 3b. Create a GitHub pull request for your helloWorld changes**
+
+Using `Github UI`, merge your new branch to the master using a pull request.
+
+✔️ Select the master branch in github
+>![Netlify Setup Example](./tutorial/setup-github-2.png?raw=true)
+
+✔️ Click and `Compare & Pull request` button. for `step-1` into `master`.
+>![Netlify Setup Example](./tutorial/setup-github-3.png?raw=true)
+
+✔️ Caution don't target the original master from DataStax-Academy but **YOUR** master
+>![Netlify Setup Example](./tutorial/setup-github-4.png?raw=true)
+
+✔️ Provide a comment and click `Create Pull Request`
+>![Netlify Setup Example](./tutorial/setup-github-5.png?raw=true)
+
+✔️ Once your test have passed, click on `Merge Pull Request`
+>![Netlify Setup Example](./tutorial/setup-github-7.png?raw=true)
+
+✔️ Click on `Confirm Merge`
+>![Netlify Setup Example](./tutorial/setup-github-8.png?raw=true)
+
+Congratulations you are done, it should look something like this
+>![Netlify Setup Example](./tutorial/setup-github-9.png?raw=true)
 
 ## 4. Check your deployment in Netlify
 At this point you should see that your pull request kicked off a **Deploy Preview** in Netlify. Once all tests have passed you can confirm your merge. 
+
+**✅ Step 4a. Confirm your deployment**
+
+✔️ Browsing `Netlify`, navigate to **`Deploys`**, and see the CI/CD process rolling with our deployments
+>![Netlify Setup Example](./tutorial/setup-github-10.png?raw=true)
+
+Click on any items in the deploy list to see logs and other useful information about your deployments
+>![Netlify Setup Example](./tutorial/setup-github-11.png?raw=true)
 
 Once completed **Netlify** will automatically push the confirmed changes into production. No need to manually deploy anything separately, just push into your repo and production happens.
 
 Finally, you can check that your new `helloWorld` function is deployed and accessible from production.
 
-TODO: We need function instructions
+**✅ Step 4b. Confirm your serverless helloWorld endpoint on the internetz**
+
+Now that we've sucessfully deployed your **helloWorld** serverless function simply by merging back to **master** in GitHub, we should check that it's actually there and working.
+
+✔️ In **`Netlify`**, navigate to **`Functions`** in the toolbar, then click the **`helloWorld`** function in the list.
+>![Netlify functions](./tutorial/netlify-functions-helloWorld.png?raw=true)
+
+✔️ Copy the function endpoint from the browser window and paste into a new tab.
+
+>![Netlify functions endpoint](./tutorial/netlify-functions-helloWorld-endpoint.png?raw=true)
+
+📗 **Expected output**
+>![Netlify functions output](./tutorial/netlify-functions-helloWorld-output.png?raw=true)
+
+Ok, that was arguably a lot of stuff, but we wanted to break down the process at least once. It might feel like a lot of steps on the first couple runs, but as you get used to it the flow becomes quite natural.
+
+* make changes to your branch
+* push those changes back to GitHub
+* use a pull request to merge the changes back to master
+* CI/CD automatically checks your application using GitHub actions and the Netlify integration
+* confirm merge
+* changes are automatically pushed to production
+
+In the future, we won't break it down quite so much, but feel free to use this section as a reference as we move forward.
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
