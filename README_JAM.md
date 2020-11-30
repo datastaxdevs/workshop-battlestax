@@ -1,12 +1,13 @@
-# What is the JAM Stack
+# 📚 What is the JAM Stack
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#)** | ***next=>**  ⚒️ [Setup and deploy your first app](./README_step00.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#README_JAM.MD)** | ***next=>**  ⚒️ [Setup and deploy your first app](./README_step00.md)*
 
 If you are already familiar with **JAMStack** and just want to move on to the first exercise go to the next section => *[Setup and deploy your first app](./README_step00.md)*. Otherwise, read on.
 
 1. [Introduction to the JAMStack](#1-introduction-to-the-jamstack)
 2. [Why this is cool ?](#2-why-this-is-cool-)
-3. [Want to learn more ?](#3-want-to-learn-more-)
+3. [Introduction to Netlify](#3-introduction-to-netlify)
+4. [Want to learn more ?](#4-want-to-learn-more-)
 
 ## 1. Introduction to the JAMStack
 
@@ -17,13 +18,19 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 ![ok](./tutorial/jamstack/jam-1.png)
 
 **🔵 Javascript:** can represent any modern Javascript/Typescript framework like `React`, `Vue`, or `Angular` or even vanilla JS.
-
 <table>
  <tr>
   <td><img src="./tutorial/jamstack/logo-react.png"/></td>
-  <td><img src="./tutorial/jamstack/logo-angular.png"/> </td>
+  <td><a href="https://reactjs.org/">ReactJS (we will use it today)</a>: </td>
+ </tr>
+ <tr>
+  <td><img src="./tutorial/jamstack/logo-angular.png"/></td>
+  <td><a href="https://angularjs.org/">AngularJS</a></td>
+ </tr>
+<tr>
   <td><img src="./tutorial/jamstack/logo-vuejs.png"/></td>
-  </tr>
+ <td><a href="https://vuejs.org/">VueJS</a></td>
+ </tr>
 </table>
 
 <br/>
@@ -31,18 +38,14 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 **🔵 API:** is a backend serving real time data through either REST or GraphQL, endpoints to interact with fetch, ajax,axios
 
 <table>
- <tr>
-  <td>
-   <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">
-    <img src="./tutorial/jamstack/logo-rest.png"/>
-   </a>
-  </td>
-  <td>
-   <a href="#">
-    <img src="./tutorial/jamstack/logo-graphql.png"/>
-   </a>
-  </td>
-  </tr>
+  <tr>
+  <td><img src="./tutorial/jamstack/logo-rest.png"/></td>
+ <td><a href="https://vuejs.org/">REST (we will use it today)</a></td>
+ </tr>
+<tr>
+  <td><img src="./tutorial/jamstack/logo-graphql.png"/></td>
+ <td><a href="https://graphql.org/learn/">GraphQL</a></td>
+ </tr>
 </table>
 
 <br/>
@@ -51,17 +54,13 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 
 <table>
  <tr>
-  <td>
-   <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">
-    <img src="./tutorial/jamstack/logo-html.png"/>
-   </a>
-  </td>
-  <td>
-   <a href="https://www.markdownguide.org/">
-    <img src="./tutorial/jamstack/logo-markdown.png"/>
-   </a>
-  </td>
-  </tr>
+  <td><img src="./tutorial/jamstack/logo-html.png"/></td>
+ <td><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/">Vanilla HTML (we will use this today)</a></td>
+ </tr>
+ <tr>
+  <td><img src="./tutorial/jamstack/logo-markdown.png"/></td>
+ <td><a href="https://www.markdownguide.org/">Markdown</a></td>
+ </tr>
 </table>
 
 <br/>
@@ -71,9 +70,19 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 <table>
  <tr>
    <td><img src="./tutorial/jamstack/logo-gatsby.png"/></td>
-  <td><img src="./tutorial/jamstack/logo-next.png"/></td>
-  <td><img src="./tutorial/jamstack/logo-jekyll.png"/></td>
-  <td><img src="./tutorial/jamstack/logo-hugo.png"/></td>
+   <td><a href="https://www.gatsbyjs.com//"><b>Gatsby JS</b> </a> Build blazing-fast, modern apps and websites with React</td>
+  </tr>
+  <tr>
+    <td><img src="./tutorial/jamstack/logo-next.png"/></td>
+    <td><a href="https://nextjs.org/"><b>Next.js</b></a> Next.js is a minimalistic framework for server-rendered React applications as well as statically exported React apps.</td>
+  </tr>
+  <tr>
+    <td><img src="./tutorial/jamstack/logo-jekyll.png"/></td>
+    <td><a href="https://www.markdownguide.org/"><b>Jekyll</b></a> Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.</td>
+  </tr>
+  <tr>
+    <td><img src="./tutorial/jamstack/logo-hugo.png"/></td>
+    <td><a href="https://www.markdownguide.org/"><b>Hugo</b></a> Hugo is a static site generator written in Go. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full html website. Hugo makes use of Markdown files with front matter for meta data.</td>
   </tr>
 </table>
 
@@ -81,33 +90,10 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 
 **🔵 Pre-rendering AND Decoupling:** The core principles of **pre-rendering**, and **decoupling**, enable sites and applications to be delivered with greater confidence and resilience than ever before.
 
-**🔵 CDN:**
+**🔵 CDN:** : geographically distributed group of servers which work together to provide fast delivery of Internet content.
 
-## 📄 What is Netlify ?
+A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, images, and videos. The popularity of CDN services continues to grow, and today the majority of web traffic is served through CDNs, including traffic from major sites like Facebook, Netflix, and Amazon.
 
-> *Source [https://www.netlify.com](https://www.netlify.com/)*
-
-You have already seen a first feature of Netlify by creating and deploying a site. This part is called [The workflow](https://www.netlify.com/products/workflow/).
-
-- **✅  Configure builds** – Netlify can run your build command and deploy the result whenever you push to your Git repo. Get started with basic build settings, learn about managing build dependencies, and explore additional options available with file-based configuration.
-
-- **✅ Site deploys** – Atomic deploys with Netlify guarantee that your site is always consistent. Learn how to manage deploys, enable deploy notifications, and run a branch-based split test.
-
-To know more about the **sites** here are the [documentation](https://docs.netlify.com/site-deploys/overview/#deploy-summary).
-
-- **[Monitor sites *(not free)*](https://docs.netlify.com/monitor-sites/analytics/#get-started)** – Learn how Netlify Analytics lets you monitor trends in site activity. Monitor builds to understand the role individual sites play in your team's builds usage. Explore what kinds of logs and notifications are available for your sites.
-
-![.](./tutorial/netlify-pageview1.png)
-
-- **Domains & HTTP *(not free)*** Register a new domain in the Netlify UI, or use a domain you already own, to assign a custom domain to your site. Either way, you can have Netlify handle DNS management for you. We provide free automatic HTTPS on all sites.
-
-- **Forms:** You can use Netlify Forms without adding API calls or extra JavaScript on your site, configure extra spam prevention beyond our automatic spam filtering, and receive notifications about new submissions.
-
-- **CLI** You can use Netlify's command line interface to deploy sites or configure continuous deployment. Netlify Dev brings the functionality of your Netlify production environment directly to your local machine.
-
-- **API** To get started with the Netlify API, learn how to authenticate and make a request. Then explore options for deploying via API and usage for some popular endpoints.
-
-- **Functions** Deploy serverless functions built with JavaScript or with Go. You can even execute Background Functions for long-running tasks and trigger function calls when certain Netlify events happen.
 
 **🔵 Before vs after** 
 
@@ -183,27 +169,35 @@ Bye-bye infrastructure lock-in.
 
 Let us show you this one today
 
+## 3. Netlify, JAMStack automation
 
-## 3. Want to learn more ?
+> *Source [https://www.netlify.com](https://www.netlify.com/)*
 
-<table>
- <tr>
-  <td colspan="2">☁️ <b>Content Delivery Network (CDN)</b>
-  </td>
- </tr>
- <tr>
-   <td><img src="./tutorial/jamstack/what-is-cdn-1.png"/></td>
-   <td><a href="https://www.youtube.com/watch?v=Bsq5cKkS33I">
-    What is Content Delivery Network</a>
-    <br/>Ryan Sumner (4:32 min)</td>
- </tr>
- <tr>
-  <td><img src="./tutorial/jamstack/what-is-cdn-2.png"/></td>
-   <td><a href="https://www.youtube.com/watch?v=farO15_0NUQ">What is a CDN and why Developers should Care about using one (GOTO 2016)</a><br/>Artur Bergman (32:10min)<a></td>
- </tr>
-</table>
+### 3.1 Netlify in a nutshell
 
-![.](./tutorial/line.png)
+
+**Decoupling the frontend from the backend**
+>Unlike the large legacy apps, Jamstack projects neatly separate the frontend pages and UI from the backend apps and databases. Freed from backend servers, the frontend can then be deployed globally, directly to a CDN.
+
+**Dynamic content via APIs**
+> The global frontend uses Javascript and APIs to talk to backend services, allowing pages to be enhanced and personalized.
+
+![ok](./tutorial/netlify.png)
+
+
+## 4. Want to learn more ?
+
+**Angular vs VueJS vs React**
+1. 🎥 [Angular vs React vs Vue [2020 Update]](https://www.youtube.com/watch?v=lYWYWyX04JI)
+2. 🎥 [React vs. Angular vs. Vue: Which Should You Choose](https://www.youtube.com/watch?v=xDhzYQ4VyCw)
+1. [Angular vs Vue vs React: choosing the best framework in 2020](https://www.educative.io/blog/react-angular-vue-comparison)
+2. [React vs Angular vs Vue.js — What to choose in 2020? (updated in 2020)](https://medium.com/techmagic/reactjs-vs-angular5-vs-vue-js-what-to-choose-in-2018-b91e028fa91d)
+3. [Angular vs React vs Vue 2020](https://athemes.com/guides/angular-vs-react-vs-vue/)
+
+**Content Delivery Network (CDN)**
+1. 🎥 [What is Content Delivery Network, by Ryan Sumner (4:32 min)](https://www.youtube.com/watch?v=Bsq5cKkS33I)
+2. 🎥 [What is a CDN and why Developers should Care about using one (GOTO 2016) by Artur Bergman (32:10 min)](https://www.youtube.com/watch?v=farO15_0NUQ)
+
 
 **Click** below to move to the next section.
 
