@@ -1,4 +1,4 @@
-# What can Netlify do for you ? 
+# 📚 What can Netlify do for you
 
 📚 [What is the JAMStack](./README_JAM.md) > ⚒️ [Setup and deploy your first app](./README_step00.md) > 📚 **[What can Netlify do for you](#)** |  **next=>** ⚒️ *[Create a mock REST API with Netlify functions](./README_step01.md)*
 

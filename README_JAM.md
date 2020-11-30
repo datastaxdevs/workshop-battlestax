@@ -1,4 +1,4 @@
-# What is the JAM Stack ? 
+# What is the JAM Stack
 
 🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#)** | ***next=>**  ⚒️ [Setup and deploy your first app](./README_step00.md)*
 

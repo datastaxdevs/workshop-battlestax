@@ -1,4 +1,4 @@
-# Astra / Stargate PLACEHOLDER 
+# 📚 What are DataStax Astra and Stargate
 
 📚 [What can Netlify do for you](./README_Netlify.md) > ⚒️ [Create a mock REST API with Netlify functions](./README_step01.md) > 📚 **[What is DataStax Astra and Stargate](#)** |  ***next=>** ⚒️ [Connect to your Astra database](./README_step02.md)*
 

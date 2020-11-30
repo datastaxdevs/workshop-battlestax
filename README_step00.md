@@ -1,4 +1,4 @@
-# ⚒️ [Bootstrapping] Setup and deploy your first app
+# ⚒️ Setup and deploy your first app
 
 🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is the JAMStack](./README_JAM.md) > ⚒️ **[Setup and deploy your first app](#)** |  **next=>**  📚 *[What can Netlify do for you](./README_Netlify.md)*
 

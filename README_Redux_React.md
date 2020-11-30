@@ -1,4 +1,4 @@
-# Redux and React
+# 📚 What are Redux and React
 
 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ [Connect to your Astra database](./README_step02.md) > 📚 **[What is Redux and React](#)** |  **next=>** ⚒️ *[Create client State with Redux](./README_step03.md)*
 

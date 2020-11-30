@@ -1,6 +1,4 @@
-# What's NEXT
-
-## 🔗 Extra Resources
+# 📚 Extra Resources and certifications
 
 1. [Source code](https://github.com/DataStax-Academy/battlestax/tree/full-game) of the full game
 
