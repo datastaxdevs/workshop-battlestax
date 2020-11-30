@@ -28,12 +28,6 @@ The Lobby and Player clients stay connected, as once the state is updated, it wi
 
 ![state-flow](./tutorial/state-flow.png)
 
-In this step we will be working with the `/src/store/gameSlice.js` file on branch `step-3`
-
-```bash
-git checkout step-3
-```
-
 ## 🗓️ Table of Contents
 1. [Setup your environment](#2-setup-your-environment)
 2. [Building a `gameSlice`](#2-building-a-gameslice)
@@ -107,7 +101,7 @@ setIdLoading: (state, action) => {
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
-## 2. Generate an action and a selector
+## 3. Generate an action and a selector
 
 Now that we have a reducer, RTK will generate an action and a selector for us. 
 * An **action** is functions that call reducers. An action dispatches a state change event, then the reducer gets that event and figures out what to do with it
@@ -126,7 +120,7 @@ export const selectGame = (state) => state.game;
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
 
-## 3. Create an Async Action
+## 4. Create an Async Action
 
 
 
@@ -149,30 +143,67 @@ export const createGame = () => {
 };
 ```
 
-**✅ Step 3a: Set the id state back to the defaults**
+**✅ Step 4a: Set the id state back to the defaults**
 
 📘 **Code to copy**
 
+```javascript
+// let's set the id state back to the defaults
+    dispatch(setIdLoading(true));
+    dispatch(setIdError(""));
+    dispatch(setId(""));
+```
 
-**✅ Step 3b: Generate a game code and insert it into Astra**
+
+**✅ Step 4b: Generate a game code and insert it into Astra**
 
 📘 **Code to copy**
 
-**✅ Step 3c: Set the game id as part of state**
+```javascript
+// let's generate a new game id
+const gameId = generateGameId();
+
+// let's call our insert game netlify function
+const res = await fetch(`/.netlify/functions/insertGame/${gameId}`, {
+  method: "POST",
+  body: JSON.stringify({ state: "initialized" }),
+});
+if (!res.ok) {
+  throw Error(res.statusText);
+}
+```      
+
+**✅ Step 4c: Set the game id as part of state**
+
+We call the `setId` reducer to set the game id as part of state. We get the game id from the  JSON response from the REST call, incase the request fails, it won't lead to inconsistancy between Astra and game state.
+
+```javascript
+// let's set the game id
+const resJson = await res.json();
+dispatch(setId(resJson.documentId));
+```      
 
 📘 **Code to copy**
 
-**✅ Step 3d: Add error handling**
+**✅ Step 4d: Add error handling**
 
 📘 **Code to copy**
 
-**✅ Step 3e: Set id state to not loading**
+```javascript
+// let's set the id error if there is one
+      dispatch(setIdError(e.message));
+```
+
+**✅ Step 4e: Set id state to not loading**
 
 Once the try block has executed
 
 📘 **Code to copy**
 
-
+```javascript
+// let's set the id state to not loading
+dispatch(setIdLoading(false));
+```
 
 
 
@@ -180,7 +211,15 @@ Once the try block has executed
 
 ## 5. Running TDD tests
 
-We are provided with test cases `store/gameSlice.test.js` which will test that our slice we created working is in `store/gameSlice.js`. 
+We are provided with test cases `store/gameSlice.test.js` which will test that our slice we created working is in `store/gameSlice.js`. The tests will ensure that `gameSlice.js` does the following:
+
+* The slice should return the initial state on first run
+* It should set a game id
+* It should beable to set the game id loading flag
+* It should beable to set the game id error
+* It should should create a new game
+
+Have a look at the [src/store/gameSlice.test.js](src/store/gameSlice.test.js) to review these tests.
 
 Now, we can run our tests using `npm test src/store/gameSlice.test.js` to see that we have a functioning game slice.
 
