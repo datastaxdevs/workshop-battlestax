@@ -27,13 +27,13 @@ Since state is a very powerful mechanism for building dynamic React apps, proper
 
 ## How do they work together ?
 
-Before we start, here is a very quick intro to React and Redux.
+Before we start, here is a very quick intro to how React and Redux work together.
+
+![react-redux-flow](./tutorial/react-redux-flow.png)
 
 The Redux Store keeps the application state. This state can be updated by dispatching actions. An action is nothing more than a JSON object with a type and some parameters (e.g., { type: ‘SET_DATE’, date: ‘2017-03-15T13:24:00.000Z’ }). The store has a reducer, which, taking into account the action and the previous state, will produce the next state.
 
 React lets you build components that react to changes of the application state. Components affected by a state change are re-rendered with the new data. Components also dispatch actions, for example when a button is clicked.
-
-
 
 
 
@@ -47,6 +47,8 @@ This is the rough flow proposed by Redux:
 3. Reducers process the actions, computing the new state.
 4. The new state of the whole application goes into a single store.
 5. Components receive the new state as props and re-render themselves where needed.
+
+![component-state-change](./tutorial/component-state-change.png)
 
 
 ## How does this work in our application ?
