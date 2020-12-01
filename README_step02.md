@@ -73,6 +73,76 @@ For a **FULL** code solution to this section **`right-click`** the image below a
 
 `git checkout step-2`
 
+**✅ Step 2b: Set environment variables in code**
+
+In the ["hello world"](./README_step01.md) section, we pushed a simple helloWorld "test" function to get a feel for how things work. Now, we are going to start working with the "real" code to get our game working. To do this, we need to set a group of environment  variables referring to the database we just created with **DataStax Astra**, not only in our code, but across **GitHub** and **Netlify** as well.
+
+Why are we doing this, you might ask? Because as part of our **CI/CD** pipeline our tests will attempt to connect to our data layer to ensure everything is hooked up and working. Not only that, but once you deploy your application to **Netlify** it will use these variables to hook up your production app and power your serverless functions. 
+
+We set these **ONE** time and that's it, you are ready to go. With that, let's do it.
+
+_The following instructions are the same whether using GitPod or a local IDE._
+
+✔  Copy and paste the contents of the `.env.template` file into an `.env` file:
+
+📘 **Command to execute**
+
+`cat .env.example > .env`
+
+✔ The `.env` file allows us to customize our own environmental variables. We set our Astra credentials to env variables, which are outside of our program. Fill in the `.env` file variables with the Astra variables you made a copy of earlier:
+
+`ASTRA_DB_USERNAME=battle_user`<br/>
+`ASTRA_DB_PASSWORD=battle_password1`<br/>
+`ASTRA_DB_KEYSPACE=battlestax`<br/>
+`ASTRA_DB_ID=[cf bloc 3b]`<br/>
+`ASTRA_DB_REGION=[cf bloc 3b]`<br/>
+`GAMES_COLLECTION=games`
+
+![Netlify Setup Example](./tutorial/gitpod-env.png?raw=true)
+
+**✅ Step 2c: Set environment variables _(secrets)_ in GitHub for CI/CD**
+
+Every application should have a CI/CD *(**C**ontinuous **I**ntegration, **C**ontinuous **D**eployment)* pipeline. This allows for quick iteration of changes to production deployment by taking advantage of automation and tests to ensure everything is working properly. 
+
+After each commit a workflow is initialized to BUILD your project, EXECUTE tests and DEPLOY to **Netlify**.  The good thing is many **CI/CD** tools are provided right within **GitHub**. Adding this capability just takes a couple steps.
+
+✔ Within **YOUR** Battlestax repository in **GitHub** click on **`Settings`** in the top toolbar, choose **`Secrets`** from the menu on the left, and finally click the **`New secret`** button on the top right of the page. Add a secret for each of the variables we used earlier.
+
+`ASTRA_DB_USERNAME=battle_user`<br/>
+`ASTRA_DB_PASSWORD=battle_password1`<br/>
+`ASTRA_DB_KEYSPACE=battlestax`<br/>
+`ASTRA_DB_ID=[check Step3b]`<br/>
+`ASTRA_DB_REGION=[check Step3b]`<br/>
+`GAMES_COLLECTION=games`
+
+*That should look like:*
+
+![Netlify Setup Example](./tutorial/setup-github-1.png?raw=true)
+
+**✅ Step 2d: Set environment variables in Netlify**
+
+✔ Click `Show advanced` to enter the following variables:
+
+🟢 `ASTRA_DB_USERNAME` as `battle_user` *(The user name we defined when creation the Astra instance)*
+
+🟢 `ASTRA_DB_PASSWORD` as `battle_password1` *(The password we defined when creation the Astra instance)*
+
+🟢 `ASTRA_DB_KEYSPACE` as `battlestax` *(The keyspace we defined when creation the Astra instance)*
+
+🟢 `ASTRA_DB_ID` as the cluster ID of your Astra DB. To get your database ID and region go the ASTRA summary page. Locate the cluster ID and copy it by clicking the clickboard icon as showed below. 
+
+![Netlify Setup Example](./tutorial/netlify-createsite-5.png?raw=true)
+
+🟢 `ASTRA_DB_REGION` as the region you picked when creating the DB, It should be either `us-east-1` or `europe-west1`.
+
+🟢 `GAMES_COLLECTION` as `games` _(this is the collection where we will store all values)
+
+You should now have something like
+
+![Netlify Setup Example](./tutorial/netlify-createsite-6.png?raw=true)
+
+TODO: Finish this section with save 
+
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
 ## 3. Creating the `insertGame` Netlify endpoint
