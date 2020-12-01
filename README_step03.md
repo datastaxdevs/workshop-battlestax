@@ -157,6 +157,8 @@ export const createGame = () => {
 
 **✅ Step 4b: Generate a game code and insert it into Astra**
 
+Call the `generateGameId()` from `src/util/random.js` to generate a new game id for us. Then we initialize a new game by inserting the game id into Astra with the `insertGame` function we created in step 2.
+
 📘 **Code to copy**
 
 ```javascript
@@ -177,15 +179,14 @@ if (!res.ok) {
 
 We call the `setId` reducer to set the game id as part of state. We get the game id from the  JSON response from the REST call, incase the request fails, it won't lead to inconsistancy between Astra and game state.
 
+📘 **Code to copy**
+
 ```javascript
 // let's set the game id
 const resJson = await res.json();
 dispatch(setId(resJson.documentId));
 ```      
-
-📘 **Code to copy**
-
-**✅ Step 4d: Add error handling**
+While we are at it, let's be sure to handle any potential errors that may arise.
 
 📘 **Code to copy**
 
@@ -194,7 +195,7 @@ dispatch(setId(resJson.documentId));
       dispatch(setIdError(e.message));
 ```
 
-**✅ Step 4e: Set id state to not loading**
+**✅ Step 4d: Set id state to not loading**
 
 Once the try block has executed
 
@@ -213,13 +214,67 @@ dispatch(setIdLoading(false));
 
 We are provided with test cases `store/gameSlice.test.js` which will test that our slice we created working is in `store/gameSlice.js`. The tests will ensure that `gameSlice.js` does the following:
 
-* The slice should return the initial state on first run
-* It should set a game id
-* It should beable to set the game id loading flag
-* It should beable to set the game id error
-* It should should create a new game
-
 Have a look at the [src/store/gameSlice.test.js](src/store/gameSlice.test.js) to review these tests.
+
+✔️  _TEST 1_: The slice should return the initial state on first run. It important for our game slice to change state back to the default state before another state change occurs.
+
+```javascript
+it("should return the initial state on first run", () => {
+  const nextState = initialState;
+  const result = reducer(undefined, {});
+  expect(result).toEqual(nextState);
+});
+```
+
+✔️  _TEST 2_ : Naturally, it should beable to set a new game id as part of the state.
+```javascript
+it("should set a game id", () => {
+    const gameId = generateGameId();
+    const nextState = reducer(initialState, setId(gameId));
+    const rootState = { game: nextState };
+    expect(selectGame(rootState).id).toEqual(gameId);
+  });
+```
+
+✔️  _TEST 3_: 
+
+```javascript
+it("should set the game id loading flag", () => {
+  const gameId = generateGameId();
+  const nextState = reducer(initialState, setIdLoading(true));
+  const rootState = { game: nextState };
+  expect(selectGame(rootState).idLoading).toEqual(true);
+});
+```
+
+✔️  _TEST 4_: 
+
+```javascript
+it("should set the game id error", () => {
+  const nextState = reducer(initialState, setIdError("nope"));
+  const rootState = { game: nextState };
+  expect(selectGame(rootState).idError).toEqual("nope");
+});
+```
+✔️  _TEST 5_: 
+
+```javascript
+it("should create a new game", async () => {
+  fetchMock.postOnce("*", {
+    body: { documentId: "DANG" },
+  });
+  store.dispatch(createGame());
+  const initialState = store.getState();
+  expect(selectGame(initialState).idError).toEqual("");
+  expect(selectGame(initialState).idLoading).toEqual(true);
+  expect(selectGame(initialState).id).toEqual("");
+  await new Promise((resolve) => setTimeout(resolve, 500));
+  const finalState = store.getState();
+  expect(selectGame(finalState).idError).toEqual("");
+  expect(selectGame(finalState).idLoading).toEqual(false);
+  expect(selectGame(finalState).id).toEqual("DANG");
+});
+```
 
 Now, we can run our tests using `npm test src/store/gameSlice.test.js` to see that we have a functioning game slice.
 
