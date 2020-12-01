@@ -62,11 +62,9 @@ import { selectGame, createGame } from "../../../store/gameSlice";
 
 React Hooks allow you to access things like state, React lifecycle methods, and other goodies in function components that were previously only available in class components. 
 
-![hook](./tutorial/hook.png)
+`useSelector()` is a React Hook which allows you to extract data from the Redux store state, using a selector function. It takes in selector functio argument (in this case `selectGame`) that returns the part of the state that you want.
 
-`useSelector()` is a React Hook which allows you to extract data from the Redux store state, using a selector function.
-
-`useDispatch()` is a React Hook that allows us to dispatch actions from our React component.
+`useDispatch()` is a React Hook that allows us to dispatch actions from our React component. Recall the `createGame` function we created in the last step.
 
 📘 **Code to copy**
 
@@ -80,7 +78,7 @@ const { id, idError, idLoading } = useSelector(selectGame);
 
 ## 4. Updating the UI
 
-When our game id is set, we want to show it in the UI
+When our game id is set, we want to show it in the UI. If the `id` is present, it will be rendered in the view. If not, `"----"` will show up.
 
 📘 **Code to copy**
 
@@ -89,7 +87,7 @@ When our game id is set, we want to show it in the UI
 {id || "----"}
 ```
 
-We also need to change our button to create a new game and also make it disabled while a request is taking place
+We also need to change our button to create a new game and also make it disabled while a request is taking place. 
 
 📘 **Code to copy**
 
@@ -117,9 +115,21 @@ Finally, let's show any errors
 
 ## 4. Running TDD tests
 
-We are provided with test cases `store/gameSlice.test.js`. This test will check to see if our `NewGame` compenent renders properly.
+We are provided with test case `src/pages/Lobby/NewGame/NewGame.test.js`. This test will check to see if our `NewGame` compenent renders properly. The <Provider> is used to make that store available to our component tree.
 
-We can run our tests to see that we have a properly rendering component:
+✔️  _TEST 1_: The `NewGame` component we created needs to beable to render without crashing.
+
+```javascript
+test("renders without crashing", () => {
+  render(
+    <Provider store={store}>
+      <NewGame />
+    </Provider>
+  );
+});
+```
+
+We can run our test to see if the compoenent renders successfully:
  
 📘 **Command to execute**
 
