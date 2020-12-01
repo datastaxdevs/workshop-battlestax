@@ -183,21 +183,22 @@ Let us show you this one today
 
 - The application we will deploy is BattleStax. This is not only static content but also a REST API retrieve Data from a DB. The DB will ne DataStax Astra.
 
-![Template CTRL click](./tutorial/tools.png?raw=true)
 
+![Template CTRL click](./tutorial/architecture1.png?raw=true)
 
 ## 4. Want to learn more ?
+
 
 **Angular vs VueJS vs React**
 1. 🎥 [Angular vs React vs Vue [2020 Update]](https://www.youtube.com/watch?v=lYWYWyX04JI)
 2. 🎥 [React vs. Angular vs. Vue: Which Should You Choose](https://www.youtube.com/watch?v=xDhzYQ4VyCw)
-1. [Angular vs Vue vs React: choosing the best framework in 2020](https://www.educative.io/blog/react-angular-vue-comparison)
-2. [React vs Angular vs Vue.js — What to choose in 2020? (updated in 2020)](https://medium.com/techmagic/reactjs-vs-angular5-vs-vue-js-what-to-choose-in-2018-b91e028fa91d)
-3. [Angular vs React vs Vue 2020](https://athemes.com/guides/angular-vs-react-vs-vue/)
+1. 📄 [Angular vs Vue vs React: choosing the best framework in 2020](https://www.educative.io/blog/react-angular-vue-comparison)
+2. 📄 [React vs Angular vs Vue.js — What to choose in 2020? (updated in 2020)](https://medium.com/techmagic/reactjs-vs-angular5-vs-vue-js-what-to-choose-in-2018-b91e028fa91d)
+3. 📄 [Angular vs React vs Vue 2020](https://athemes.com/guides/angular-vs-react-vs-vue/)
 
-**Static site Generator (SSG)
-1. [What is a Static Site Generator? And 3 ways to find the best one](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/)
-2. [List of static generators](https://jamstack.org/generators/)
+**Static site Generator (SSG)**
+1. 📄 [What is a Static Site Generator? And 3 ways to find the best one](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/)
+2. 📄 [List of static generators](https://jamstack.org/generators/)
 
 
 **Content Delivery Network (CDN)**
