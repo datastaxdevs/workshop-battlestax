@@ -1,8 +1,8 @@
 # 📚 What is the JAM Stack
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#README_JAM.MD)** | ***next=>**  ⚒️ [Setup and deploy your first app](./README_step00.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#README_JAM.MD)**
 
-If you are already familiar with **JAMStack** and just want to move on to the first exercise go to the next section => *[Setup and deploy your first app](./README_step00.md)*. Otherwise, read on.
+If you are already familiar with **JAMStack** and just want to move on to the first exercise go to the next section => *⚒️  [Setup and deploy your first app](./README_step00.md)*. Otherwise, read on.
 
 1. [Introduction to the JAMStack](#1-introduction-to-the-jamstack)
 2. [Why this is cool ?](#2-why-this-is-cool-)
@@ -21,7 +21,7 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 <table>
  <tr>
   <td><img src="./tutorial/jamstack/logo-react.png"/></td>
-  <td><a href="https://reactjs.org/">ReactJS (we will use it today)</a>: </td>
+  <td><a href="https://reactjs.org/">ReactJS (we will use it today)</a> </td>
  </tr>
  <tr>
   <td><img src="./tutorial/jamstack/logo-angular.png"/></td>
@@ -65,32 +65,23 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 
 <br/>
 
-**🔵 Static page generator:** You can find a pretty exhaustive list [here](https://jamstack.org/generators/). Most commonly used are Gatsby|Hugo|Jekyll for markdown files and [NextJS](https://nextjs.org/) for pure React.
+**🔵 Static page generator**
 
-<table>
- <tr>
-   <td><img src="./tutorial/jamstack/logo-gatsby.png"/></td>
-   <td><a href="https://www.gatsbyjs.com//"><b>Gatsby JS</b> </a> Build blazing-fast, modern apps and websites with React</td>
-  </tr>
-  <tr>
-    <td><img src="./tutorial/jamstack/logo-next.png"/></td>
-    <td><a href="https://nextjs.org/"><b>Next.js</b></a> Next.js is a minimalistic framework for server-rendered React applications as well as statically exported React apps.</td>
-  </tr>
-  <tr>
-    <td><img src="./tutorial/jamstack/logo-jekyll.png"/></td>
-    <td><a href="https://www.markdownguide.org/"><b>Jekyll</b></a> Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.</td>
-  </tr>
-  <tr>
-    <td><img src="./tutorial/jamstack/logo-hugo.png"/></td>
-    <td><a href="https://www.markdownguide.org/"><b>Hugo</b></a> Hugo is a static site generator written in Go. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full html website. Hugo makes use of Markdown files with front matter for meta data.</td>
-  </tr>
-</table>
+They apply data and content to templates, and generate a view of a page which can be served to the visitors of a site.
 
-<br/>
+The greatest difference between a static site generator and a traditional web application stack, is that instead of waiting until a page is requested and then generating its view on demand each time, a static site generator does this in advance so that the view is ready to serve ahead of time. And it does so for every possible view of a site at build time.
+
+![ok](./tutorial/ssg-flow.png)
+
+It improves performance and high compatibility with its rendering. *Automates code splitting, image optimization, inlining critical styles, lazy-loading, prefetching resources, and more to ensure your site is fully optimized. No manual tuning required.* 
+
+You can find a pretty exhaustive list [here](https://jamstack.org/generators/).
 
 **🔵 CDN:** : geographically distributed group of servers which work together to provide fast delivery of Internet content.
 
 A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, images, and videos. The popularity of CDN services continues to grow, and today the majority of web traffic is served through CDNs, including traffic from major sites like Facebook, Netflix, and Amazon.
+
+![ok](./tutorial/jamstack/cdn.png)
 
 
 **🔵 Logical Architecture** 
@@ -203,6 +194,11 @@ Let us show you this one today
 1. [Angular vs Vue vs React: choosing the best framework in 2020](https://www.educative.io/blog/react-angular-vue-comparison)
 2. [React vs Angular vs Vue.js — What to choose in 2020? (updated in 2020)](https://medium.com/techmagic/reactjs-vs-angular5-vs-vue-js-what-to-choose-in-2018-b91e028fa91d)
 3. [Angular vs React vs Vue 2020](https://athemes.com/guides/angular-vs-react-vs-vue/)
+
+**Static site Generator (SSG)
+1. [What is a Static Site Generator? And 3 ways to find the best one](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/)
+2. [List of static generators](https://jamstack.org/generators/)
+
 
 **Content Delivery Network (CDN)**
 1. 🎥 [What is Content Delivery Network, by Ryan Sumner (4:32 min)](https://www.youtube.com/watch?v=Bsq5cKkS33I)
