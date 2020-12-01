@@ -24,6 +24,7 @@ In step 1 of the Battlestax tutorial, we will:
 1. [Setup your environment](#1-setup-your-environment)
 2. [Make a serverless endpoint using Netlify functions](#2-make-a-serverless-endpoint-using-netlify-functions)
 3. [Merge back to master](#3-merge-back-to-master)
+4. [Check your deployment in Netlify](#4-check-your-deployment-in-netlify)
 
 ## 1. Setup your environment
 
@@ -209,6 +210,8 @@ Using `Github UI`, merge your new branch to the master using a pull request.
 
 Congratulations you are done, it should look something like this
 >![Netlify Setup Example](./tutorial/setup-github-9.png?raw=true)
+
+### [🔝](#%EF%B8%8F-table-of-contents)
 
 ## 4. Check your deployment in Netlify
 At this point you should see that your pull request kicked off a **Deploy Preview** in Netlify. Once all tests have passed you can confirm your merge. 

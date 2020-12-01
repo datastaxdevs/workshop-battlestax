@@ -179,7 +179,7 @@ Let us show you this one today
 
 - Netlify is integrated with GITHUB, on new commit it will BUILD and deploy the SITE on the CDN
 
-- To code and commit to github we will use an IDE. You cacn use your own or we will provide you one in the Cloud called GIPOD.
+- To code and commit to github we will use an IDE. You cacn use your own or we will provide you one in the Cloud called GITPOD.
 
 - The application we will deploy is BattleStax. This is not only static content but also a REST API retrieve Data from a DB. The DB will ne DataStax Astra.
 
