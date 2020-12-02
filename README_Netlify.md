@@ -3,15 +3,14 @@
 🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **Step1 - [ What can Netlify do for you](#README_Netlify.md)**
 
 
-If you are already familiar with **Netlify Serverless functions** and just want to move on to the next exercise go to section => [Expose your "hello world" API ](./README_step01.md). Otherwise, read on.
+If you are already familiar with **Netlify Serverless functions** and just want to move on to the next exercise go to section =>  ⚒️ [Expose your "hello world" API ](./README_step01.md). Otherwise, read on.
 
-We will cover:
+**We will cover:**
 1. [Build, Package, deploy, host](#1-introduction-to-astra-db)
 2. [Advanced features](#2-introduction-to-stargate)
 3. [Netlify Functions](#3-want-to-know-more-)
 
 ---
-
 ## 1. Build, Package, deploy, host
 
 We already introduced you the features to Build, Package, deploy and  host before to deploy your empty application. Here the schema:
@@ -20,7 +19,7 @@ We already introduced you the features to Build, Package, deploy and  host befor
 
 - **✅ Site deploys** – Atomic deploys with Netlify guarantee that your site is always consistent. Learn how to manage deploys, enable deploy notifications, and run a branch-based split test.
 
-![Template CTRL click](./tutorial/netlify.png?raw=true)
+![Template CTRL click](./tutorial/architecture2.png?raw=true)
 
 ## 2. Advanced features
 
@@ -72,6 +71,5 @@ Ok, let's do this ourselves in the next exercise.
 
 This [document](https://docs.netlify.com/functions/configure-and-deploy/#configure-the-functions-folder) goes into details about implementing **serverless** functions with Netlify and this [tutorial](https://kentcdodds.com/blog/super-simple-start-to-netlify-functions) spells it out. 
 
-**Click** below to move to the next section.
-
-📚 [What is the JAMStack](./README_JAM.md) > ⚒️ [Setup and deploy your first app](./README_step00.md) > 📚 **[What can Netlify do for you](#)** |  **next=>** ⚒️ *[Expose your "hello world" API ](./README_step01.md)*
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>**  ⚒️ [Expose your "hello world" API ](./README_step01.md)

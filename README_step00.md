@@ -1,17 +1,20 @@
 # ⚒️ Setup and deploy your first app
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is the JAMStack](./README_JAM.md) > ⚒️ **[Setup and deploy your first app](#)** |  **next=>**  📚 *[What can Netlify do for you](./README_Netlify.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is the JAMStack](./README_JAM.md) > ⚒️ **[Setup and deploy your first app](#)**
 
 This is arguably the biggest step in the whole workshop. Once you get your tools and environment setup you'll be good to go, not just for this workshop, but for your own **JAMStack** applications moving forward. Just repeat the process for your own application repositories.
 
-![Template CTRL click](./tutorial/tools.png?raw=true)
+**We will cover:**
 
-## 🗓️ Table of Contents
 1. [Create your `BattleStax` repository](#1-create-your-battlestax-repository)
 2. [Create your Astra instance](#2-create-your-astra-instance)
 3. [Setup Netlify account](#3-setup-netlify-account)
 4. [Setup for Production CI/CD](#4-setup-for-production-cicd)
 5. [Setup your development environment](#5-setup-your-development-environment)
+
+![Template CTRL click](./tutorial/architecture2.png?raw=true)
+
+---
 
 ## 1. Create your `BattleStax` repository
 
@@ -86,9 +89,5 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 ||
 |<details><summary><i>Click to view the solution</i></summary><br/>✔  Start the application<br/><br/>📘 **Command to execute**<br/>`npm start`<br/><br/>✔ Hit the loading screen<br/>`http://localhost:3000/`<br/>![Netlify Setup Example](./tutorial/start-localhost.png?raw=true)<br/><br/>**Done!** You have successfully set up your app, run your tests locally, and started BattleStax.<br/><br/>![Netlify Setup Example](./tutorial/well-done.png?raw=true)</details>|
 
-
-![.](./tutorial/line.png)
-
-**Click** below to move to the next section.
-
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is the JAMStack](./README_JAM.md) > ⚒️ **[Setup and deploy your first app](#)** |  **next=>** 📚 *[What can Netlify do for you](./README_Netlify.md)*
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** 📚 [What can Netlify do for you](./README_Netlify.md)

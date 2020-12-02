@@ -1,8 +1,10 @@
 # 📚 What is the JAM Stack
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#README_JAM.MD)**
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > **Bootstraping - 📚 [What is the JAMStack](#README_JAM.MD)**
 
-If you are already familiar with **JAMStack** and just want to move on to the first exercise go to the next section => *⚒️  [Setup and deploy your first app](./README_step00.md)*. Otherwise, read on.
+If you are already familiar with **JAMStack** and just want to move on to the first exercise go to the next section => ⚒️ [Setup and deploy your first app](./README_step00.md). Otherwise, read on.
+
+**We will cover:**
 
 1. [Introduction to the JAMStack](#1-introduction-to-the-jamstack)
 2. [Why this is cool ?](#2-why-this-is-cool-)
@@ -206,7 +208,5 @@ Let us show you this one today
 1. 🎥 [What is Content Delivery Network, by Ryan Sumner (4:32 min)](https://www.youtube.com/watch?v=Bsq5cKkS33I)
 2. 🎥 [What is a CDN and why Developers should Care about using one (GOTO 2016) by Artur Bergman (32:10 min)](https://www.youtube.com/watch?v=farO15_0NUQ)
 
-
-**Click** below to move to the next section.
-
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#)** | ***next=>**  ⚒️ [Setup and deploy your first app](./README_step00.md)*
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** ⚒️ [Setup and deploy your first app](./README_step00.md)
