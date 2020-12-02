@@ -23,7 +23,9 @@ In step 2 of the Battlestax tutorial, we will:
 
 One of the first things we need to do is hook up the "plumbing" of our application to talk to our back-end services, namely, our Cassandra database with Astra and Netlify. Once this is in place, we are connected and ready to go with the services we need to power our app.
 
-We will also be making use of the Document API to connect to our Astra database. Stargate API framework allows developers the freedom to access Astra with a variety of APIs, the Document API being one. With the Document API, you can now save and search schemaless JSON documents in Cassandra, which previously had not been supported.
+We will also be making use of the Document API to connect to our Astra database. Stargate API framework allows developers the freedom to access Astra with a variety of APIs, the Document API being one. With the Document API, you can save and search schemaless JSON documents in Cassandra. No need to use SQL, CQL, or any database drivers to talk to the data layer. Just code and move on.
+
+_ehem...for those of you familiar with Apache Cassandra, yes, I just said you could skip data modeling._
 
 ![Document API Flow](./tutorial/document-api.png?raw=true)
 
@@ -55,7 +57,7 @@ For a **FULL** code solution to this section **`right-click`** the image below a
 |**✅ Step 1b. Choose the free plan and select your region**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>![my-pic](https://github.com/datastaxdevs/shared-assets/blob/master/astra/choose-a-plan-1000-annotated.png?raw=true)<br/>- **Select the free tier**: 5GB storage, no obligation<br/>- **Select the region**: This is the region where your database will reside physically (choose one close to you or your users). For people in EMEA please use `europe-west-1` idea here is to reduce latency.<br/></details>|
+|<details><summary><i>🖱️ Click me to show details</i></summary><br/>![my-pic](https://github.com/datastaxdevs/shared-assets/blob/master/astra/choose-a-plan-1000-annotated.png?raw=true)<br/>- **Select the free tier**: 5GB storage, no obligation<br/>- **Select the region**: This is the region where your database will reside physically (choose one close to you or your users). For people in EMEA please use `europe-west1` idea here is to reduce latency.<br/></details>|
 
 |**✅ Step 1c. Configure and create your database**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
@@ -133,7 +135,7 @@ After each commit a workflow is initialized to BUILD your project, EXECUTE tests
 
 ![Netlify Setup Example](./tutorial/netlify-createsite-5.png?raw=true)
 
-🟢 `ASTRA_DB_REGION` as the region you picked when creating the DB, It should be either `us-east-1` or `europe-west1`.
+🟢 `ASTRA_DB_REGION` as the region you picked when creating the DB, It should be either `us-east1` or `europe-west1`.
 
 🟢 `GAMES_COLLECTION` as `games` _(this is the collection where we will store all values)
 
@@ -278,7 +280,7 @@ it("should create a game document", async () => {
 We use a simple async function to do this. `faker.helpers.replaceSymbols("????")` will create a sample game id for the path, and some user data in the
 body. As successful test run will return a `200`.
 
-✔️  _TEST 2_ : Our function must not beable to create a game document with a valid game id
+✔️  _TEST 2_ : Our function must not be able to create a game document with a valid game id
 ```javascript
 it("shouldn't create a game document without a game id", async () => {
   const response = await insertGame.handler({ path: "insertGame" });

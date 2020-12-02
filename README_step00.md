@@ -63,7 +63,7 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 |**✅ Step 5_A3. Run the Tests**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>Click to view the solution</i></summary><br/>✔ At initialization gitpod has download dependencies already (you should have the `node_modules` folder already there. Still, check dependencies are installed with :<br/><br/>📘 **Command to execute**<br/>`npm install`<br/><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the `package.json` file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/><br/>![Netlify Setup Example](./tutorial/gitpod-test.png?raw=true)</details>|
+|<details><summary><i>Click to view the solution</i></summary><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the `package.json` file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/><br/>![Netlify Setup Example](./tutorial/gitpod-test.png?raw=true)</details>|
 
 
 |**✅ Step 5_A4. Start the application**![.](./tutorial/line.png?raw=true)|
@@ -79,7 +79,7 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 |**✅ Step 5_B3. Run the Tests**![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>Click to view the solution</i></summary><br/>✔ Install Battlestax Dependencies. These are specified in the `package.json` file.<br/><br/>📘 **Command to execute**<br/>`npm install`<br/><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the package.json file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/>![Netlify Setup Example](./tutorial/local-test.png?raw=true)</details>|
+|<details><summary><i>Click to view the solution</i></summary><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the package.json file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/>![Netlify Setup Example](./tutorial/local-test.png?raw=true)</details>|
 
 |**✅ Step 5_B4. Start the application**![.](./tutorial/line.png?raw=true)|
 |:---|
