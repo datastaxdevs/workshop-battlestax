@@ -26,8 +26,37 @@ Congratulations, you made it to the last part. This is only the beginning we do 
 
 ![](https://www.datastax.com/sites/default/files/inline-images/Admin%20Certification%20Badge%201_0.png)
 
-[ENROLL NOW](https://www.datastax.com/dev/certifications)
+[![.](./tutorial/enroll.png)](https://www.datastax.com/dev/certifications)
+
+## 💚 Share the love
+
+- Share on TWITTER
+
+<a href="https://twitter.com/intent/tweet?url=https://github.com/DataStax-Academy/battlestax&text=I attented a great workshop with #JAMStack and the new Datastore #Astra">
+  <img src="./tutorial/share-on-twitter.png" ?>
+</a>
+
+- Share on INSTAGRAM
+
+<a href="https://twitter.com/intent/tweet?url=https://github.com/DataStax-Academy/battlestax&text=I attented a great workshop with #JAMStack and the new Datastore #Astra">
+  <img src="./tutorial/share-on-twitter.png" ?>
+</a>
+
+- 
+
+```diff
+- todo
+```
+
+## 🧑🏻‍🤝‍🧑🏽 Let's get in touch
+
+The materials has been prepared with live with our great team
+
+| ![B](./tutorial/crew/chris.png) | ![B](./tutorial/crew/david.png) | ![B](./tutorial/crew/rebecca.png) | ![B](./tutorial/crew/cedrick.png)|
+|--- | --- | --- | --- |
+| Chris Whilhite <br>[@kidrecursive](https://github.com/kidrecursive) | David Gilardi <br>[@SonicDMG](https://github.com/SonicDMG)| Rebecca Millis <br>[@beccam](https://github.com/beccam) | Cedrick Lunven<br>[@clun](https://github.com/clun)|
+
 
 ---
 
-⚒️ [Create client State with Redux](./README_step03.md) > ⚒️ [Bind Redux to the User Interface](./README_step04.md) > ⚒️ **[What's next](#)** | **next=>**  *[Share the love](./README_Ending.md)*
+[![BattleStax JAMStack Workshop](./tutorial/thankyou.gif)]()
