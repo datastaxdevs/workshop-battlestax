@@ -86,7 +86,7 @@ Brave yourselves, everybody goes to [https://battlestax-workshop.netlify.app/](h
   - ⚒️ [Bind Redux to the User Interface](./README_step04.md) (*branch: `step-4`*)
 - **What's NEXT ?** *(not the framework* 😈)
   - 📚 [Extra Resources and certifications](./README_Resources.md)   
-  - 💚 [Share the love](./README_Ending.md)
+  - 💚 [Share the love](./README_Resources.md#-share-the-love)
 
 *click the image to start !*
 

@@ -26,27 +26,16 @@ Congratulations, you made it to the last part. This is only the beginning we do 
 
 ![](https://www.datastax.com/sites/default/files/inline-images/Admin%20Certification%20Badge%201_0.png)
 
-[![.](./tutorial/enroll.png)](https://www.datastax.com/dev/certifications)
+[- **ENROLL NOW** -](https://www.datastax.com/dev/certifications)
 
 ## 💚 Share the love
 
-- Share on TWITTER
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DataStax-Academy/battlestax/blob/master/README.md"><img src="./tutorial/share-facebook.png"/></a>
 
-<a href="https://twitter.com/intent/tweet?url=https://github.com/DataStax-Academy/battlestax&text=I attented a great workshop with #JAMStack and the new Datastore #Astra">
-  <img src="./tutorial/share-on-twitter.png" ?>
-</a>
+<a href="https://twitter.com/intent/tweet?url=https://github.com/DataStax-Academy/battlestax/blob/master/README.md&text=I attended a wonderful workshop today introducing #Cassandra with #React and #netlify #JAMStack, thank you @Datastax, @clunven, @sonicdmg"><img src="./tutorial/share-twitter.png"/></a>
 
-- Share on INSTAGRAM
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/DataStax-Academy/battlestax/blob/master/README.md&title=&summary=I attended a wonderful workshop today introducing #Cassandra with #React and #netlify #JAMStack, thank you @Datastax, @clunven, @sonicdmg&source="><img src="./tutorial/share-linkedin.png"/></a>
 
-<a href="https://twitter.com/intent/tweet?url=https://github.com/DataStax-Academy/battlestax&text=I attented a great workshop with #JAMStack and the new Datastore #Astra">
-  <img src="./tutorial/share-on-twitter.png" ?>
-</a>
-
-- 
-
-```diff
-- todo
-```
 
 ## 🧑🏻‍🤝‍🧑🏽 Let's get in touch
 
