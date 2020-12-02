@@ -5,13 +5,11 @@
 [![Actions Status](https://github.com/DataStax-Academy/battlestax/workflows/BattleStax%20Tests/badge.svg)](https://github.com/DataStax-Academy/battlestax/actions) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e265340f-c6a6-4d7b-b24c-438b87c67876/deploy-status)](https://app.netlify.com/sites/battlestax-tutorial/deploys)
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [ What can Netlify do for you](#README_Netlify.md)> ⚒️ **[Expose your "hello world" API](#)**
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What can Netlify do for you](#README_Netlify.md)> ⚒️ **[Expose your "hello world" API](#)**
 
 **Objectives**
 
-The REST API is `stateless`, and therefore helps functions scale horizontally. 
-
-In step 1 of the Battlestax tutorial, we will:
+The REST API is `stateless`, and therefore helps functions scale horizontally. Here we will:
 * Create test cases to check that our API call is working correctly
 * Build the API call to Astra to create a game document, based on the requirements from our test
 

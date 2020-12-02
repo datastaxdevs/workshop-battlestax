@@ -5,21 +5,16 @@
 [![Actions Status](https://github.com/DataStax-Academy/battlestax/workflows/BattleStax%20Tests/badge.svg)](https://github.com/DataStax-Academy/battlestax/actions)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e265340f-c6a6-4d7b-b24c-438b87c67876/deploy-status)](https://app.netlify.com/sites/battlestax-tutorial/deploys)
 
-⚒️ [Create a mock REST API with Netlify functions](./README_step01.md) > 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ **[Connect to your Astra database](#)** |  ***next=>** 📚 [What is Redux and React](./README_Redux_React.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ **[Connect to your Astra database](#)**
 
 ## Objectives
 
-```diff
-+ The REST API is stateless, and therefore helps functions scale horizontally. 
+The REST API is `stateless`, and therefore helps functions scale horizontally. 
 
 In step 2 of the Battlestax tutorial, we will:
-
-+ Create an Astra database to store game documents
-
-+ Create test cases to check that our API call is working correctly
- 
-+ Build the API call to Astra to create a game document, based on the requirements from our test
-```
+- Create an Astra database to store game documents
+- Create test cases to check that our API call is working correctly
+ - Build the API call to Astra to create a game document, based on the requirements from our test
 
 One of the first things we need to do is hook up the "plumbing" of our application to talk to our back-end services, namely, our Cassandra database with Astra and Netlify. Once this is in place, we are connected and ready to go with the services we need to power our app.
 
@@ -29,7 +24,7 @@ _ehem...for those of you familiar with Apache Cassandra, yes, I just said you co
 
 ![Document API Flow](./tutorial/document-api.png?raw=true)
 
-## 🗓️ Table of Contents
+**We will cover:**
 
 1. [Create your Astra instance](#1-create-your-astra-instance)
 2. [Setup your environment](#2-setup-your-environment)
@@ -44,6 +39,8 @@ For a **FULL** code solution to this section **`right-click`** the image below a
 [![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/2/files)
 
 **_Don't forget to SAVE your changes or enable autosave in GitPod._**
+
+---
 
 ## 1. Create your Astra instance
 
@@ -143,9 +140,11 @@ You should now have something like
 
 ![Netlify Setup Example](./tutorial/netlify-createsite-6.png?raw=true)
 
-TODO: Finish this section with save 
+```diff
+- TODO: Finish this section with save 
+```
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 ## 3. Creating the `insertGame` Netlify endpoint
 
@@ -190,7 +189,7 @@ Let's not forget about error handling. If we cannot parse the game id or body fr
 
 All this should statisfy our second test ( we need to get valid game id)
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 ## 4. Connect to Astra
 
@@ -214,7 +213,7 @@ const gamesCollection = astraClient
   .namespace(process.env.ASTRA_DB_KEYSPACE)
   .collection(process.env.GAMES_COLLECTION);
 ```
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 ## 5. Hook it all together
 
@@ -301,7 +300,7 @@ npm run test:functions
 
 ![test functions output](./tutorial/step-1-test-functions.png)
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 ## 7. Merge back to master
 
@@ -309,12 +308,13 @@ Now that we've updated our code we need to push these changes back to master and
 
 📘 **Commands to execute**
 
-`git add functions/insertGame.js`<br/>
-`git commit -m "Merging step2 into master"`<br/>
-`git push`<br/>
+```bash
+git add functions/insertGame.js
+git commit -m "Merging step2 into master
+git push
+```
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
-**Click** below to move to the next section.
-
-⚒️ [Create a mock REST API with Netlify functions](./README_step01.md) > 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ **[Connect to your Astra database](#)** |  ***next=>** 📚 [What is Redux and React](./README_Redux_React.md)*
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** 📚 [What is Redux and React](./README_Redux_React.md)*
