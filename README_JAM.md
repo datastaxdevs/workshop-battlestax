@@ -8,6 +8,7 @@ If you are already familiar with **JAMStack** and just want to move on to the fi
 2. [Why this is cool ?](#2-why-this-is-cool-)
 3. [Introduction to Netlify](#3-introduction-to-netlify)
 4. [Want to learn more ?](#4-want-to-learn-more-)
+---
 
 ## 1. Introduction to the JAMStack
 
