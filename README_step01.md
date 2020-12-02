@@ -5,26 +5,25 @@
 [![Actions Status](https://github.com/DataStax-Academy/battlestax/workflows/BattleStax%20Tests/badge.svg)](https://github.com/DataStax-Academy/battlestax/actions) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e265340f-c6a6-4d7b-b24c-438b87c67876/deploy-status)](https://app.netlify.com/sites/battlestax-tutorial/deploys)
 
-⚒️ [Setup and deploy your first app](./README_step00.md) > 📚 [What can Netlify do for you](./README_Netlify.md) > ⚒️ **[Create a mock REST API with Netlify functions](#)** |  ***next=>**  📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [ What can Netlify do for you](#README_Netlify.md)> ⚒️ **[Expose your "hello world" API](#)**
 
-## Objectives
+**Objectives**
 
-```diff
-+ The REST API is stateless, and therefore helps functions scale horizontally. 
+The REST API is `stateless`, and therefore helps functions scale horizontally. 
 
 In step 1 of the Battlestax tutorial, we will:
+* Create test cases to check that our API call is working correctly
+* Build the API call to Astra to create a game document, based on the requirements from our test
 
-+ Create test cases to check that our API call is working correctly
- 
-+ Build the API call to Astra to create a game document, based on the requirements from our test
-```
 
-## 🗓️ Table of Contents
+**What we will cover:**
 
 1. [Setup your environment](#1-setup-your-environment)
 2. [Make a serverless endpoint using Netlify functions](#2-make-a-serverless-endpoint-using-netlify-functions)
 3. [Merge back to master](#3-merge-back-to-master)
 4. [Check your deployment in Netlify](#4-check-your-deployment-in-netlify)
+
+---
 
 ## 1. Setup your environment
 
@@ -257,7 +256,6 @@ Before moving on, take a moment to let this sink in. You just deployed an app wi
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
-**Click** below to move to the next section.
-
-⚒️ [Setup and deploy your first app](./README_step00.md) > 📚 [What can Netlify do for you](./README_Netlify.md) > ⚒️ **[Create a mock REST API with Netlify functions](#)** |  ***next=>**  📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md)*
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** 📚 [What are DataStax Astra and Stargate](./README_Astra_Stargate.md)
 
