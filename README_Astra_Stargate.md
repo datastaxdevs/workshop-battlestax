@@ -1,20 +1,22 @@
 # 📚 What are DataStax Astra and Stargate
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What are DataStax Astra and Stargate](#README_Astra_Stargate.md)**
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **Step2 - [What are DataStax Astra and Stargate](#README_Astra_Stargate.md)**
 
-If you are already familiar with **DataStax Astra and Stargate** and just want to move on to the next exercise go to section => *[Connect to your Astra database](./README_step02.md)*. Otherwise, read on.
+If you are already familiar with **DataStax Astra and Stargate** and just want to move on to the next exercise go to
+**next section** => [Connect to your Astra database](./README_step02.md). Otherwise, read on.
 
+We will cover:
 1. [Introduction to Astra](#1-introduction-to-astra-db)
 2. [Introduction to Stargate](#2-introduction-to-stargate)
-3. [Want to know More](#3-want-to-know-more)
+3. [Want to know More](#3-want-to-know-more-)
 
 ## 1. Introduction to Astra DB
-
-> *Sources [Astra Documentation](https://docs.astra.datastax.com/docs)*
 
 ![](./tutorial/astra.png?raw=true)
 
 **`NoSQL Database Apache Cassandra as-a-service + DevTools`**
+
+> *Sources [Astra Documentation](https://docs.astra.datastax.com/docs)*
 
 DataStax Astra, built on the best distribution of Apache Cassandra™, provides the ability to develop and deploy data-driven applications with a cloud-native service, without the hassles of database and infrastructure administration. By automating tuning and configuration, DataStax Astra radically simplifies database operations.
 
@@ -22,12 +24,11 @@ DataStax Astra, built on the best distribution of Apache Cassandra™, provides 
 
 ## 2. Introduction to STARGATE
 
-> *Sources [Stargate Documentation](https://stargate.io/docs/stargate/0.1/concepts/concepts.html)*
-
 ![](./tutorial/stargate.png?raw=true)
 
-
 **`Data Gateway providing REST + GraphQL = Icluded in ASTR`A**
+
+> *Sources [Stargate Documentation](https://stargate.io/docs/stargate/0.1/concepts/concepts.html)*
 
 **Developers...**
 - Do you like learning query languages (CQL, N1QL, GQL, cypher, gremlin….) No. Save my JSON, give it to me back when I need it
@@ -57,4 +58,4 @@ Stargate is a framework used to customize all aspects of data access. It is depl
 
 **Click** below to move to the next section.
 
-📚 [What can Netlify do for you](./README_Netlify.md) > ⚒️ [Create a mock REST API with Netlify functions](./README_step01.md) > 📚 **[What is DataStax Astra and Stargate](#)** |  ***next=>** ⚒️ [Connect to your Astra database](./README_step02.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > **Step 2 - ⚒️ [Implement a CRUD Api in Astra ](./README_step02.md)**
