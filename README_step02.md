@@ -7,7 +7,7 @@
 
 🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ **[Connect to your Astra database](#)**
 
-## Objectives
+**Objectives**
 
 The REST API is `stateless`, and therefore helps functions scale horizontally. 
 
@@ -16,13 +16,6 @@ In step 2 of the Battlestax tutorial, we will:
 - Create test cases to check that our API call is working correctly
  - Build the API call to Astra to create a game document, based on the requirements from our test
 
-One of the first things we need to do is hook up the "plumbing" of our application to talk to our back-end services, namely, our Cassandra database with Astra and Netlify. Once this is in place, we are connected and ready to go with the services we need to power our app.
-
-We will also be making use of the Document API to connect to our Astra database. Stargate API framework allows developers the freedom to access Astra with a variety of APIs, the Document API being one. With the Document API, you can save and search schemaless JSON documents in Cassandra. No need to use SQL, CQL, or any database drivers to talk to the data layer. Just code and move on.
-
-_ehem...for those of you familiar with Apache Cassandra, yes, I just said you could skip data modeling._
-
-![Document API Flow](./tutorial/document-api.png?raw=true)
 
 **We will cover:**
 
@@ -33,6 +26,14 @@ _ehem...for those of you familiar with Apache Cassandra, yes, I just said you co
 5. [Hook it all together](#5-hook-it-all-together)
 6. [Running TDD tests](#6-running-tdd-tests)
 7. [Merge back to master](#7-merge-back-to-master)
+
+One of the first things we need to do is hook up the "plumbing" of our application to talk to our back-end services, namely, our Cassandra database with Astra and Netlify. Once this is in place, we are connected and ready to go with the services we need to power our app.
+
+We will also be making use of the Document API to connect to our Astra database. Stargate API framework allows developers the freedom to access Astra with a variety of APIs, the Document API being one. With the Document API, you can save and search schemaless JSON documents in Cassandra. No need to use SQL, CQL, or any database drivers to talk to the data layer. Just code and move on.
+
+_ehem...for those of you familiar with Apache Cassandra, yes, I just said you could skip data modeling._
+
+![Document API Flow](./tutorial/document-api.png?raw=true)
 
 For a **FULL** code solution to this section **`right-click`** the image below and choose **`Open Link in New Tab`**.
 
@@ -317,4 +318,4 @@ git push
 ### [🔝](#)
 
 ---
-🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** 📚 [What is Redux and React](./README_Redux_React.md)*
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** 📚 [What is Redux and React](./README_Redux_React.md)
