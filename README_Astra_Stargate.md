@@ -3,12 +3,14 @@
 🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **Step2 - [What are DataStax Astra and Stargate](#README_Astra_Stargate.md)**
 
 If you are already familiar with **DataStax Astra and Stargate** and just want to move on to the next exercise go to
-**next section** => [Connect to your Astra database](./README_step02.md). Otherwise, read on.
+**next section** => [Implement a CRUD Api in Astra ](./README_step02.md). Otherwise, read on.
 
 We will cover:
 1. [Introduction to Astra](#1-introduction-to-astra-db)
 2. [Introduction to Stargate](#2-introduction-to-stargate)
 3. [Want to know More](#3-want-to-know-more-)
+
+---
 
 ## 1. Introduction to Astra
 
