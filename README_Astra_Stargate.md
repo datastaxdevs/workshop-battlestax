@@ -48,14 +48,12 @@ especially with datasets and integration tests
 
 Stargate is a framework used to customize all aspects of data access. It is deployed between client applications and a database to provide an abstraction layer that can be used to shape your data access to fit your application’s needs.
 
-
-
 ## 3. Want to know more ?
 
-- Official Stargate WebSite [Stargate.io](http://stargate.io)
-- [Stargate DISCORD](http://stargate.io)
-- Astra Portal [astra.datastax.com](astra.datastax.com)
-- Official K8ssandra website [k8ssandra.io](http://k8ssandra.io)
+- 📄 Official **Stargate** WebSite [Stargate.io](http://stargate.io)
+- 📄 [Stargate DISCORD](http://stargate.io)
+- 📄 Astra Portal [astra.datastax.com](astra.datastax.com)
+- 📄 Official **K8ssandra** website [k8ssandra.io](http://k8ssandra.io)
 
 **Click** below to move to the next section.
 
