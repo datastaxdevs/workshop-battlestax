@@ -110,7 +110,7 @@ Finally, let's show any errors
 
 ### [🔝](#)
 
-## 4. Running TDD tests
+## 5. Running TDD tests
 
 We are provided with test case `src/pages/Lobby/NewGame/NewGame.test.js`. This test will check to see if our `NewGame` compenent renders properly. The <Provider> is used to make that store available to our component tree.
 
@@ -141,5 +141,5 @@ npm test src/pages/lobby/NewGame/NewGame.test.js
 ### [🔝](#)
 
 ---
-🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section =>[What's next](./README_Resources.md)
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section =>[Extra Resources and certifications](./README_Resources.md)
 
