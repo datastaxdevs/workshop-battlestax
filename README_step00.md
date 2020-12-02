@@ -7,10 +7,8 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 **We will cover:**
 
 1. [Create your `BattleStax` repository](#1-create-your-battlestax-repository)
-2. [Create your Astra instance](#2-create-your-astra-instance)
-3. [Setup Netlify account](#3-setup-netlify-account)
-4. [Setup for Production CI/CD](#4-setup-for-production-cicd)
-5. [Setup your development environment](#5-setup-your-development-environment)
+2. [Setup `Netlify` account](#2-setup-netlify-account)
+3. [Setup your development environment](#3-setup-your-development-environment) (local or cloud)
 
 ![Template CTRL click](./tutorial/architecture2.png?raw=true)
 
@@ -38,19 +36,19 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
-## 3. Setup Netlify account
+## 2. Setup Netlify account
 
-|**✅ Step 3a. Setup a Netlify account**<br/>![.](./tutorial/line.png?raw=true)|
+|**✅ Step 2a. Setup a Netlify account**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>🖱️ Click me to show details</i></summary><br />- Using the link [HERE](https://www.netlify.com), sign up for a new account and follow **Netlify's** instructions to create a **`New Site from Git`** (_you must be logged in to see this option_).<br /><br />![Netlify Setup Example](./tutorial/netlify-signin.png?raw=true)<br />- Once signed in, you should land on the following page.<br /><br />![Netlify Setup Example](./tutorial/netlify-empty.png?raw=true)<br /></details>|
 
-|**✅ Step 3b. Create a new site**<br/>![.](./tutorial/line.png?raw=true)|
+|**✅ Step 2b. Create a new site**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>🖱️ Click me to show details</i></summary><br/>Move to the `Sites` tab and Click the `New site from git` button.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-1.png?raw=true)<br/><br/>On the new page select `Github` and locate the proper repository in your github Account.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-2.png?raw=true)<br/><br/>After allowing the `Netlify` application on Github select the `BattleStax` repository.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-3.png?raw=true)<br/><br/>Use all of the defaults for `Basic Build Settings`<br/>![Netlify Setup Example](./tutorial/netlify-createsite-4.png?raw=true)<br/><br/></details>|
 
-|**✅ Step 3c. Deploy your site**<br/>![.](./tutorial/line.png?raw=true)|
+|**✅ Step 2c. Deploy your site**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>🖱️ Click me to show details</i></summary><br/>Click **`Deploy Site`** and once deployed copy the domain name of your new site from **Netlify**.<br/>![Netlify URL Example](https://raw.githubusercontent.com/kidrecursive/battlestax-tutorial/step-1/tutorial/netlify_url.png)<br/><br/>Finally, wait for deployment!<br/>![Netlify Setup Example](./tutorial/netlify-createsite-7.png?raw=true)<br/><br/>When your new site is ready, you will be able to go to: `<your_url>.netlify.app` to see your game.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-8.png?raw=true)<br/><br/>If you start new games it will create a new record in the database. If you want to validate this behavirour click on `START NEW GAME`<br/><br/>Open Astra UI, show the `CQL Console` and execute the following command (here *battlestax* is your keyspace and *games* your collection name - if you chose another names adapt the query accordingly).<br/><br/>📘 **Command to execute**<br/>`SELECT key, text_value FROM battlestax.games;`<br/><br/>You should have a result that looks like <br/>![Netlify Setup Example](./tutorial/netlify-createsite-9.png?raw=true)|
@@ -58,18 +56,18 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
 
-## 5. Setup your development environment
+## 3. Setup your development environment
 
 *To code during the workshop you can either use **your laptop** or a **Cloud-based IDE** named [Gitpod](gitpod.io) with everything installed. **Here we explain the Gitpod way**.*
 
 
-|**✅ Step 5_A3. Run the Tests**<br/>![.](./tutorial/line.png?raw=true)|
+|**✅ Step 3_A3. Run the Tests**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>Click to view the solution</i></summary><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the `package.json` file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/><br/>![Netlify Setup Example](./tutorial/gitpod-test.png?raw=true)</details>|
 
 
-|**✅ Step 5_A4. Start the application**![.](./tutorial/line.png?raw=true)|
+|**✅ Step 3_A4. Start the application**![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>Click to view the solution</i></summary><br/>✔ Start the application<br/><br/>📘 **Command to execute**<br/>`npm start`<br/><br/>✔  Hit the loading screen<br/>`https://3000-<your_uid>.<your_region>.gitpod.io/#/workspace/battlestax`![Netlify Setup Example](./tutorial/gitpod-start.png?raw=true)<br/><br/>**Done!** You have successfully set up your app, run your tests locally, and started BattleStax.</details>|
@@ -79,12 +77,12 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 ### Option B - LOCAL development environment
 
 
-|**✅ Step 5_B3. Run the Tests**![.](./tutorial/line.png?raw=true)|
+|**✅ Step 3_B3. Run the Tests**![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>Click to view the solution</i></summary><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the package.json file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/>![Netlify Setup Example](./tutorial/local-test.png?raw=true)</details>|
 
-|**✅ Step 5_B4. Start the application**![.](./tutorial/line.png?raw=true)|
+|**✅ Step 3_B4. Start the application**![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>Click to view the solution</i></summary><br/>✔  Start the application<br/><br/>📘 **Command to execute**<br/>`npm start`<br/><br/>✔ Hit the loading screen<br/>`http://localhost:3000/`<br/>![Netlify Setup Example](./tutorial/start-localhost.png?raw=true)<br/><br/>**Done!** You have successfully set up your app, run your tests locally, and started BattleStax.<br/><br/>![Netlify Setup Example](./tutorial/well-done.png?raw=true)</details>|
