@@ -1,5 +1,11 @@
 # 📚 Extra Resources and certifications
 
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **What's next - [Extra Resources and certification](#)**
+
+Congratulations, you made it to the last part. This is only the beginning we do have a lot of links for you.
+
+## Resources
+
 1. [Source code](https://github.com/DataStax-Academy/battlestax/tree/full-game) of the full game
 
 2. [Start Practical Trainings on [Datastax /Dev](https://www.datastax.com/dev) with Katacoda
@@ -10,8 +16,18 @@
 7. Our Astra Database today [Astra Database](http://dtsx.io/workshop)
 8. Documentation for [Astra JS SDK](https://github.com/kidrecursive/astrajs)
 
+## Certifications
 
+- **The Developer Certification** is designed for professionals that use Apache Cassandra clusters to manage data. This includes roles such as application developers, data architects, database designers, and database administrators.
 
-**Click** below to move to the next section.
+![](https://www.datastax.com/sites/default/files/inline-images/Developer%20Certification%20Badge%201.png)
+
+- **The Administrator Certification** is designed for professionals who install, configure, manage and tune the performance of Apache Cassandra clusters, such as database administrators, DevOps engineers and Site Reliability Engineers (SREs).
+
+![](https://www.datastax.com/sites/default/files/inline-images/Admin%20Certification%20Badge%201_0.png)
+
+[ENROLL NOW](https://www.datastax.com/dev/certifications)
+
+---
 
 ⚒️ [Create client State with Redux](./README_step03.md) > ⚒️ [Bind Redux to the User Interface](./README_step04.md) > ⚒️ **[What's next](#)** | **next=>**  *[Share the love](./README_Ending.md)*
