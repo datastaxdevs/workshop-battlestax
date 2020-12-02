@@ -50,11 +50,12 @@ Stargate is a framework used to customize all aspects of data access. It is depl
 
 
 
-## 3. Want to know more
+## 3. Want to know more ?
 
-## How does this work in our application ?
-
-## Want to learn more ?
+- Official Stargate WebSite [Stargate.io](http://stargate.io)
+- [Stargate DISCORD](http://stargate.io)
+- Astra Portal [astra.datastax.com](astra.datastax.com)
+- Official K8ssandra website [k8ssandra.io](http://k8ssandra.io)
 
 **Click** below to move to the next section.
 
