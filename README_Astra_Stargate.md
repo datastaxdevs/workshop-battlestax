@@ -10,7 +10,7 @@ We will cover:
 2. [Introduction to Stargate](#2-introduction-to-stargate)
 3. [Want to know More](#3-want-to-know-more-)
 
-## 1. Introduction to Astra DB
+## 1. Introduction to Astra
 
 ![](./tutorial/astra.png?raw=true)
 
@@ -26,7 +26,7 @@ DataStax Astra, built on the best distribution of Apache Cassandra™, provides 
 
 ![](./tutorial/stargate.png?raw=true)
 
-**`Data Gateway providing REST + GraphQL = Icluded in ASTR`A**
+**`Data Gateway providing REST + GraphQL = Included in ASTRA`**
 
 > *Sources [Stargate Documentation](https://stargate.io/docs/stargate/0.1/concepts/concepts.html)*
 
