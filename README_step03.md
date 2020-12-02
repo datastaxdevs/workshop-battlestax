@@ -67,7 +67,7 @@ export const slice = createSlice({
   },
 });
 ```
-
+**✅ Step 2a: Create the setID reduucer**
 
 First, we need to create a reducer that will allow us to modify the game id: 
 
@@ -79,6 +79,7 @@ setId: (state, action) => {
   state.id = action.payload;
 },
 ```
+**✅ Step 2b: Create the setIdError and setIdLoading reducers**
 
 Next, we need to create some reducers that will allow us to handle the API request changes: 
 
@@ -102,6 +103,8 @@ setIdLoading: (state, action) => {
 Now that we have a reducer, RTK will generate an action and a selector for us. 
 * An **action** is functions that call reducers. An action dispatches a state change event, then the reducer gets that event and figures out what to do with it
 * A **selector** (`selectId` in our case) is simply a function that accepts Redux state as an argument and returns data that is derived from that state. It is small function you write that can take the entire Redux state, and pick out a value from it. This will be useful in the next step of our app development.
+
+**✅ Step 3a: Export an action and a selector**
 
 Let's export the action and the selector for our game. We can call actions and selector from other places in out code base. This will be useful in the next step of our app development.
 
@@ -182,7 +185,7 @@ We call the `setId` reducer to set the game id as part of state. We get the game
 const resJson = await res.json();
 dispatch(setId(resJson.documentId));
 ```      
-While we are at it, let's be sure to handle any potential errors that may arise.
+While we are at it, let's be sure to handle any potential errors that may arise, and set them as a part of the state.
 
 📘 **Code to copy**
 
@@ -193,7 +196,7 @@ While we are at it, let's be sure to handle any potential errors that may arise.
 
 **✅ Step 4d: Set id state to not loading**
 
-Once the try block has executed
+Once the try block has executed, the id is no longer in a state of loading.
 
 📘 **Code to copy**
 
@@ -250,7 +253,7 @@ it("should set the game id error", () => {
   expect(selectGame(rootState).idError).toEqual("nope");
 });
 ```
-✔️  _TEST 5_: 
+✔️  _TEST 5_: This test goes through the process of creating a new game to ensure that it works.
 
 ```javascript
 it("should create a new game", async () => {
@@ -269,6 +272,7 @@ it("should create a new game", async () => {
   expect(selectGame(finalState).id).toEqual("DANG");
 });
 ```
+**✅ Step 1a: Test the gameSlice**
 
 Now, we can run our tests using `npm test src/store/gameSlice.test.js` to see that we have a functioning game slice.
 

@@ -45,6 +45,8 @@ React is a popular open-source, front end, JavaScript library for building user 
 
 In this step we will be working with `/src/pages/lobby/NewGame/NewGame.js`.In order to bind our React component to our Redux store, we need to import the items that we need:
 
+**✅ Step 2a: Create import statements**
+
 📘 **Code to copy**
 
 ```javascript
@@ -63,6 +65,8 @@ React Hooks allow you to access things like state, React lifecycle methods, and 
 
 `useDispatch()` is a React Hook that allows us to dispatch actions from our React component. Recall the `createGame` function we created in the last step.
 
+**✅ Step 3a: Connect to the store with a hook**
+
 📘 **Code to copy**
 
 ```javascript
@@ -75,6 +79,8 @@ const { id, idError, idLoading } = useSelector(selectGame);
 
 ## 4. Updating the UI
 
+**✅ Step 4a: Display game id in the UI**
+
 When our game id is set, we want to show it in the UI. If the `id` is present, it will be rendered in the view. If not, `"----"` will show up.
 
 📘 **Code to copy**
@@ -83,6 +89,8 @@ When our game id is set, we want to show it in the UI. If the `id` is present, i
 {/* let's display the game id */}
 {id || "----"}
 ```
+
+**✅ Step 4b: Enable create game button**
 
 We also need to change our button to create a new game and also make it disabled while a request is taking place. 
 
@@ -96,6 +104,8 @@ We also need to change our button to create a new game and also make it disabled
     dispatch(createGame());
   }} ...
 ```
+
+**✅ Step 4c: Show errors in the UI**
 
 Finally, let's show any errors
 
@@ -125,6 +135,8 @@ test("renders without crashing", () => {
   );
 });
 ```
+
+**✅ Step 5: Test the component**
 
 We can run our test to see if the compoenent renders successfully:
  
