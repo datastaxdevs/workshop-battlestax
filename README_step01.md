@@ -202,7 +202,7 @@ Using `Github UI`, merge your new branch to the master using a pull request.
 ✔️ Provide a comment and click `Create Pull Request`
 >![Netlify Setup Example](./tutorial/setup-github-5.png?raw=true)
 
-✔️ Once your test have passed, click on `Merge Pull Request`
+✔️ Once your tests have passed, click on `Merge Pull Request`
 >![Netlify Setup Example](./tutorial/setup-github-7.png?raw=true)
 
 ✔️ Click on `Confirm Merge`
@@ -252,6 +252,8 @@ Ok, that was arguably a lot of stuff, but we wanted to break down the process at
 * changes are automatically pushed to production
 
 In the future, we won't break it down quite so much, but feel free to use this section as a reference as we move forward.
+
+Before moving on, take a moment to let this sink in. You just deployed an app with a serverless function to production over a globally supported CDN using a full CI/CD pipeline all by merging your code into master. Boom!
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
