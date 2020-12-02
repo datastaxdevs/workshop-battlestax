@@ -5,19 +5,22 @@
 [![Actions Status](https://github.com/DataStax-Academy/battlestax/workflows/BattleStax%20Tests/badge.svg)](https://github.com/DataStax-Academy/battlestax/actions) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e265340f-c6a6-4d7b-b24c-438b87c67876/deploy-status)](https://app.netlify.com/sites/battlestax-tutorial/deploys)
 
-📚 [What is Redux and React](./README_Redux_React.md) > ⚒️ [Create client State with Redux](./README_step03.md) > ⚒️ **[Bind Redux to the User Interface](#)** | **next=>**  *[What's next](./README_Resources.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > ⚒️ [Create client State with Redux](./README_step03.md) > ⚒️ **[Bind Redux to the User Interface](#)**
 
-## Objectives
+**Objectives**
 
-```diff
-+ React is a great way to build a UI, but we need to connect it to our game state.
+React is a great way to build a UI, but we need to connect it to our game state.
 
-In step 4 of the Battlestax tutorial, we will:
-
+In this **step 4** we will:
 + Build out the NewGame.js component by connecting it to redux.
- 
 + Build a test to try out the functionality of NewGame.js
-```
+
+**We will cover:**
+1. [Setup your environment](#1-setup-your-environment)
+2. [Import our Redux artifacts](#2-import-our-redux-artifacts)
+3. [Use hooks to connect our compoonent to our Redux Store](#3-use-hooks-to-connect-our-compoonent-to-our-redux-store)
+4. [Updating the UI](#4-updating-the-ui)
+5. [Running TDD tests](#5-running-tdd-tests)
 
 React is a popular open-source, front end, JavaScript library for building user interfaces or UI components. React makes user interfaces very easy to build by cutting each page into pieces called **components**. A React component is a bit of code that represents a piece of the page. Each component is a JavaScript function that returns a piece of code that represents a piece of a web page.
 
@@ -25,13 +28,7 @@ React is a popular open-source, front end, JavaScript library for building user 
 
 ![hooks](./tutorial/hooks.png)
 
-## 🗓️ Table of Contents
-1. [Setup your environment](#1-setup-your-environment)
-2. [Import our Redux artifacts](#2-import-our-redux-artifacts)
-3. [Use hooks to connect our compoonent to our Redux Store](#3-use-hooks-to-connect-our-compoonent-to-our-redux-store)
-4. [Updating the UI](#4-updating-the-ui)
-5. [Running TDD tests](#5-running-tdd-tests)
-
+---
 
 ## 1. Setup your environment
 
@@ -56,7 +53,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectGame, createGame } from "../../../store/gameSlice";
 ```
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 ## 3. Use hooks to connect our compoonent to our Redux Store
 
@@ -74,7 +71,7 @@ const dispatch = useDispatch();
 const { id, idError, idLoading } = useSelector(selectGame);
 ```
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 ## 4. Updating the UI
 
@@ -111,9 +108,9 @@ Finally, let's show any errors
 )}
 ```
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
-## 4. Running TDD tests
+## 5. Running TDD tests
 
 We are provided with test case `src/pages/Lobby/NewGame/NewGame.test.js`. This test will check to see if our `NewGame` compenent renders properly. The <Provider> is used to make that store available to our component tree.
 
@@ -141,9 +138,8 @@ npm test src/pages/lobby/NewGame/NewGame.test.js
 
 ![.](tutorial/new-game-test.png)
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
-**Click** below to move to the next section.
-
-📚 [What is Redux and React](./README_Redux_React.md) > ⚒️ [Create client State with Redux](./README_step03.md) > ⚒️ **[Bind Redux to the User Interface](#)** | **next=>**  *[What's next](./README_Resources.md)*
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section =>[Extra Resources and certifications](./README_Resources.md)
 

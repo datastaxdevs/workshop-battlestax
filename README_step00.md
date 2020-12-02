@@ -1,17 +1,18 @@
 # ⚒️ Setup and deploy your first app
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is the JAMStack](./README_JAM.md) > ⚒️ **[Setup and deploy your first app](#)** |  **next=>**  📚 *[What can Netlify do for you](./README_Netlify.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is the JAMStack](./README_JAM.md) > ⚒️ **[Setup and deploy your first app](#)**
 
 This is arguably the biggest step in the whole workshop. Once you get your tools and environment setup you'll be good to go, not just for this workshop, but for your own **JAMStack** applications moving forward. Just repeat the process for your own application repositories.
 
-![Template CTRL click](./tutorial/tools.png?raw=true)
+**We will cover:**
 
-## 🗓️ Table of Contents
 1. [Create your `BattleStax` repository](#1-create-your-battlestax-repository)
-2. [Create your Astra instance](#2-create-your-astra-instance)
-3. [Setup Netlify account](#3-setup-netlify-account)
-4. [Setup for Production CI/CD](#4-setup-for-production-cicd)
-5. [Setup your development environment](#5-setup-your-development-environment)
+2. [Setup `Netlify` account](#2-setup-netlify-account)
+3. [Setup your development environment](#3-setup-your-development-environment) (local or cloud)
+
+![Template CTRL click](./tutorial/architecture2.png?raw=true)
+
+---
 
 ## 1. Create your `BattleStax` repository
 
@@ -35,19 +36,19 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
-## 3. Setup Netlify account
+## 2. Setup Netlify account
 
-|**✅ Step 3a. Setup a Netlify account**<br/>![.](./tutorial/line.png?raw=true)|
+|**✅ Step 2a. Setup a Netlify account**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>🖱️ Click me to show details</i></summary><br />- Using the link [HERE](https://www.netlify.com), sign up for a new account and follow **Netlify's** instructions to create a **`New Site from Git`** (_you must be logged in to see this option_).<br /><br />![Netlify Setup Example](./tutorial/netlify-signin.png?raw=true)<br />- Once signed in, you should land on the following page.<br /><br />![Netlify Setup Example](./tutorial/netlify-empty.png?raw=true)<br /></details>|
 
-|**✅ Step 3b. Create a new site**<br/>![.](./tutorial/line.png?raw=true)|
+|**✅ Step 2b. Create a new site**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>Move to the `Sites` tab and Click the `New site from git` button.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-1.png?raw=true)<br/><br/>On the new page select `Github` and locate the proper repository in your github Account.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-2.png?raw=true)<br/><br/>After allowing the `Netlify` application on Github select the `BattleStax` repository.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-3.png?raw=true)<br/><br/>Use all of the defaults for `Basic Build Settings`<br/>![Netlify Setup Example](./tutorial/netlify-createsite-4.png?raw=true)<br/><br/>Click `Show advanced` to enter the following variables:<br/><br/> 🟢 `ASTRA_DB_USERNAME` as `battle_user` *(The user name we defined when creation the Astra instance)*<br/><br/>🟢 `ASTRA_DB_PASSWORD` as `battle_password1` *(The password we defined when creation the Astra instance)*<br/><br/> 🟢 `ASTRA_DB_KEYSPACE` as `battlestax` *(The keyspace we defined when creation the Astra instance)*<br/><br/>🟢 `ASTRA_DB_ID` as the cluster ID of your Astra DB. To get your database ID and region go the ASTRA summary page. Locate the cluster ID and copy it by clicking the clickboard icon as showed below. <br/>![Netlify Setup Example](./tutorial/netlify-createsite-5.png?raw=true)<br/><br/>🟢 `ASTRA_DB_REGION` as the region you picked when creating the DB, It should be either `us-east-1` or `europe-west1`.<br/><br/>🟢 `GAMES_COLLECTION` as `games` _(this is the collection where we will store all values)_<br/><br/>You should now have something like<br/>![Netlify Setup Example](./tutorial/netlify-createsite-6.png?raw=true)<br/></details>|
+|<details><summary><i>🖱️ Click me to show details</i></summary><br/>Move to the `Sites` tab and Click the `New site from git` button.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-1.png?raw=true)<br/><br/>On the new page select `Github` and locate the proper repository in your github Account.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-2.png?raw=true)<br/><br/>After allowing the `Netlify` application on Github select the `BattleStax` repository.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-3.png?raw=true)<br/><br/>Use all of the defaults for `Basic Build Settings`<br/>![Netlify Setup Example](./tutorial/netlify-createsite-4.png?raw=true)<br/><br/></details>|
 
-|**✅ Step 3c. Deploy your site**<br/>![.](./tutorial/line.png?raw=true)|
+|**✅ Step 2c. Deploy your site**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>🖱️ Click me to show details</i></summary><br/>Click **`Deploy Site`** and once deployed copy the domain name of your new site from **Netlify**.<br/>![Netlify URL Example](https://raw.githubusercontent.com/kidrecursive/battlestax-tutorial/step-1/tutorial/netlify_url.png)<br/><br/>Finally, wait for deployment!<br/>![Netlify Setup Example](./tutorial/netlify-createsite-7.png?raw=true)<br/><br/>When your new site is ready, you will be able to go to: `<your_url>.netlify.app` to see your game.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-8.png?raw=true)<br/><br/>If you start new games it will create a new record in the database. If you want to validate this behavirour click on `START NEW GAME`<br/><br/>Open Astra UI, show the `CQL Console` and execute the following command (here *battlestax* is your keyspace and *games* your collection name - if you chose another names adapt the query accordingly).<br/><br/>📘 **Command to execute**<br/>`SELECT key, text_value FROM battlestax.games;`<br/><br/>You should have a result that looks like <br/>![Netlify Setup Example](./tutorial/netlify-createsite-9.png?raw=true)|
@@ -55,37 +56,18 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
 
-## 4. Setup for Production CI/CD
-
-Every application should have a CI/CD *(**C**ontinuous **I**ntegration, **C**ontinuous **D**eployment)* pipeline. This allows for quick iteration of changes to production deployment by taking advantage of automation and tests to ensure everything is working properly. 
-
-After each commit a workflow is initialized to BUILD your project, EXECUTE tests and DEPLOY to netlify.  The good thing is many CI/CD tools are provided right within **GitHub**. Adding this capability just takes a couple steps.
-
-|**✅ Step 4a. Add secret variables**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>Remember those variables when we configured **Netlify**? We need to add the same ones to our **GitHub** repository.<br/><br/>Within **YOUR** Battlestax repository click on **`Settings`** in the top toolbar, choose **`Secrets`** from the menu on the left, and finally click the **`New secret`** button on the top right of the page. Add a secret for each of the variables we used earlier.<br/><br/>You notice that those are the same as used by netlify. Github will populate them at deploy time.<br/>`ASTRA_DB_USERNAME=battle_user`<br/>`ASTRA_DB_PASSWORD=battle_password1`<br/>`ASTRA_DB_KEYSPACE=battlestax`<br/>`ASTRA_DB_ID=[check Step3b]`<br/>`ASTRA_DB_REGION=[check Step3b]`<br/>`GAMES_COLLECTION=games`<br/><br/>*That should look like:*<br/>![Netlify Setup Example](./tutorial/setup-github-1.png?raw=true)<br/></details>|
-
-### [🔝](#%EF%B8%8F-table-of-contents)
-
-## 5. Setup your development environment
+## 3. Setup your development environment
 
 *To code during the workshop you can either use **your laptop** or a **Cloud-based IDE** named [Gitpod](gitpod.io) with everything installed. **Here we explain the Gitpod way**.*
 
 
-|**✅ Step 5_A2. Define environment variables**<br/>![.](./tutorial/line.png?raw=true)|
+|**✅ Step 3_A3. Run the Tests**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>Click to view the solution</i></summary><br/>✔  Copy and paste the contents of the `.env.template` file into an `.env` file:<br/><br/>📘 **Command to execute**<br/>`cat .env.example > .env`<br/><br/>✔ The `.env` file allows us to customize our own environmental variables. We set our Astra credentials to env variables, which are outside of our program. Fill in the `.env` file variables with the Astra variables you made a copy of earlier:<br/>`ASTRA_DB_USERNAME=battle_user`<br/>`ASTRA_DB_PASSWORD=battle_password1`<br/>`ASTRA_DB_KEYSPACE=battlestax`<br/>`ASTRA_DB_ID=[cf bloc 3b]`<br/>`ASTRA_DB_REGION=[cf bloc 3b]`<br/>`GAMES_COLLECTION=games`<br/><br/>![Netlify Setup Example](./tutorial/gitpod-env.png?raw=true)</details>|
+|<details><summary><i>Click to view the solution</i></summary><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the `package.json` file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/><br/>![Netlify Setup Example](./tutorial/gitpod-test.png?raw=true)</details>|
 
 
-|**✅ Step 5_A3. Run the Tests**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>Click to view the solution</i></summary><br/>✔ At initialization gitpod has download dependencies already (you should have the `node_modules` folder already there. Still, check dependencies are installed with :<br/><br/>📘 **Command to execute**<br/>`npm install`<br/><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the `package.json` file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/><br/>![Netlify Setup Example](./tutorial/gitpod-test.png?raw=true)</details>|
-
-
-|**✅ Step 5_A4. Start the application**![.](./tutorial/line.png?raw=true)|
+|**✅ Step 3_A4. Start the application**![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>Click to view the solution</i></summary><br/>✔ Start the application<br/><br/>📘 **Command to execute**<br/>`npm start`<br/><br/>✔  Hit the loading screen<br/>`https://3000-<your_uid>.<your_region>.gitpod.io/#/workspace/battlestax`![Netlify Setup Example](./tutorial/gitpod-start.png?raw=true)<br/><br/>**Done!** You have successfully set up your app, run your tests locally, and started BattleStax.</details>|
@@ -94,24 +76,16 @@ After each commit a workflow is initialized to BUILD your project, EXECUTE tests
 
 ### Option B - LOCAL development environment
 
-|**✅ Step 5_B2. Define environment variables**![.](./tutorial/line.png?raw=true)|
+
+|**✅ Step 3_B3. Run the Tests**![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>Click to view the solution</i></summary><br/>✔  Copy and paste the contents of the `.env.template` file into an `.env` file:<br/><br/>📘 **Command to execute**<br/>`cp .env.template .env`<br/><br/>✔ The `.env` file allows us to customize our own environmental variables. We set our Astra credential to env variable, which are outside of our program. Fill in the `.env` file variables with the Astra variables you made a copy of earlier:<br/>`ASTRA_DB_USERNAME=battle_user`<br/>`ASTRA_DB_PASSWORD=battle_password1`<br/>`ASTRA_DB_KEYSPACE=battlestax`<br/>`ASTRA_DB_ID=[cf bloc 3b]`<br/>`ASTRA_DB_REGION=[cf bloc 3b]`<br/>`GAMES_COLLECTION=games`</details>|
+|<details><summary><i>Click to view the solution</i></summary><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the package.json file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/>![Netlify Setup Example](./tutorial/local-test.png?raw=true)</details>|
 
-|**✅ Step 5_B3. Run the Tests**![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>Click to view the solution</i></summary><br/>✔ Install Battlestax Dependencies. These are specified in the `package.json` file.<br/><br/>📘 **Command to execute**<br/>`npm install`<br/><br/>✔ Run the provided test on the master branch. The behavior of `npm test` is also specified in the package.json file.<br/><br/>📘 **Command to execute**<br/>`npm test`<br/>![Netlify Setup Example](./tutorial/local-test.png?raw=true)</details>|
-
-|**✅ Step 5_B4. Start the application**![.](./tutorial/line.png?raw=true)|
+|**✅ Step 3_B4. Start the application**![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
 |<details><summary><i>Click to view the solution</i></summary><br/>✔  Start the application<br/><br/>📘 **Command to execute**<br/>`npm start`<br/><br/>✔ Hit the loading screen<br/>`http://localhost:3000/`<br/>![Netlify Setup Example](./tutorial/start-localhost.png?raw=true)<br/><br/>**Done!** You have successfully set up your app, run your tests locally, and started BattleStax.<br/><br/>![Netlify Setup Example](./tutorial/well-done.png?raw=true)</details>|
 
-
-![.](./tutorial/line.png)
-
-**Click** below to move to the next section.
-
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is the JAMStack](./README_JAM.md) > ⚒️ **[Setup and deploy your first app](#)** |  **next=>** 📚 *[What can Netlify do for you](./README_Netlify.md)*
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** 📚 [What can Netlify do for you](./README_Netlify.md)

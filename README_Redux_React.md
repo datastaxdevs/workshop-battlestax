@@ -1,19 +1,29 @@
 # 📚 What are Redux and React
 
-📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ [Connect to your Astra database](./README_step02.md) > 📚 **[What is Redux and React](#)** |  **next=>** ⚒️ *[Create client State with Redux](./README_step03.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **Step3 - [What are Redux and React](#)**
 
-If you are already familiar with **Redux and React** and just want to move on to the next exercise go to section [*=> Create client State with Redux*](./README_step03.md). Otherwise, read on.
+If you are already familiar with **Redux and React** and just want to move on to the next exercise go to section ⚒️ [=> Create client State with Redux](./README_step03.md). Otherwise, read on.
 
-## What is Redux ? 
+**We will cover:**
+
+1. [What is Redux ? ](#1-what-is-redux-)
+2. [What is React ?](#2-what-is-react-)
+3. [How do they work together ?](#3-how-do-they-work-together-)
+4. [Why this is cool ?](#4-why-this-is-cool-)
+5. [How does this work in our application ?](#5-how-does-this-work-in-our-application-)
+6. [Want to learn more ?](#6-want-to-learn-more-)
+
+---
+
+## 1. What is Redux ? 
 
 Redux is a JavaScript library that is used mostly for application state management. To summarize it, Redux maintains the state of an entire application in a single immutable state tree (object), which can’t be changed directly. When something changes, a new object is created (using actions and reducers). 
-
 
 ![redux-lifecycle](./tutorial/redux-lifecycle.png)
 
 It has a global state provider which is known as store which contains the entire state logic of your application.This has a huge advantage in the sense that there is a single source of truth for state and it is globally accessible throughout your application.
 
-## What is React ? 
+## 2. What is React ? 
 
 React is a fast, component-based, front-end JavaScript library. React typically runs in your browser and renders single-page web application user interfaces
 
@@ -25,7 +35,7 @@ It provides two major mechanisms for providing data to components: props and sta
 
 Since state is a very powerful mechanism for building dynamic React apps, proper state management is paramount.
 
-## How do they work together ?
+## 3. How do they work together ?
 
 Before we start, here is a very quick intro to how React and Redux work together.
 
@@ -35,12 +45,9 @@ The Redux Store keeps the application state. This state can be updated by dispat
 
 React lets you build components that react to changes of the application state. Components affected by a state change are re-rendered with the new data. Components also dispatch actions, for example when a button is clicked.
 
+## 4. Why this is cool ?
 
-
-## Why this is cool ?
-
-
- Whenever Redux is involved, React container components don’t communicate directly between each other by passing in callbacks and props down the tree.
+Whenever Redux is involved, React container components don’t communicate directly between each other by passing in callbacks and props down the tree.
 This is the rough flow proposed by Redux:
 1. Components are given callback functions as props, which they call whenever a UI event happens.
 2. Those callbacks create and dispatch actions based on the event.
@@ -50,11 +57,17 @@ This is the rough flow proposed by Redux:
 
 ![component-state-change](./tutorial/component-state-change.png)
 
+## 5. How does this work in our application ?
 
-## How does this work in our application ?
+```diff
+- todo
+```
 
-## Want to learn more ?
+## 6. Want to learn more ?
 
-**Click** below to move to the next section.
+```diff
+- todo
+```
 
-📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md) > ⚒️ [Connect to your Astra database](./README_step02.md) > 📚 **[What is Redux and React](#)** |  **next=>** ⚒️ *[Create client State with Redux](./README_step03.md)*
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** ⚒️ [Create client State with Redux](./README_step03.md)

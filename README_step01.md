@@ -5,26 +5,23 @@
 [![Actions Status](https://github.com/DataStax-Academy/battlestax/workflows/BattleStax%20Tests/badge.svg)](https://github.com/DataStax-Academy/battlestax/actions) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e265340f-c6a6-4d7b-b24c-438b87c67876/deploy-status)](https://app.netlify.com/sites/battlestax-tutorial/deploys)
 
-⚒️ [Setup and deploy your first app](./README_step00.md) > 📚 [What can Netlify do for you](./README_Netlify.md) > ⚒️ **[Create a mock REST API with Netlify functions](#)** |  ***next=>**  📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What can Netlify do for you](#README_Netlify.md)> ⚒️ **[Expose your "hello world" API](#)**
 
-## Objectives
+**Objectives**
 
-```diff
-+ The REST API is stateless, and therefore helps functions scale horizontally. 
+The REST API is `stateless`, and therefore helps functions scale horizontally. Here we will:
+* Create test cases to check that our API call is working correctly
+* Build the API call to Astra to create a game document, based on the requirements from our test
 
-In step 1 of the Battlestax tutorial, we will:
 
-+ Create test cases to check that our API call is working correctly
- 
-+ Build the API call to Astra to create a game document, based on the requirements from our test
-```
-
-## 🗓️ Table of Contents
+**What we will cover:**
 
 1. [Setup your environment](#1-setup-your-environment)
 2. [Make a serverless endpoint using Netlify functions](#2-make-a-serverless-endpoint-using-netlify-functions)
 3. [Merge back to master](#3-merge-back-to-master)
 4. [Check your deployment in Netlify](#4-check-your-deployment-in-netlify)
+
+---
 
 ## 1. Setup your environment
 
@@ -39,7 +36,7 @@ In step 1 of the Battlestax tutorial, we will:
 |**✅ Step A. Launch gitpod**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>Click to view the solution</i></summary><br/> ✔ Gitpod is a cloud based IDE based on Eclipse Theia very similar to VSCode. You need to authenticate with your github account but then GitPod will initialized you workspace, building the solution.To initialize your environment click on the button below (CTRL + Click to open in new tab)<br/>[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)<br/><br/>Target urls are dynamic and look like `https://<your_uid>.<your_region>.gitpod.io/#/workspace/battlestax`<br/>![Netlify Setup Example](./tutorial/gitpod-welcome.png?raw=true)</details>|
+|<details><summary><i>Click to view the solution</i></summary><br/> ✔ Gitpod is a cloud based IDE based on Eclipse Theia very similar to VSCode. You need to authenticate with your github account but then GitPod will initialized you workspace, building the solution.To initialize your environment click on the button below (CTRL + Click to open in new tab)<br/>[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)<br/><br/>✔ At initialization gitpod has download dependencies already (you should have the `node_modules` folder already there.<br/><br/>Target urls are dynamic and look like `https://<your_uid>.<your_region>.gitpod.io/#/workspace/battlestax`<br/>![Netlify Setup Example](./tutorial/gitpod-welcome.png?raw=true)</details>|
 
 # OR
 
@@ -202,7 +199,7 @@ Using `Github UI`, merge your new branch to the master using a pull request.
 ✔️ Provide a comment and click `Create Pull Request`
 >![Netlify Setup Example](./tutorial/setup-github-5.png?raw=true)
 
-✔️ Once your test have passed, click on `Merge Pull Request`
+✔️ Once your tests have passed, click on `Merge Pull Request`
 >![Netlify Setup Example](./tutorial/setup-github-7.png?raw=true)
 
 ✔️ Click on `Confirm Merge`
@@ -253,9 +250,10 @@ Ok, that was arguably a lot of stuff, but we wanted to break down the process at
 
 In the future, we won't break it down quite so much, but feel free to use this section as a reference as we move forward.
 
+Before moving on, take a moment to let this sink in. You just deployed an app with a serverless function to production over a globally supported CDN using a full CI/CD pipeline all by merging your code into master. Boom!
+
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
-**Click** below to move to the next section.
-
-⚒️ [Setup and deploy your first app](./README_step00.md) > 📚 [What can Netlify do for you](./README_Netlify.md) > ⚒️ **[Create a mock REST API with Netlify functions](#)** |  ***next=>**  📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md)*
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** 📚 [What are DataStax Astra and Stargate](./README_Astra_Stargate.md)
 

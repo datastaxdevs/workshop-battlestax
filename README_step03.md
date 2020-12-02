@@ -5,21 +5,23 @@
 [![Actions Status](https://github.com/DataStax-Academy/battlestax/workflows/BattleStax%20Tests/badge.svg)](https://github.com/DataStax-Academy/battlestax/actions) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e265340f-c6a6-4d7b-b24c-438b87c67876/deploy-status)](https://app.netlify.com/sites/battlestax-tutorial/deploys)
 
-⚒️ [Connect to your Astra database](./README_step02.md) > 📚 [What is Redux and React](./README_Redux_React.md) > ⚒️ **[Create client State with Redux](#)** |  **next=>** ⚒️ *[Bind Redux to the User Interface](./README_step04.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 [What is Redux and React](./README_Redux_React.md) > ⚒️ **[Create client State with Redux](#)**
 
-## Objectives 
+**Objectives** 
 
-```diff
-+ Redux Tool Kit (RTK) tremendously simplifies using Redux, elminating most of the issues most people have when using it.
+**Redux Tool Kit (RTK)** tremendously simplifies using Redux, elminating most of the issues most people have when using it. We will use RTK for state management on the Client and see how it is working with Astra.
 
-+ We will use RTK for state management on the Client and see how it is working with Astra.
+In this **step 3** we will:
+- Build out the game slice boilerplate code by implementing one reducer, exporting an action and a selector
+- Run tests to try out the functionality of our game slice
 
-In step 3 of the Battlestax tutorial, we will:
+**We will cover:**
+1. [Setup your environment](#1-setup-your-environment)
+2. [Building a `gameSlice`](#2-building-a-gameslice)
+3. [Generate an action and a selector](#3-generate-an-action-and-a-selector)
+4. [Create an Async Action](#4-create-an-async-action)
+5. [Running TDD tests](#5-running-tdd-tests)
 
-+ Build out the game slice boilerplate code by implementing one reducer, exporting an action and a selector
-
-+ Run tests to try out the functionality of our game slice
-```
 
 An application's state is divided into "slices" that are corresponding to each feature set of the application. 
 Game state is saved in Astra and state writes go from the clients to the REST API (Netlify).
@@ -28,13 +30,7 @@ The Lobby and Player clients stay connected, as once the state is updated, it wi
 
 ![state-flow](./tutorial/state-flow.png)
 
-## 🗓️ Table of Contents
-1. [Setup your environment](#1-setup-your-environment)
-2. [Building a `gameSlice`](#2-building-a-gameslice)
-3. [Generate an action and a selector](#3-generate-an-action-and-a-selector)
-4. [Create an Async Action](#4-create-an-async-action)
-5. [Running TDD tests](#5-running-tdd-tests)
-
+---
 
 ## 1. Setup your environment
 
@@ -47,7 +43,7 @@ The Lobby and Player clients stay connected, as once the state is updated, it wi
 
 `git checkout step-3`
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 ## 2. Building a `gameSlice`
 
@@ -99,7 +95,7 @@ setIdLoading: (state, action) => {
 },
 ```
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 ## 3. Generate an action and a selector
 
@@ -117,7 +113,7 @@ export const { setId, setIdLoading, setIdError } = slice.actions;
 export const selectGame = (state) => state.game;
 ```
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 
 ## 4. Create an Async Action
@@ -206,9 +202,7 @@ Once the try block has executed
 dispatch(setIdLoading(false));
 ```
 
-
-
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
 ## 5. Running TDD tests
 
@@ -286,10 +280,7 @@ Now, we can run our tests using `npm test src/store/gameSlice.test.js` to see th
 
 <img src="./tutorial/slice-test.png" width="455" height="160">
 
-### [🔝](#%EF%B8%8F-table-of-contents)
+### [🔝](#)
 
-**Click** below to move to the next section.
-
-⚒️ [Connect to your Astra database](./README_step02.md) > 📚 [What is Redux and React](./README_Redux_React.md) > ⚒️ **[Create client State with Redux](#)** |  **next=>** ⚒️ *[Bind Redux to the User Interface](./README_step04.md)*
-
-
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** [Bind Redux to the User Interface](./README_step04.md)
