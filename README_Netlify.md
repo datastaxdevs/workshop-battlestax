@@ -8,6 +8,7 @@ If you are already familiar with **Netlify Serverless functions** and just want 
 1. [Build, Package, deploy, host](#1-build-package-deploy-host)
 2. [Advanced features](#2-advanced-features)
 3. [Netlify Functions](#3-netlify-functions)
+4. [Netlify Functions](#4-want-to-learn-more-)
 
 ---
 ## 1. Build, Package, deploy, host
@@ -63,9 +64,9 @@ That's it. Once a function is implemented in this fashion it will be deployed as
 
 Ok, let's do this ourselves in the next exercise.
 
-## ➕ Want to learn more ?
+## 4. Want to learn more ?
 
-This [document](https://docs.netlify.com/functions/configure-and-deploy/#configure-the-functions-folder) goes into details about implementing **serverless** functions with Netlify and this [tutorial](https://kentcdodds.com/blog/super-simple-start-to-netlify-functions) spells it out. 
+- 📄  This [document](https://docs.netlify.com/functions/configure-and-deploy/#configure-the-functions-folder) goes into details about implementing **serverless** functions with Netlify and this [tutorial](https://kentcdodds.com/blog/super-simple-start-to-netlify-functions) spells it out. 
 
 ---
 🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>**  ⚒️ [Expose your "hello world" API ](./README_step01.md)
