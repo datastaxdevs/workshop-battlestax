@@ -43,11 +43,9 @@ export default function RoundScore() {
     const newPlayers = _.cloneDeep(players);
     _.keys(roundVotes).forEach((voteId) => {
       const player = roundAnswers[roundVotes[voteId].answer].player;
-      newPlayers[player] = {
-        score:
-          constants.BASE_POINTS * currentRound.scoreMultiplier +
-          parseInt(newPlayers[player].score),
-      };
+      newPlayers[player].score =
+        constants.BASE_POINTS * currentRound.scoreMultiplier +
+        parseInt(newPlayers[player].score);
     });
     updateGame(`${gameId}/players`, newPlayers);
     setTimeout(() => {

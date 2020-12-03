@@ -6,7 +6,7 @@ import {
   selectId,
   selectPlayer,
   setPlayer,
-  setId,
+  initialize,
 } from "../../../store/gameSlice";
 import { Button, TextField, Grid, Typography } from "@material-ui/core";
 
@@ -22,7 +22,7 @@ export default function JoinGame() {
     const newGameIdUpper = newGameId.toUpperCase();
     await addPlayer(newGameIdUpper, newPlayer);
     dispatch(setPlayer(newPlayer));
-    dispatch(setId(newGameIdUpper));
+    dispatch(initialize(newGameIdUpper));
     history.push(`/player/${newGameIdUpper}`);
   };
 

@@ -20,8 +20,6 @@ const getPage = (page) => {
   switch (page) {
     case constants.ADDING_PLAYERS_PAGE:
       return <AddPlayers />;
-    case constants.TUTORIAL_PAGE:
-      return <React.Fragment />;
     case constants.ROUND_INPUT_PAGE:
       return <RoundInput />;
     case constants.ROUND_VOTE_PAGE:

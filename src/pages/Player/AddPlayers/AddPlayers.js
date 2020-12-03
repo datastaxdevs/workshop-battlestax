@@ -22,7 +22,7 @@ export default function AddPlayers() {
       <React.Fragment>
         <div style={{ marginBottom: 32 }}>
           <Typography paragraph variant="caption">
-            Congrats, you're VIP!
+            Congrats, you're VIP! Start the game when everyone is in.
           </Typography>
           <Button
             fullWidth
