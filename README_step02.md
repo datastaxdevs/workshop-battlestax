@@ -342,6 +342,26 @@ git push
 
 ### [🔝](#)
 
+## 8. Verify your deployment in Netlify
+
+✔️  When your new site is ready, you will be able to go to: `<your_url>.netlify.app` to see your game.
+
+![Netlify Setup Example](./tutorial/netlify-createsite-8.png?raw=true)
+
+If you start new games it will create a new record in the database. If you want to validate this behavirour click on `START NEW GAME`.
+
+✔️  Open Astra UI, show the `CQL Console` and execute the following command (here *battlestax* is your keyspace and *games* your collection name - if you chose another names adapt the query accordingly).
+
+📘 **Command to execute**
+
+`SELECT key, text_value FROM battlestax.games;`
+
+You should have a result that looks like:
+
+![Netlify Setup Example](./tutorial/netlify-createsite-9.png?raw=true)
+
+
+
 Great job! Let's move to the next section.
 
 ---

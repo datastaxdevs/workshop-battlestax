@@ -18,45 +18,83 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 
 *The very first thing we want to do is create a copy of the BattleStax repository into **YOUR** GitHub account. This is important because as part of this workshop you will deploy the BattleStax application to production and will need your own repository to do so. To do this we will fork the DataStax-Academy/battlestax repo.*
 
-|**✅ Step 1a. Launch the BattleStax repo into another tab**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>This might seem like an odd step, but will allow you to keep your place in the instructions you are reading now until you move to the new repo. Scroll up on the **GitHub** repo page, **_Right-Click_** on the **`battlestax`** repo name, and choose **`Open Link in New Tab`** to launch it in a new tab:<br/><br/>![Template CTRL click](./tutorial/template-ctrl-click.png?raw=true)</details>|
+**✅ Step 1a. Launch the BattleStax repo into another tab**
+
+This might seem like an odd step, but will allow you to keep your place in the instructions you are reading now until you move to the new repo. Scroll up on the **GitHub** repo page, **_Right-Click_** on the **`battlestax`** repo name, and choose **`Open Link in New Tab`** to launch it in a new tab:
+
+>![Template CTRL click](./tutorial/template-ctrl-click.png?raw=true)
 
 
-|**✅ Step 1b. Create repository from the provided template**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>✔ From the new tab you just launched, click on the **`Use this template`** button up on the top right of the toolbar.<br/><br/>![Template CTRL click](./tutorial/template-click-use-template.png?raw=true)<br/><br/>✔ On the **Create a new repository from battlestax** page you are presented with, fill out the **`Repository name`** field with `battlestax`, choose **`Public`** (_this should be default_), click the **`include all branches`** option, and finally click the **`Create repository from template`** button at the bottom of the page.<br/><br/>![Template create repo](./tutorial/template-create-repo.png?raw=true)<br/>It should only take a moment for **GitHub** to generate a new repository in your account.</details>|
+**✅ Step 1b. Fork repository into YOUR GitHub account**
 
-|**✅ Step 1c. Navigate back to your place in the docs**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>Once completed you will land in the root of your new repository.<br/><br/>![Template nav back to step0](./tutorial/template-nav-back-to-step0.png?raw=true)<br/>From there, navigate back to your place in the documentation and continue on [with creating your **Astra** instance.](#2-create-your-astra-instance)<br><br/>![Template nav to create astra](./tutorial/template-nav-to-create-astra.png?raw=true)</details>|
+✔ From the new tab you just launched, click on the **`Fork`** button up on the top right of the page.
+
+>![Template CTRL click](./tutorial/github-fork-repo.png?raw=true)
+
+✔ On the **Fork battlestax** dialog, choose the repository you wish to fork the repo to. This should be to one of YOUR personal GitHub orgs.
+
+>![Template create repo](./tutorial/github-fork-repo-whereto.png?raw=true)
+
+It should only take a moment for **GitHub** to generate a new repository in your account.
+
+**✅ Step 1c. Navigate back to your place in the docs**
+
+✔ Once complete you should now have your own battlestax repo within YOUR account. Notice both the GitHub org is no longer `DataStax-Academy` and the text `forked from DataStax-Academy/battlestax`.
+
+>![Template create repo](./tutorial/github-fork-repo-complete.png?raw=true)
+
+✔ From there, navigate back to your place in the documentation and continue on with step **`Setup Netlify account`**
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
 ## 2. Setup Netlify account
 
-|**✅ Step 2a. Setup a Netlify account**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br />- Using the link [HERE](https://www.netlify.com), sign up for a new account and follow **Netlify's** instructions to create a **`New Site from Git`** (_you must be logged in to see this option_).<br /><br />![Netlify Setup Example](./tutorial/netlify-signin.png?raw=true)<br />- Once signed in, you should land on the following page.<br /><br />![Netlify Setup Example](./tutorial/netlify-empty.png?raw=true)<br /></details>|
+**✅ Step 2a. Setup a Netlify account**
 
-|**✅ Step 2b. Create a new site**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>Move to the `Sites` tab and Click the `New site from git` button.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-1.png?raw=true)<br/><br/>On the new page select `Github` and locate the proper repository in your github Account.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-2.png?raw=true)<br/><br/>After allowing the `Netlify` application on Github select the `BattleStax` repository.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-3.png?raw=true)<br/><br/>Use all of the defaults for `Basic Build Settings`<br/>![Netlify Setup Example](./tutorial/netlify-createsite-4.png?raw=true)<br/><br/></details>|
+✔ Using the link [HERE](https://www.netlify.com), sign up for a new account and follow **Netlify's** instructions to create a **`New Site from Git`** (_you must be logged in to see this option_).
 
-|**✅ Step 2c. Deploy your site**<br/>![.](./tutorial/line.png?raw=true)|
-|:---|
-||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>Click **`Deploy Site`** and once deployed copy the domain name of your new site from **Netlify**.<br/>![Netlify URL Example](https://raw.githubusercontent.com/kidrecursive/battlestax-tutorial/step-1/tutorial/netlify_url.png)<br/><br/>Finally, wait for deployment!<br/>![Netlify Setup Example](./tutorial/netlify-createsite-7.png?raw=true)<br/><br/>When your new site is ready, you will be able to go to: `<your_url>.netlify.app` to see your game.<br/>![Netlify Setup Example](./tutorial/netlify-createsite-8.png?raw=true)<br/><br/>If you start new games it will create a new record in the database. If you want to validate this behavirour click on `START NEW GAME`<br/><br/>Open Astra UI, show the `CQL Console` and execute the following command (here *battlestax* is your keyspace and *games* your collection name - if you chose another names adapt the query accordingly).<br/><br/>📘 **Command to execute**<br/>`SELECT key, text_value FROM battlestax.games;`<br/><br/>You should have a result that looks like <br/>![Netlify Setup Example](./tutorial/netlify-createsite-9.png?raw=true)|
+>![Netlify Setup Example](./tutorial/netlify-signin.png?raw=true)
+
+✔ Once signed in, you should land on the following page.
+
+>![Netlify Setup Example](./tutorial/netlify-empty.png?raw=true)
+
+
+**✅ Step 2b. Create a new site**
+
+✔ Move to the `Sites` tab and Click the `New site from git` button.
+
+>![Netlify Setup Example](./tutorial/netlify-createsite-1.png?raw=true)
+
+✔ On the new page select `Github` and locate the proper repository in your github Account.
+
+>![Netlify Setup Example](./tutorial/netlify-createsite-2.png?raw=true)
+
+✔ After allowing the `Netlify` application on Github select the `BattleStax` repository.
+
+>![Netlify Setup Example](./tutorial/netlify-createsite-3.png?raw=true)
+
+✔ Use all of the defaults for `Basic Build Settings`
+
+>![Netlify Setup Example](./tutorial/netlify-createsite-4.png?raw=true)
+
+**✅ Step 2c. Deploy your site**
+
+✔ Click **`Deploy Site`** and once deployed copy the domain name of your new site from **Netlify**.
+
+>![Netlify URL Example](https://raw.githubusercontent.com/kidrecursive/battlestax-tutorial/step-1/tutorial/netlify_url.png)
+
+✔ We'll let that bake for a moment and move on to the next section. It will take Netlify a couple minutes to spin everything up. We'll come back to this interface in an upcoming section.
+
+>![Netlify Setup Example](./tutorial/netlify-createsite-7.png?raw=true)
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
+At this point, by creating a new site from **GitHub** in **Netlify** anytime you commit to master your site will automatically be deployed with a **CI/CD** pipeline. No servers needed. This is seriously powerful stuff and really gets at the core of what we're all good at, coding. 
 
-## 3. Setup your development environment
+As we move on we'll dive deeper into what this all means and how it's hooked up. 
+
+<!-- ## 3. Setup your development environment
 
 *To code during the workshop you can either use **your laptop** or a **Cloud-based IDE** named [Gitpod](gitpod.io) with everything installed. **Here we explain the Gitpod way**.*
 
@@ -87,5 +125,6 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 ||
 |<details><summary><i>Click to view the solution</i></summary><br/>✔  Start the application<br/><br/>📘 **Command to execute**<br/>`npm start`<br/><br/>✔ Hit the loading screen<br/>`http://localhost:3000/`<br/>![Netlify Setup Example](./tutorial/start-localhost.png?raw=true)<br/><br/>**Done!** You have successfully set up your app, run your tests locally, and started BattleStax.<br/><br/>![Netlify Setup Example](./tutorial/well-done.png?raw=true)</details>|
 
+-->
 ---
 🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** 📚 [What can Netlify do for you](./README_Netlify.md)
