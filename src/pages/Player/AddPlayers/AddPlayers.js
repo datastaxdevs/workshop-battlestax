@@ -13,7 +13,6 @@ export default function AddPlayers() {
   const player = useSelector(selectPlayer);
   const players = useSelector(selectPlayers);
   const startGame = async () => {
-    console.log(`${gameId}/game`);
     setStartingGame(true);
     await updateGame(`${gameId}/game`, { page: constants.TUTORIAL_PAGE });
   };

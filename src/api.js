@@ -30,7 +30,7 @@ export const addPlayer = async (gameId, playerId) => {
     `${netlifyPath}/updateGame/${gameId}/players/${playerId}`,
     {
       method: "PUT",
-      body: JSON.stringify({ name: playerId }),
+      body: JSON.stringify({ name: playerId, joinTime: Date.now() }),
     }
   );
   return await res.json();

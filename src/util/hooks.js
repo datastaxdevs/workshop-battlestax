@@ -36,8 +36,9 @@ export const useGamePollingInterval = () => {
       }
       batch(() => {
         if (gameData.players) {
-          _.keys(gameData.players).forEach((playerId) => {
-            dispatch(addPlayer(playerId, gameData.players[playerId].score));
+          const sortedPlayers = _.sortBy(gameData.players, ["joinTime"]);
+          sortedPlayers.forEach((player) => {
+            dispatch(addPlayer(player.name, player.score));
           });
         }
         if (gameData.game && gameData.game.round) {
