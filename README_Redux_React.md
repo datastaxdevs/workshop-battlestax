@@ -64,10 +64,12 @@ In our app when we click the button to generate a game id.
 <img src="./tutorial/ui-game-code.png" width="473" height="292.5">
 
  When we do this, Redux uses a simple function (reducers) to take the current state and the new game id, and make them the same. 
+
+<img src="./tutorial/redux-reducers.png">
  
- 
- 
- There is this separation between the state and the UI. Our NewGame react component listens for state changes, and
+ Our NewGame react component listens for state changes, and the UI changes accordingly.
+
+ <img src="./tutorial/react-hooks.png">
 
 ## 6. Want to learn more ?
 
