@@ -73,8 +73,8 @@ In our app when we click the button to generate a game id.
 
 ## 6. Want to learn more ?
 
-1.🎥 [Learn React Redux With React Hooks (2020)](https://www.youtube.com/watch?v=rcOcYdoz8o8)
-2.🎥 [Redux For Beginners | React Redux Tutorial](https://www.youtube.com/watch?v=CVpUuw9XSjY)
+1. 🎥 [Learn React Redux With React Hooks (2020)](https://www.youtube.com/watch?v=rcOcYdoz8o8)
+2. 🎥 [Redux For Beginners | React Redux Tutorial](https://www.youtube.com/watch?v=CVpUuw9XSjY)
 3. 📄 [The only introduction to Redux (and React-Redux) you’ll ever need](https://medium.com/javascript-in-plain-english/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
 4. 📄 [How to setup Redux with React (2020)](https://medium.com/coox-tech/how-to-setup-redux-with-react-2020-adb8cad90234)
 5. 📄 [A beginner’s guide to Redux with React](https://medium.com/@bretcameron/a-beginners-guide-to-redux-with-react-50309ae09a14)
