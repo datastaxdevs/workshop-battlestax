@@ -148,7 +148,7 @@ npm test src/pages/lobby/NewGame/NewGame.test.js
 
 📗 **Expected output**
 
-![.](tutorial/new-game-test.png)
+<img src="./tutorial/new-game-test.png" width="578" height="97">
 
 ### [🔝](#)
 

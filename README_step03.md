@@ -233,7 +233,7 @@ it("should set a game id", () => {
   });
 ```
 
-✔️  _TEST 3_: 
+✔️  _TEST 3_: If a new game is in the process of loading, the state needs to be made aware of it.
 
 ```javascript
 it("should set the game id loading flag", () => {
@@ -244,7 +244,7 @@ it("should set the game id loading flag", () => {
 });
 ```
 
-✔️  _TEST 4_: 
+✔️  _TEST 4_: Make sure that if there is an error, it can be set as part of state.
 
 ```javascript
 it("should set the game id error", () => {
