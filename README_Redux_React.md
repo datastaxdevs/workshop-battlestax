@@ -61,7 +61,7 @@ This is the rough flow proposed by Redux:
 
 In our app when we click the button to generate a game id.
 
-<img src="./tutorial/ui-game-code.png" width="473" height="292.5">
+<img src="./tutorial/ui-game-code.png" width="423" height="334">
 
  When we do this, Redux uses a simple function (reducers) to take the current state and the new game id, and make them the same. 
 
@@ -69,7 +69,7 @@ In our app when we click the button to generate a game id.
  
  Our NewGame react component listens for state changes, and the UI changes accordingly.
 
- <img src="./tutorial/react-hooks.png"width="412" height="256">
+ <img src="./tutorial/react-hooks.png"width="553" height="316">
 
 ## 6. Want to learn more ?
 
