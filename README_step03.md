@@ -272,7 +272,7 @@ it("should create a new game", async () => {
   expect(selectGame(finalState).id).toEqual("DANG");
 });
 ```
-**✅ Step 1a: Test the gameSlice**
+**✅ Step 5a: Test the gameSlice**
 
 Now, we can run our tests using `npm test src/store/gameSlice.test.js` to see that we have a functioning game slice.
 
@@ -283,6 +283,18 @@ Now, we can run our tests using `npm test src/store/gameSlice.test.js` to see th
 📗 **Expected output**
 
 <img src="./tutorial/slice-test.png" width="455" height="160">
+
+## 6. Merge back to master
+
+Now that we've updated our code we need to push these changes back to master and kick off an automated deploy in Netlify.
+
+📘 **Commands to execute**
+
+```bash
+git add src/store/gameSlice.js
+git commit -m "Merging step3 into master
+git push
+```
 
 ### [🔝](#)
 

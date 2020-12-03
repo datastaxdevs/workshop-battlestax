@@ -152,6 +152,18 @@ npm test src/pages/lobby/NewGame/NewGame.test.js
 
 ### [🔝](#)
 
+## 6. Merge back to master
+
+Now that we've updated our code we need to push these changes back to master and kick off an automated deploy in Netlify.
+
+📘 **Commands to execute**
+
+```bash
+git add /src/pages/lobby/NewGame/NewGame.js
+git commit -m "Merging step4 into master
+git push
+```
+
 ---
 🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section =>[Extra Resources and certifications](./README_Resources.md)
 

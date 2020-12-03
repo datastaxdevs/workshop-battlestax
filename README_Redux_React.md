@@ -59,9 +59,14 @@ This is the rough flow proposed by Redux:
 
 ## 5. How does this work in our application ?
 
-```diff
-- todo
-```
+In our app when we click the button to generate a game id.
+![ui-game-code](./tutorial/ui-game-code.png)
+
+ When we do this, Redux uses a simple function (reducers) to take the current state and the new game id, and make them the same. 
+ 
+ 
+ 
+ There is this separation between the state and the UI. Our NewGame react component listens for state changes, and
 
 ## 6. Want to learn more ?
 
