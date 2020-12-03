@@ -26,6 +26,7 @@ In step 2 of the Battlestax tutorial, we will:
 5. [Hook it all together](#5-hook-it-all-together)
 6. [Running TDD tests](#6-running-tdd-tests)
 7. [Merge back to master](#7-merge-back-to-master)
+7. [Verify your deployment in Netlify](#8-verify-your-deployment-in-netlify)
 
 One of the first things we need to do is hook up the "plumbing" of our application to talk to our back-end services, namely, our Cassandra database with **Astra** and **Netlify**. Once this is in place, we are connected and ready to go with the services we need to power our app.
 
@@ -360,7 +361,7 @@ You should have a result that looks like:
 
 ![Netlify Setup Example](./tutorial/netlify-createsite-9.png?raw=true)
 
-
+### [🔝](#)
 
 Great job! Let's move to the next section.
 

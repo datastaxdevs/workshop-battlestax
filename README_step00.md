@@ -8,7 +8,6 @@ This is arguably the biggest step in the whole workshop. Once you get your tools
 
 1. [Create your `BattleStax` repository](#1-create-your-battlestax-repository)
 2. [Setup `Netlify` account](#2-setup-netlify-account)
-3. [Setup your development environment](#3-setup-your-development-environment) (local or cloud)
 
 ![Template CTRL click](./tutorial/architecture2.png?raw=true)
 
