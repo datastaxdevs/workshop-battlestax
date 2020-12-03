@@ -72,22 +72,21 @@ Brave yourselves, everybody goes to [https://battlestax-workshop.netlify.app/](h
 
 - **Bootstraping**
   - 📚 [What is the JAMStack](./README_JAM.md)
-  - ⚒️ [Setup and deploy your first app](./README_step00.md) *(master)*
+  - ⚒️ [Setup and deploy your first app](./README_step00.md) *(branch `master`)*
 - **Step 1 - Serverless**
   - 📚 [What can Netlify do for you](./README_Netlify.md)
   - ⚒️ [Expose your "hello world" API](./README_step01.md) (*branch: `step-1`*)
 - **Step 2 - Implement a Serverless Data API**
-  - 📚 [What is DataStax Astra and Stargate](./README_Astra_Stargate.md)
+  - 📚 [What are DataStax Astra and Stargate](./README_Astra_Stargate.md)
   - ⚒️ [Implement a CRUD Api in Astra](./README_step02.md) (*branch: `step-2`*)
 - **Step 3 - Client and State Management with Redux**
-  - 📚 [What is Redux](./README_Redux.md)  
-  - ⚒️ [Create Redux slice](./README_step03.md) (*branch: `step-3`*)
-- **Step 4 - React stuff**
-  - 📚 [What is React](./README_React.md)   
+  - 📚 [What are Redux and React](./README_Redux_React.md)  
+  - ⚒️ [Create client state with Redux](./README_step03.md) (*branch: `step-3`*)
+- **Step 4 - React stuff** 
   - ⚒️ [Bind Redux to the User Interface](./README_step04.md) (*branch: `step-4`*)
 - **What's NEXT ?** *(not the framework* 😈)
   - 📚 [Extra Resources and certifications](./README_Resources.md)   
-  - 💚 [Share the love](./README_Ending.md)
+  - 💚 [Share the love](https://github.com/DataStax-Academy/battlestax/blob/master/README_Resources.md#-share-the-love)
 
 *click the image to start !*
 
