@@ -69,7 +69,7 @@ In our app when we click the button to generate a game id.
  
  Our NewGame react component listens for state changes, and the UI changes accordingly.
 
- <img src="./tutorial/react-hooks.png"width="553" height="316">
+ <img src="./tutorial/react-hooks.png "width="553" height="316">
 
 ## 6. Want to learn more ?
 
