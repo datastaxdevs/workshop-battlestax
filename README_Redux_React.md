@@ -65,17 +65,19 @@ In our app when we click the button to generate a game id.
 
  When we do this, Redux uses a simple function (reducers) to take the current state and the new game id, and make them the same. 
 
-<img src="./tutorial/redux-reducers.png">
+<img src="./tutorial/redux-reducers.png" width="412" height="256">
  
  Our NewGame react component listens for state changes, and the UI changes accordingly.
 
- <img src="./tutorial/react-hooks.png">
+ <img src="./tutorial/react-hooks.png"width="412" height="256">
 
 ## 6. Want to learn more ?
 
-```diff
-- todo
-```
+1.🎥 [Learn React Redux With React Hooks (2020)](https://www.youtube.com/watch?v=rcOcYdoz8o8)
+2.🎥 [Redux For Beginners | React Redux Tutorial](https://www.youtube.com/watch?v=CVpUuw9XSjY)
+3. 📄 [The only introduction to Redux (and React-Redux) you’ll ever need](https://medium.com/javascript-in-plain-english/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
+4. 📄 [How to setup Redux with React (2020)](https://medium.com/coox-tech/how-to-setup-redux-with-react-2020-adb8cad90234)
+5. 📄 [A beginner’s guide to Redux with React](https://medium.com/@bretcameron/a-beginners-guide-to-redux-with-react-50309ae09a14)
 
 ---
 🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** ⚒️ [Create client State with Redux](./README_step03.md)
