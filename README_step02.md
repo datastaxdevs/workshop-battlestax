@@ -27,9 +27,9 @@ In step 2 of the Battlestax tutorial, we will:
 6. [Running TDD tests](#6-running-tdd-tests)
 7. [Merge back to master](#7-merge-back-to-master)
 
-One of the first things we need to do is hook up the "plumbing" of our application to talk to our back-end services, namely, our Cassandra database with Astra and Netlify. Once this is in place, we are connected and ready to go with the services we need to power our app.
+One of the first things we need to do is hook up the "plumbing" of our application to talk to our back-end services, namely, our Cassandra database with **Astra** and **Netlify**. Once this is in place, we are connected and ready to go with the services we need to power our app.
 
-We will also be making use of the Document API to connect to our Astra database. Stargate API framework allows developers the freedom to access Astra with a variety of APIs, the Document API being one. With the Document API, you can save and search schemaless JSON documents in Cassandra. No need to use SQL, CQL, or any database drivers to talk to the data layer. Just code and move on.
+We will also be making use of the Document API to connect to our **Astra** database. The **Stargate** API framework allows developers the freedom to access **Astra** with a variety of APIs, the Document API being one. With the Document API, you can save and search schemaless JSON documents in Cassandra. No need to use SQL, CQL, or any database drivers to talk to the data layer. Just code and move on.
 
 _ehem...for those of you familiar with Apache Cassandra, yes, I just said you could skip data modeling._
 
@@ -79,9 +79,31 @@ In the ["hello world"](./README_step01.md) section, we pushed a simple helloWorl
 
 Why are we doing this, you might ask? Because as part of our **CI/CD** pipeline our tests will attempt to connect to our data layer to ensure everything is hooked up and working. Not only that, but once you deploy your application to **Netlify** it will use these variables to hook up your production app and power your serverless functions. 
 
-We set these **ONE** time and that's it, you are ready to go. With that, let's do it.
+We set these all **ONE** time and that's it, you are ready to go. With that, let's do it.
+
+First things first, we need to get the values we are going to use for our variables. This section might look like a lot, but honestly, it's just a bunch of copy/paste.
+
+✔  Go back to the **Astra** UI and click on the database you just created to get the details page.
+
+![Netlify Setup Example](./tutorial/netlify-createsite-5.png?raw=true)
+
+🟢 `ASTRA_DB_USERNAME` as `battle_user` *(The user name we defined when creating the Astra instance)*
+
+🟢 `ASTRA_DB_PASSWORD` as `battle_password1` *(The password we defined when creating the Astra instance)*
+
+🟢 `ASTRA_DB_KEYSPACE` as `battlestax` *(The keyspace we defined when creating the Astra instance)*
+
+🟢 `ASTRA_DB_ID` as the cluster ID of your Astra DB. To get your database ID and region go the ASTRA summary page. Locate the cluster ID and copy it by clicking the clickboard icon as shown above. 
+
+🟢 `ASTRA_DB_REGION` as the region you picked when creating the DB, It should be either `us-east1` or `europe-west1`.
+
+🟢 `GAMES_COLLECTION` as `games` (this is the collection where we will store all values)
+
+**Now, take these values and apply them to the following sections. You will use each one more than once FYI.**
 
 _The following instructions are the same whether using GitPod or a local IDE._
+
+✔  Ensure that you are in the ??battlestax??? directory
 
 ✔  Copy and paste the contents of the `.env.template` file into an `.env` file:
 
@@ -89,13 +111,15 @@ _The following instructions are the same whether using GitPod or a local IDE._
 
 `cat .env.example > .env`
 
-✔ The `.env` file allows us to customize our own environmental variables. We set our Astra credentials to env variables, which are outside of our program. Fill in the `.env` file variables with the Astra variables you made a copy of earlier:
+✔ The `.env` file allows us to customize our own environmental variables. We set our Astra credentials to env variables, which are outside of our program. Fill in the `.env` file variables with the Astra variables you made a copy of above:
+
+**_If you used different values for your database you will need to use those instead, otherwise just use the values we've provided._**
 
 `ASTRA_DB_USERNAME=battle_user`<br/>
 `ASTRA_DB_PASSWORD=battle_password1`<br/>
 `ASTRA_DB_KEYSPACE=battlestax`<br/>
-`ASTRA_DB_ID=[cf bloc 3b]`<br/>
-`ASTRA_DB_REGION=[cf bloc 3b]`<br/>
+`ASTRA_DB_ID=[the value you retrieved above from YOUR database]`<br/>
+`ASTRA_DB_REGION=[the value you retrieved above from YOUR database]`<br/>
 `GAMES_COLLECTION=games`
 
 ![Netlify Setup Example](./tutorial/gitpod-env.png?raw=true)
@@ -111,45 +135,46 @@ After each commit a workflow is initialized to BUILD your project, EXECUTE tests
 `ASTRA_DB_USERNAME=battle_user`<br/>
 `ASTRA_DB_PASSWORD=battle_password1`<br/>
 `ASTRA_DB_KEYSPACE=battlestax`<br/>
-`ASTRA_DB_ID=[check Step3b]`<br/>
-`ASTRA_DB_REGION=[check Step3b]`<br/>
+`ASTRA_DB_ID=[the value you retrieved above from YOUR database]`<br/>
+`ASTRA_DB_REGION=[the value you retrieved above from YOUR database]`<br/>
 `GAMES_COLLECTION=games`
 
-*That should look like:*
+*This should look like:*
 
 ![Netlify Setup Example](./tutorial/setup-github-1.png?raw=true)
 
 **✅ Step 2d: Set environment variables in Netlify**
 
-✔ Click `Show advanced` to enter the following variables:
+✔ Go back to **Netlify** and navigate to **`Site settings`** in the toolbar, then choose **`Build & deploy`** from the menu on the left.
 
-🟢 `ASTRA_DB_USERNAME` as `battle_user` *(The user name we defined when creation the Astra instance)*
+>![Netlify vars site settings](./tutorial/netlify-vars-site-settings.png?raw=true)
 
-🟢 `ASTRA_DB_PASSWORD` as `battle_password1` *(The password we defined when creation the Astra instance)*
+✔ Scroll down to the **`Environment variables`** section and choose **`Edit variables`**.
 
-🟢 `ASTRA_DB_KEYSPACE` as `battlestax` *(The keyspace we defined when creation the Astra instance)*
+>![Netlify vars build edit](./tutorial/netlify-vars-build-edit.png?raw=true)
 
-🟢 `ASTRA_DB_ID` as the cluster ID of your Astra DB. To get your database ID and region go the ASTRA summary page. Locate the cluster ID and copy it by clicking the clickboard icon as showed below. 
+✔ Click `New variable` to add each key/value pair, one for each variable listed below.
 
-![Netlify Setup Example](./tutorial/netlify-createsite-5.png?raw=true)
+`ASTRA_DB_USERNAME=battle_user`<br/>
+`ASTRA_DB_PASSWORD=battle_password1`<br/>
+`ASTRA_DB_KEYSPACE=battlestax`<br/>
+`ASTRA_DB_ID=[the value you retrieved above from YOUR database]`<br/>
+`ASTRA_DB_REGION=[the value you retrieved above from YOUR database]`<br/>
+`GAMES_COLLECTION=games`
 
-🟢 `ASTRA_DB_REGION` as the region you picked when creating the DB, It should be either `us-east1` or `europe-west1`.
+You should now have something like:
 
-🟢 `GAMES_COLLECTION` as `games` _(this is the collection where we will store all values)
+![Netlify vars build edit save](./tutorial/netlify-vars-build-edit-save.png?raw=true)
 
-You should now have something like
+✔ Once complete click **`Save`** and you are good to go.
 
-![Netlify Setup Example](./tutorial/netlify-createsite-6.png?raw=true)
-
-```diff
-- TODO: Finish this section with save 
-```
+You don't have to do that ever again, we promise. From now on anytime you deploy everything should be hooked up to your data layer and ready to go through to production.
 
 ### [🔝](#)
 
 ## 3. Creating the `insertGame` Netlify endpoint
 
-Now that we have our game document store, let's start building our basic `insertGame` serverless function, in the `function/insertGame.js` file. 
+Now that we have **ALLLLL** of our environment vars set and our game document store, let's start building our basic `insertGame` serverless function, in the `function/insertGame.js` file. 
 
 First, we need to declare `gameId` and `gamePayload` variables. We know each game is associated with it's own unique game id, and during game play we can anticipate getting a payload from the user.
 
@@ -316,6 +341,8 @@ git push
 ```
 
 ### [🔝](#)
+
+Great job! Let's move to the next section.
 
 ---
 🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** 📚 [What is Redux and React](./README_Redux_React.md)
