@@ -41,7 +41,7 @@ Before we start, here is a very quick intro to how React and Redux work together
 
 ![react-redux-flow](./tutorial/react-redux-flow.png)
 
-<img src="./tutorial/react-redux-flow.png" width="736" height="538">
+<img src="./tutorial/react-redux-flow.png" width="368" height="269">
 
 The Redux Store keeps the application state. This state can be updated by dispatching actions. An action is nothing more than a JSON object with a type and some parameters (e.g., { type: ‘SET_DATE’, date: ‘2017-03-15T13:24:00.000Z’ }). The store has a reducer, which, taking into account the action and the previous state, will produce the next state.
 
@@ -57,13 +57,13 @@ This is the rough flow proposed by Redux:
 4. The new state of the whole application goes into a single store.
 5. Components receive the new state as props and re-render themselves where needed.
 
-<img src="./tutorial/component-state-change.png" width="823" height="511">
+<img src="./tutorial/component-state-change.png" width="412" height="256">
 
 ## 5. How does this work in our application ?
 
 In our app when we click the button to generate a game id.
 
-<img src="./tutorial/ui-game-code.png" width="946" height="585">
+<img src="./tutorial/ui-game-code.png" width="473" height="292.5">
 
  When we do this, Redux uses a simple function (reducers) to take the current state and the new game id, and make them the same. 
  
