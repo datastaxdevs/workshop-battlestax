@@ -39,8 +39,6 @@ Since state is a very powerful mechanism for building dynamic React apps, proper
 
 Before we start, here is a very quick intro to how React and Redux work together.
 
-![react-redux-flow](./tutorial/react-redux-flow.png)
-
 <img src="./tutorial/react-redux-flow.png" width="368" height="269">
 
 The Redux Store keeps the application state. This state can be updated by dispatching actions. An action is nothing more than a JSON object with a type and some parameters (e.g., { type: ‘SET_DATE’, date: ‘2017-03-15T13:24:00.000Z’ }). The store has a reducer, which, taking into account the action and the previous state, will produce the next state.
