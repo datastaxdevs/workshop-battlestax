@@ -39,7 +39,7 @@ Since state is a very powerful mechanism for building dynamic React apps, proper
 
 Before we start, here is a very quick intro to how React and Redux work together.
 
-![react-redux-flow](./tutorial/react-redux-flow.png)
+<img src="./tutorial/react-redux-flow.png" width="368" height="269">
 
 The Redux Store keeps the application state. This state can be updated by dispatching actions. An action is nothing more than a JSON object with a type and some parameters (e.g., { type: ‘SET_DATE’, date: ‘2017-03-15T13:24:00.000Z’ }). The store has a reducer, which, taking into account the action and the previous state, will produce the next state.
 
@@ -55,24 +55,29 @@ This is the rough flow proposed by Redux:
 4. The new state of the whole application goes into a single store.
 5. Components receive the new state as props and re-render themselves where needed.
 
-![component-state-change](./tutorial/component-state-change.png)
+<img src="./tutorial/component-state-change.png" width="412" height="256">
 
 ## 5. How does this work in our application ?
 
 In our app when we click the button to generate a game id.
-![ui-game-code](./tutorial/ui-game-code.png)
+
+<img src="./tutorial/ui-game-code.png" width="423" height="334">
 
  When we do this, Redux uses a simple function (reducers) to take the current state and the new game id, and make them the same. 
+
+<img src="./tutorial/redux-reducers.png" width="412" height="256">
  
- 
- 
- There is this separation between the state and the UI. Our NewGame react component listens for state changes, and
+ Our NewGame react component listens for state changes, and the UI changes accordingly.
+
+ <img src="./tutorial/react-hooks.png" width="553" height="316">
 
 ## 6. Want to learn more ?
 
-```diff
-- todo
-```
+1. 🎥 [Learn React Redux With React Hooks (2020)](https://www.youtube.com/watch?v=rcOcYdoz8o8)
+2. 🎥 [Redux For Beginners | React Redux Tutorial](https://www.youtube.com/watch?v=CVpUuw9XSjY)
+3. 📄 [The only introduction to Redux (and React-Redux) you’ll ever need](https://medium.com/javascript-in-plain-english/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
+4. 📄 [How to setup Redux with React (2020)](https://medium.com/coox-tech/how-to-setup-redux-with-react-2020-adb8cad90234)
+5. 📄 [A beginner’s guide to Redux with React](https://medium.com/@bretcameron/a-beginners-guide-to-redux-with-react-50309ae09a14)
 
 ---
 🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** ⚒️ [Create client State with Redux](./README_step03.md)
