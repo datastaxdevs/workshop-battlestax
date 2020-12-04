@@ -1,7 +1,7 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 module.exports = {
   // settings
-  MINIMUM_PLAYERS: 1,
+  MINIMUM_PLAYERS: 3,
   MAXIMUM_PLAYERS: 8,
   BASE_POINTS: 50,
   GAME_ID_DICTIONARY: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
