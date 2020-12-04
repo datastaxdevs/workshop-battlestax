@@ -32,7 +32,7 @@ The Lobby and Player clients stay connected, as once the state is updated, it wi
 
 For a **FULL** code solution to this section **`right-click`** the image below and choose **`Open Link in New Tab`**.
 
-[![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/3/files)
+[![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/7/files)
 
 **_Don't forget to SAVE your changes or enable autosave in GitPod._**
 
