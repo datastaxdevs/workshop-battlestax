@@ -43,7 +43,11 @@ React is a popular open-source, front end, JavaScript library for building user 
 
 ## 2. Import our Redux artifacts
 
-In this step we will be working with `/src/pages/lobby/NewGame/NewGame.js`.In order to bind our React component to our Redux store, we need to import the items that we need:
+In this step we will be working with `/src/pages/lobby/NewGame/NewGame.js`.
+
+![newgame-ide](./tutorial/newgame-ide)
+
+In order to bind our React component to our Redux store, we need to import the items that we need:
 
 **✅ Step 2a: Create import statements**
 
