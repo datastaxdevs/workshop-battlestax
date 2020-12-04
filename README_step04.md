@@ -51,7 +51,7 @@ For a **FULL** code solution to this section **`right-click`** the image below a
 
 In this step we will be working with `/src/pages/lobby/NewGame/NewGame.js`.
 
-![newgame-ide](./tutorial/newgame-ide)
+![newgame-ide](./tutorial/newgame-ide.png)
 
 In order to bind our React component to our Redux store, we need to import the items that we need:
 
