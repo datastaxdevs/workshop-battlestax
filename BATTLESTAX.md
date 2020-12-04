@@ -1,4 +1,4 @@
-## BattleStax 
+# BattleStax 
 
 BattleStax is a stateful JAMStack game that is wholesome fun for the entire crew.
 
@@ -8,7 +8,7 @@ BattleStax is a stateful JAMStack game that is wholesome fun for the entire crew
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/DataStax-Academy/battlestax)
 
-### Project Structure
+## Project Structure
 
 BattleStax's folder structure is (mostly) generated from [Create React App](https://github.com/facebook/create-react-app). We then add a Netlify Functions and Github Actions.
 
@@ -85,6 +85,7 @@ npm test
 ### Netlify Function Testing
 
 Test your netlify functions 
+
 ```sh
 # run the function tests
 npm run test:functions

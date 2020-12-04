@@ -1,12 +1,16 @@
-# What is the JAM Stack ? 
+# 📚 What is the JAM Stack
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#)** | ***next=>**  ⚒️ [Setup and deploy your first app](./README_step00.md)*
+🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > **Bootstraping - 📚 [What is the JAMStack](#README_JAM.MD)**
 
-If you are already familiar with **JAMStack** and just want to move on to the first exercise go to the next section => *[Setup and deploy your first app](./README_step00.md)*. Otherwise, read on.
+If you are already familiar with **JAMStack** and just want to move on to the first exercise go to the next section => ⚒️ [Setup and deploy your first app](./README_step00.md). Otherwise, read on.
+
+**We will cover:**
 
 1. [Introduction to the JAMStack](#1-introduction-to-the-jamstack)
 2. [Why this is cool ?](#2-why-this-is-cool-)
-3. [Want to learn more ?](#3-want-to-learn-more-)
+3. [Introduction to Netlify](#3-introduction-to-netlify)
+4. [Want to learn more ?](#4-want-to-learn-more-)
+---
 
 ## 1. Introduction to the JAMStack
 
@@ -17,13 +21,19 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 ![ok](./tutorial/jamstack/jam-1.png)
 
 **🔵 Javascript:** can represent any modern Javascript/Typescript framework like `React`, `Vue`, or `Angular` or even vanilla JS.
-
 <table>
  <tr>
   <td><img src="./tutorial/jamstack/logo-react.png"/></td>
-  <td><img src="./tutorial/jamstack/logo-angular.png"/> </td>
+  <td><a href="https://reactjs.org/">ReactJS (we will use it today)</a> </td>
+ </tr>
+ <tr>
+  <td><img src="./tutorial/jamstack/logo-angular.png"/></td>
+  <td><a href="https://angular.io/docs">Angular</a></td>
+ </tr>
+<tr>
   <td><img src="./tutorial/jamstack/logo-vuejs.png"/></td>
-  </tr>
+ <td><a href="https://vuejs.org/">VueJS</a></td>
+ </tr>
 </table>
 
 <br/>
@@ -31,18 +41,14 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 **🔵 API:** is a backend serving real time data through either REST or GraphQL, endpoints to interact with fetch, ajax,axios
 
 <table>
- <tr>
-  <td>
-   <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">
-    <img src="./tutorial/jamstack/logo-rest.png"/>
-   </a>
-  </td>
-  <td>
-   <a href="#">
-    <img src="./tutorial/jamstack/logo-graphql.png"/>
-   </a>
-  </td>
-  </tr>
+  <tr>
+  <td><img src="./tutorial/jamstack/logo-rest.png"/></td>
+ <td><a href="https://vuejs.org/">REST (we will use it today)</a></td>
+ </tr>
+<tr>
+  <td><img src="./tutorial/jamstack/logo-graphql.png"/></td>
+ <td><a href="https://graphql.org/learn/">GraphQL</a></td>
+ </tr>
 </table>
 
 <br/>
@@ -51,37 +57,39 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
 
 <table>
  <tr>
-  <td>
-   <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">
-    <img src="./tutorial/jamstack/logo-html.png"/>
-   </a>
-  </td>
-  <td>
-   <a href="https://www.markdownguide.org/">
-    <img src="./tutorial/jamstack/logo-markdown.png"/>
-   </a>
-  </td>
-  </tr>
-</table>
-
-<br/>
-
-**🔵 Static page generator:** You can find a pretty exhaustive list [here](https://jamstack.org/generators/). Most commonly used are Gatsby|Hugo|Jekyll for markdown files and [NextJS](https://nextjs.org/) for pure React.
-
-<table>
+  <td><img src="./tutorial/jamstack/logo-html.png"/></td>
+ <td><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/">Vanilla HTML (we will use this today)</a></td>
+ </tr>
  <tr>
-   <td><img src="./tutorial/jamstack/logo-gatsby.png"/></td>
-  <td><img src="./tutorial/jamstack/logo-next.png"/></td>
-  <td><img src="./tutorial/jamstack/logo-jekyll.png"/></td>
-  <td><img src="./tutorial/jamstack/logo-hugo.png"/></td>
-  </tr>
+  <td><img src="./tutorial/jamstack/logo-markdown.png"/></td>
+ <td><a href="https://www.markdownguide.org/">Markdown</a></td>
+ </tr>
 </table>
 
 <br/>
 
-**🔵 Pre-rendering AND Decoupling:** The core principles of **pre-rendering**, and **decoupling**, enable sites and applications to be delivered with greater confidence and resilience than ever before.
+**🔵 Static page generator**
 
-**🔵 Before vs after** 
+They apply data and content to templates, and generate a view of a page which can be served to the visitors of a site.
+
+The greatest difference between a static site generator and a traditional web application stack, is that instead of waiting until a page is requested and then generating its view on demand each time, a static site generator does this in advance so that the view is ready to serve ahead of time. And it does so for every possible view of a site at build time.
+
+![ok](./tutorial/ssg-flow.png)
+
+It improves performance and high compatibility with its rendering. *Automates code splitting, image optimization, inlining critical styles, lazy-loading, prefetching resources, and more to ensure your site is fully optimized. No manual tuning required.* 
+
+You can find a pretty exhaustive list [here](https://jamstack.org/generators/).
+
+**🔵 CDN:** : geographically distributed group of servers which work together to provide fast delivery of Internet content.
+
+A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, images, and videos. The popularity of CDN services continues to grow, and today the majority of web traffic is served through CDNs, including traffic from major sites like Facebook, Netflix, and Amazon.
+
+![ok](./tutorial/jamstack/CDN.png)
+
+
+**🔵 Logical Architecture** 
+
+ The core principles of **pre-rendering**, and **decoupling**, enable sites and applications to be delivered with greater confidence and resilience than ever before.
 
 ![ok](./tutorial/jamstack/jam-2.png)
 
@@ -155,28 +163,50 @@ Bye-bye infrastructure lock-in.
 
 Let us show you this one today
 
+## 3. Introduction to Netlify
 
-## 3. Want to learn more ?
+> *Source [https://www.netlify.com](https://www.netlify.com/)*
 
-<table>
- <tr>
-  <td colspan="2">☁️ <b>Content Delivery Network (CDN)</b>
-  </td>
- </tr>
- <tr>
-   <td><img src="./tutorial/jamstack/what-is-cdn-1.png"/></td>
-   <td><a href="https://www.youtube.com/watch?v=Bsq5cKkS33I">
-    What is Content Delivery Network</a>
-    <br/>Ryan Sumner (4:32 min)</td>
- </tr>
- <tr>
-  <td><img src="./tutorial/jamstack/what-is-cdn-2.png"/></td>
-   <td><a href="https://www.youtube.com/watch?v=farO15_0NUQ">What is a CDN and why Developers should Care about using one (GOTO 2016)</a><br/>Artur Bergman (32:10min)<a></td>
- </tr>
-</table>
+### 3.1 Netlify in a nutshell
 
-![.](./tutorial/line.png)
+**Decoupling the frontend from the backend**: Unlike the large legacy apps, Jamstack projects neatly separate the frontend pages and UI from the backend apps and databases. Freed from backend servers, the frontend can then be deployed globally, directly to a CDN.
 
-**Click** below to move to the next section.
+**Dynamic content via APIs**: The global frontend uses Javascript and APIs to talk to backend services, allowing pages to be enhanced and personalized.
 
-🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **[What is the JAMStack](#)** | ***next=>**  ⚒️ [Setup and deploy your first app](./README_step00.md)*
+*overview of netlify*
+![ok](./tutorial/netlify.png)
+
+### 3.2 Soooooooooo What about today ?
+
+- We will have our code in GITHUB
+
+- Netlify is integrated with GITHUB, on new commit it will BUILD and deploy the SITE on the CDN
+
+- To code and commit to github we will use an IDE. You cacn use your own or we will provide you one in the Cloud called GITPOD.
+
+- The application we will deploy is BattleStax. This is not only static content but also a REST API retrieve Data from a DB. The DB will ne DataStax Astra.
+
+
+![Template CTRL click](./tutorial/architecture1.png?raw=true)
+
+## 4. Want to learn more ?
+
+
+**Angular vs VueJS vs React**
+1. 🎥 [Angular vs React vs Vue [2020 Update]](https://www.youtube.com/watch?v=lYWYWyX04JI)
+2. 🎥 [React vs. Angular vs. Vue: Which Should You Choose](https://www.youtube.com/watch?v=xDhzYQ4VyCw)
+1. 📄 [Angular vs Vue vs React: choosing the best framework in 2020](https://www.educative.io/blog/react-angular-vue-comparison)
+2. 📄 [React vs Angular vs Vue.js — What to choose in 2020? (updated in 2020)](https://medium.com/techmagic/reactjs-vs-angular5-vs-vue-js-what-to-choose-in-2018-b91e028fa91d)
+3. 📄 [Angular vs React vs Vue 2020](https://athemes.com/guides/angular-vs-react-vs-vue/)
+
+**Static site Generator (SSG)**
+1. 📄 [What is a Static Site Generator? And 3 ways to find the best one](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/)
+2. 📄 [List of static generators](https://jamstack.org/generators/)
+
+
+**Content Delivery Network (CDN)**
+1. 🎥 [What is Content Delivery Network, by Ryan Sumner (4:32 min)](https://www.youtube.com/watch?v=Bsq5cKkS33I)
+2. 🎥 [What is a CDN and why Developers should Care about using one (GOTO 2016) by Artur Bergman (32:10 min)](https://www.youtube.com/watch?v=farO15_0NUQ)
+
+---
+🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** ⚒️ [Setup and deploy your first app](./README_step00.md)

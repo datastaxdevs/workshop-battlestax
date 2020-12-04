@@ -1,4 +1,4 @@
-# 💚  Share the love
+# 💚 Share the love
 
 ## Follow us, talk about us
 
