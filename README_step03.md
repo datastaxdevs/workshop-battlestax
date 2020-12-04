@@ -49,6 +49,7 @@ The Lobby and Player clients stay connected, as once the state is updated, it wi
 
 Let's use the  Redux Toolkit to build out the game slice that will set the game code as part of the state. Redux Toolkit allows us to write shorter logic that's easier to read, while still following the same Redux behavior and data flow. Open the `src/store/gameSlice.js` file to see skeleton code we have provided to get you started.
 
+![gameslice-ide](./tutorial/gameslice-ide.png)
 
 Lets discuss some of the parameters in `createSlice`.
 
