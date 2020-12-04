@@ -1,8 +1,8 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
-export default {
+module.exports = {
   // settings
-  MINIMUM_PLAYERS: 3,
-  MAXIMUM_PLAYERS: 8,
+  MINIMUM_PLAYERS: 1,
+  MAXIMUM_PLAYERS: 1,
   BASE_POINTS: 50,
   GAME_ID_DICTIONARY: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   GAME_ID_LENGTH: 4,
@@ -43,20 +43,20 @@ export default {
         "The title of the shortest book on earth.",
       ],
     },
-    {
-      id: 2,
-      title: "Final Round",
-      scoreMultiplier: 2,
-      content: [
-        "The most expensive software ever imagined.",
-        "The most awkward moment in earth's history.",
-        "No. NO. NO! I will not let _____ ruin my day.",
-        "The real reason that Elon Musk started SpaceX.",
-        "The one thing that will prevent us from reaching 2021.",
-        "The title of a movie that everyone secretly loves, but will never admit to.",
-        "The end of the Silicon Valley will come from _____.",
-        "The most annoying thing about Twitter.",
-      ],
-    },
+    // {
+    //   id: 2,
+    //   title: "Final Round",
+    //   scoreMultiplier: 2,
+    //   content: [
+    //     "The most expensive software ever imagined.",
+    //     "The most awkward moment in earth's history.",
+    //     "No. NO. NO! I will not let _____ ruin my day.",
+    //     "The real reason that Elon Musk started SpaceX.",
+    //     "The one thing that will prevent us from reaching 2021.",
+    //     "The title of a movie that everyone secretly loves, but will never admit to.",
+    //     "The end of the Silicon Valley will come from _____.",
+    //     "The most annoying thing about Twitter.",
+    //   ],
+    // },
   ],
 };
