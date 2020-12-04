@@ -28,7 +28,7 @@ Jamstack is the new standard architecture for the web. Using Git workflows and m
  </tr>
  <tr>
   <td><img src="./tutorial/jamstack/logo-angular.png"/></td>
-  <td><a href="https://angularjs.org/">AngularJS</a></td>
+  <td><a href="https://angular.io/docs">Angular</a></td>
  </tr>
 <tr>
   <td><img src="./tutorial/jamstack/logo-vuejs.png"/></td>
