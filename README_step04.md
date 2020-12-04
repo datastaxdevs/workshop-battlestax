@@ -28,6 +28,12 @@ React is a popular open-source, front end, JavaScript library for building user 
 
 ![hooks](./tutorial/hooks.png)
 
+For a **FULL** code solution to this section **`right-click`** the image below and choose **`Open Link in New Tab`**.
+
+[![Code solution](./tutorial/step-4-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/8/files)
+
+**_Don't forget to SAVE your changes or enable autosave in GitPod._**
+
 ---
 
 ## 1. Setup your environment
