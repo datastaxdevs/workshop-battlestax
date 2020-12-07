@@ -21,6 +21,8 @@ In this **step 4** we will:
 3. [Use hooks to connect our compoonent to our Redux Store](#3-use-hooks-to-connect-our-compoonent-to-our-redux-store)
 4. [Updating the UI](#4-updating-the-ui)
 5. [Running TDD tests](#5-running-tdd-tests)
+6. [Merge back to master](#6-merge-back-to-master)
+7. [Verify your deployment in Netlify](#7-verify-your-deployment-in-netlify)
 
 React is a popular open-source, front end, JavaScript library for building user interfaces or UI components. React makes user interfaces very easy to build by cutting each page into pieces called **components**. A React component is a bit of code that represents a piece of the page. Each component is a JavaScript function that returns a piece of code that represents a piece of a web page.
 
@@ -173,6 +175,24 @@ git add /src/pages/lobby/NewGame/NewGame.js
 git commit -m "Merging step4 into master
 git push
 ```
+
+## 7. Verify your deployment in Netlify
+
+✔️  When your new site is ready, you will be able to go to: `<your_url>.netlify.app` to see your game.
+
+![Netlify Setup Example](./tutorial/netlify-createsite-8.png?raw=true)
+
+If you start new games it will create a new record in the database. If you want to validate this behavirour click on `START NEW GAME`.
+
+✔️  Open Astra UI, show the `CQL Console` and execute the following command (here *battlestax* is your keyspace and *games* your collection name - if you chose another names adapt the query accordingly).
+
+📘 **Command to execute**
+
+`SELECT key, text_value FROM battlestax.games;`
+
+You should have a result that looks like:
+
+![Netlify Setup Example](./tutorial/netlify-createsite-9.png?raw=true)
 
 ---
 🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section =>[Extra Resources and certifications](./README_Resources.md)
