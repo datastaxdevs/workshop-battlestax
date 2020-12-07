@@ -13,6 +13,9 @@ In this 3 hour workshop you will create your own **BattleStax** game using [Reac
 
 ## ℹ️ Housekeeping
 
+<details><summary>Click to view the housekeeping items (<i>Youtube stream, Discord Chat,  Mentimeter quizz, the crew</i>)</summary>
+<p>
+
 It doesn't matter if you join our workshop live or you prefer to do at your own pace, we have you covered. In this repository, you'll find everything you need for this workshop.
 
 ### 🎥 Live and questions with Youtube**
@@ -65,6 +68,9 @@ The materials has been prepared with live with our great team
 Brave yourselves, everybody goes to [https://battlestax-workshop.netlify.app/](https://battlestax-workshop.netlify.app/). 
 
 [![.](./tutorial/rocket-animation.gif)](https://battlestax-workshop.netlify.app/)
+
+</p>
+</details>
 
 ## 🗓️ Table of Contents
 
