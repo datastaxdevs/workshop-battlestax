@@ -38,18 +38,7 @@ For a **FULL** code solution to this section **`right-click`** the image below a
 
 ---
 
-## 1. Setup your environment
-
-**✅ Step 1a: Checkout expected branch**
-
-1. Switch to branch `step-4`
-* For this part of the tutorial, we will be working in step-4 branch. Switch branches by using the following command in the terminal
-
-📘 **Command to execute**
-
-`git checkout step-4`
-
-## 2. Import our Redux artifacts
+## 1. Import our Redux artifacts
 
 In this step we will be working with `/src/pages/lobby/NewGame/NewGame.js`.
 
@@ -57,7 +46,7 @@ In this step we will be working with `/src/pages/lobby/NewGame/NewGame.js`.
 
 In order to bind our React component to our Redux store, we need to import the items that we need:
 
-**✅ Step 2a: Create import statements**
+**✅ Step 1a: Create import statements**
 
 📘 **Code to copy**
 
@@ -69,7 +58,7 @@ import { selectGame, createGame } from "../../../store/gameSlice";
 
 ### [🔝](#)
 
-## 3. Use hooks to connect our compoonent to our Redux Store
+## 2. Use hooks to connect our compoonent to our Redux Store
 
 React Hooks allow you to access things like state, React lifecycle methods, and other goodies in function components that were previously only available in class components. 
 
@@ -77,7 +66,7 @@ React Hooks allow you to access things like state, React lifecycle methods, and 
 
 `useDispatch()` is a React Hook that allows us to dispatch actions from our React component. Recall the `createGame` function we created in the last step.
 
-**✅ Step 3a: Connect to the store with a hook**
+**✅ Step 2a: Connect to the store with a hook**
 
 📘 **Code to copy**
 
@@ -89,7 +78,7 @@ const { id, idError, idLoading } = useSelector(selectGame);
 
 ### [🔝](#)
 
-## 4. Updating the UI
+## 3. Updating the UI
 
 **✅ Step 4a: Display game id in the UI**
 
@@ -102,7 +91,7 @@ When our game id is set, we want to show it in the UI. If the `id` is present, i
 {id || "----"}
 ```
 
-**✅ Step 4b: Enable create game button**
+**✅ Step 3b: Enable create game button**
 
 We also need to change our button to create a new game and also make it disabled while a request is taking place. 
 
@@ -117,7 +106,7 @@ We also need to change our button to create a new game and also make it disabled
   }} ...
 ```
 
-**✅ Step 4c: Show errors in the UI**
+**✅ Step 3c: Show errors in the UI**
 
 Finally, let's show any errors
 
@@ -132,7 +121,7 @@ Finally, let's show any errors
 
 ### [🔝](#)
 
-## 5. Running TDD tests
+## 4. Running TDD tests
 
 We are provided with test case `src/pages/Lobby/NewGame/NewGame.test.js`. This test will check to see if our `NewGame` compenent renders properly. The <Provider> is used to make that store available to our component tree.
 
@@ -148,7 +137,7 @@ test("renders without crashing", () => {
 });
 ```
 
-**✅ Step 5: Test the component**
+**✅ Step 4a: Test the component**
 
 We can run our test to see if the compoenent renders successfully:
  
@@ -164,22 +153,28 @@ npm test src/pages/lobby/NewGame/NewGame.test.js
 
 ### [🔝](#)
 
-## 6. Merge back to master
+## 5. Merge back to master
 
-Now that we've updated our code we need to push these changes back to master and kick off an automated deploy in Netlify.
+Now it's time to merge ALL of the changes from the last 3 sections back to master.  This will kick off an automated deploy to Netlify and get our changes ready for production.
 
 📘 **Commands to execute**
 
 ```bash
-git add /src/pages/lobby/NewGame/NewGame.js
-git commit -m "Merging step4 into master
+git add functions/insertGame.js src/store/gameSlice.js src/pages/Lobby/NewGame/NewGame.js
+git commit -m "Merging insertGame, gameSlice, and NewGame into master"
 git push
 ```
 
-## 7. Verify your deployment in Netlify
+✔️  Once you've completed the **`push`** command above go back to **YOUR** battlestax repository in **Github** and create a Pull Request to merge the changes into master. Use the same exact process we used in Step01 to do this. If you need a refresher go [HERE](./README_step01.md#3-merge-back-to-master) and then come back here to finsih your deployment.
 
-✔️  When your new site is ready, you will be able to go to: `<your_url>.netlify.app` to see your game.
+## 6. Verify your deployment in Netlify
 
+✔️  When your new site is ready, you will be able to go to: `<your_url>.netlify.app` to see your game. To find your URL, navigate to **`Deploys`** in **Netlify** and click on the link provided via the UI.
+
+![Netlify final deploy](./tutorial/netlify-final-deploy.png?raw=true)
+
+
+✔️  Once clicked you should see a display like the following:
 ![Netlify Setup Example](./tutorial/netlify-createsite-8.png?raw=true)
 
 If you start new games it will create a new record in the database. If you want to validate this behavirour click on `START NEW GAME`.
@@ -190,9 +185,17 @@ If you start new games it will create a new record in the database. If you want 
 
 `SELECT key, text_value FROM battlestax.games;`
 
-You should have a result that looks like:
+You should have a result that looks like the following image. If you see the game you just created in this list you know your application is properly hooked up to your database via the document API.
 
 ![Netlify Setup Example](./tutorial/netlify-createsite-9.png?raw=true)
+
+### [🔝](#)
+
+Alrighty, let's sum all this up. If you got to this point you have now deployed an application through a **CI/CD** pipeline with **GitHub Actions** using **serverless** functions that are globally available via **Netlify** all backed by the top NoSQL distributed database Apache Cassandra on **DataStax Astra** without ever touching a server, deploying back-end code, or needing to talk to your IT folks _(no harm meant to my IT friends)_. And if your app goes viral this tech stack will scale with you.
+
+You did this completely from front-end, fullstack knowledge. Awe...some!
+
+Now go take this knowledge and go create the next disruptive application.
 
 ---
 🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section =>[Extra Resources and certifications](./README_Resources.md)

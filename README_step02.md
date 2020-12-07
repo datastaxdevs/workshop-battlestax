@@ -25,7 +25,6 @@ In step 2 of the Battlestax tutorial, we will:
 4. [Connect to Astra](#4-connect-to-astra)
 5. [Hook it all together](#5-hook-it-all-together)
 6. [Running TDD tests](#6-running-tdd-tests)
-7. [Merge back to master](#7-merge-back-to-master)
 
 One of the first things we need to do is hook up the "plumbing" of our application to talk to our back-end services, namely, our Cassandra database with **Astra** and **Netlify**. Once this is in place, we are connected and ready to go with the services we need to power our app.
 
@@ -64,16 +63,7 @@ For a **FULL** code solution to this section **`right-click`** the image below a
 
 ## 2. Setup your environment
 
-**✅ Step 2a: Checkout expected branch**
-
-1. Switch to branch `step-2`
-* For this part of the tutorial, we will be working in step-2 branch. Switch branches by using the following command in the terminal
-
-📘 **Command to execute**
-
-`git checkout step-2`
-
-**✅ Step 2b: Set environment variables in code**
+**✅ Step 2a: Set environment variables in code**
 
 In the ["hello world"](./README_step01.md) section, we pushed a simple helloWorld "test" function to get a feel for how things work. Now, we are going to start working with the "real" code to get our game working. To do this, we need to set a group of environment  variables referring to the database we just created with **DataStax Astra**, not only in our code, but across **GitHub** and **Netlify** as well.
 
@@ -124,7 +114,7 @@ _The following instructions are the same whether using GitPod or a local IDE._
 
 ![Netlify Setup Example](./tutorial/gitpod-env.png?raw=true)
 
-**✅ Step 2c: Set environment variables _(secrets)_ in GitHub for CI/CD**
+**✅ Step 2b: Set environment variables _(secrets)_ in GitHub for CI/CD**
 
 Every application should have a CI/CD *(**C**ontinuous **I**ntegration, **C**ontinuous **D**eployment)* pipeline. This allows for quick iteration of changes to production deployment by taking advantage of automation and tests to ensure everything is working properly. 
 
@@ -143,7 +133,7 @@ After each commit a workflow is initialized to BUILD your project, EXECUTE tests
 
 ![Netlify Setup Example](./tutorial/setup-github-1.png?raw=true)
 
-**✅ Step 2d: Set environment variables in Netlify**
+**✅ Step 2c: Set environment variables in Netlify**
 
 ✔ Go back to **Netlify** and navigate to **`Site settings`** in the toolbar, then choose **`Build & deploy`** from the menu on the left.
 
@@ -325,20 +315,6 @@ npm run test:functions
 📗 **Expected output**
 
 ![test functions output](./tutorial/step-1-test-functions.png)
-
-### [🔝](#)
-
-## 7. Merge back to master
-
-Now that we've updated our code we need to push these changes back to master and kick off an automated deploy in Netlify.
-
-📘 **Commands to execute**
-
-```bash
-git add functions/insertGame.js
-git commit -m "Merging step2 into master
-git push
-```
 
 ### [🔝](#)
 

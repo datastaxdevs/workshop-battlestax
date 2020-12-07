@@ -68,14 +68,14 @@ We just need to configure the default remote once. Run the below command to set 
 
 `git config checkout.defaultRemote origin`</br>
 
-**✅ Step 1c: Checkout expected branch**
+**✅ Step 1c: Create a local branch for code changes**
 
-1. Switch to branch `step-1`
-* For this part of the tutorial, we will be working in step-1 branch. Switch branches by using the following command in the terminal. 
+1. Create a local branch `myBranch`
+* We'll create a "feature" branch to record changes locally and then push to master when we're ready to deploy. 
 
 📘 **Command to execute**
 
-`git checkout step-1`
+`git checkout -b myBranch`
 
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
@@ -165,7 +165,7 @@ Run the test to try it out:
 📘 **Command to execute**
 
 ```bash
-npm run test:functions
+$(npm bin)/jest test/helloWorld.test.js --coverage --setupFiles dotenv/config --testEnvironment node
 ```
 ### [🔝](#%EF%B8%8F-table-of-contents)
 
@@ -178,8 +178,8 @@ Now that we've updated our code we need to push these changes back to master and
 📘 **Commands to execute**
 
 `git add functions/helloWorld.js test/helloWorld.test.js`<br/>
-`git commit -m "Merging step1 into master"`<br/>
-`git push`<br/>
+`git commit -m "Merging helloWorld into master"`<br/>
+`git push --set-upstream origin myBranch`<br/>
 
 Once you've pushed your changes go back to your repository in GitHub and create a pull request to merge our step-1 branch changes into master. **_Ensure that you are merging back into your YOUR master branch_**.
 
@@ -187,17 +187,16 @@ Once you've pushed your changes go back to your repository in GitHub and create 
 
 Using `Github UI`, merge your new branch to the master using a pull request.
 
-✔️ Select the master branch in github
+✔️ Select the **`myBranch`** branch in github, then click the **`Pull request`** button on the right
 >![Netlify Setup Example](./tutorial/setup-github-2.png?raw=true)
 
-✔️ Click and `Compare & Pull request` button. for `step-1` into `master`.
+✔️ IMPORTANT!!! Do not use the default base repository **`DataStax-Academy/battlestax`** !!!
 >![Netlify Setup Example](./tutorial/setup-github-3.png?raw=true)
 
-✔️ Caution don't target the original master from DataStax-Academy but **YOUR** master
+✔️ Instead, click on the **`base respository`** dropdown and choose the battlestax repository from **YOUR** account
 >![Netlify Setup Example](./tutorial/setup-github-4.png?raw=true)
 
 ✔️ Provide a comment and click `Create Pull Request`
->![Netlify Setup Example](./tutorial/setup-github-5.png?raw=true)
 
 ✔️ Once your tests have passed, click on `Merge Pull Request`
 >![Netlify Setup Example](./tutorial/setup-github-7.png?raw=true)
