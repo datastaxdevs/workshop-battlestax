@@ -57,6 +57,7 @@ Stargate is a framework used to customize all aspects of data access. It is depl
 - 📄 [Stargate DISCORD](http://stargate.io)
 - 📄 Astra Portal [astra.datastax.com](astra.datastax.com)
 - 📄 Official **K8ssandra** website [k8ssandra.io](http://k8ssandra.io)
+- 📄 [Document API Skills Page](https://www.datastax.com/dev/document) on datastax.com/dev
 
 **Click** below to move to the next section.
 
