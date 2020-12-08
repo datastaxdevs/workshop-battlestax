@@ -75,7 +75,7 @@ First things first, we need to get the values we are going to use for our variab
 
 ✔  Go back to the **Astra** UI and click on the database you just created to get the details page.
 
-![Netlify Setup Example](./tutorial/netlify-createsite-5.png?raw=true)
+![Group 10](https://user-images.githubusercontent.com/69874632/101394474-6dd9f480-387d-11eb-96f5-05a6ee711fac.png)
 
 🟢 `ASTRA_DB_USERNAME` as `battle_user` *(The user name we defined when creating the Astra instance)*
 
