@@ -136,6 +136,10 @@ Finally, let's show any errors.
 )}
 ```
 
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/63cc39025063de2cd04ac188baeaa1a576c954c7/src/pages/Lobby/NewGame/NewGame.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/63cc39025063de2cd04ac188baeaa1a576c954c7/src/pages/Lobby/NewGame/NewGame.js) version for easy copying.
+
+[![Code solution](./tutorial/step-4-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/8/files)
+
 ### [🔝](#)
 
 ## 4. Running TDD tests
