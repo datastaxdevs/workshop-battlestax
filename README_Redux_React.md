@@ -6,8 +6,8 @@ If you are already familiar with **Redux and React** and just want to move on to
 
 **We will cover:**
 
-1. [What is Redux ? ](#1-what-is-redux-)
-2. [What is React ?](#2-what-is-react-)
+1. [What is React ?](#1-what-is-react-)
+2. [What is Redux ? ](#2-what-is-redux-)
 3. [How do they work together ?](#3-how-do-they-work-together-)
 4. [Why this is cool ?](#4-why-this-is-cool-)
 5. [How does this work in our application ?](#5-how-does-this-work-in-our-application-)
@@ -15,15 +15,7 @@ If you are already familiar with **Redux and React** and just want to move on to
 
 ---
 
-## 1. What is Redux ? 
-
-Redux is a JavaScript library that is used mostly for application state management. To summarize it, Redux maintains the state of an entire application in a single immutable state tree (object), which can’t be changed directly. When something changes, a new object is created (using actions and reducers). 
-
-![redux-lifecycle](./tutorial/redux-lifecycle.png)
-
-It has a global state provider which is known as store which contains the entire state logic of your application.This has a huge advantage in the sense that there is a single source of truth for state and it is globally accessible throughout your application.
-
-## 2. What is React ? 
+## 1. What is React ? 
 
 React is a fast, component-based, front-end JavaScript library. React typically runs in your browser and renders single-page web application user interfaces
 
@@ -34,6 +26,14 @@ React breaks web elements down into re-usable components making it easy to manag
 It provides two major mechanisms for providing data to components: props and state. Props are read-only and allow a parent component to pass attributes to a child component. State is local and encapsulated within the component and can change at any time in the component’s lifecycle.
 
 Since state is a very powerful mechanism for building dynamic React apps, proper state management is paramount.
+
+## 2. What is Redux ? 
+
+Redux is a JavaScript library that is used mostly for application state management. To summarize it, Redux maintains the state of an entire application in a single immutable state tree (object), which can’t be changed directly. When something changes, a new object is created (using actions and reducers). 
+
+![redux-lifecycle](./tutorial/redux-lifecycle.png)
+
+It has a global state provider which is known as store which contains the entire state logic of your application.This has a huge advantage in the sense that there is a single source of truth for state and it is globally accessible throughout your application.
 
 ## 3. How do they work together ?
 
