@@ -2,7 +2,7 @@
 
 🏠 [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) > 📚 **What's next - [Extra Resources and certification](#)**
 
-Congratulations, you made it to the last part. This is only the beginning we do have a lot of links for you.
+Congratulations, you made it to the end. We have plenty of resources for you to delve into. Happy coding!
 
 ## Resources
 
@@ -38,8 +38,6 @@ Congratulations, you made it to the last part. This is only the beginning we do 
 
 
 ## 🧑🏻‍🤝‍🧑🏽 Let's get in touch
-
-The materials has been prepared with live with our great team
 
 | ![B](./tutorial/crew/chris.png) | ![B](./tutorial/crew/david.png) | ![B](./tutorial/crew/rebecca.png) | ![B](./tutorial/crew/cedrick.png)|
 |--- | --- | --- | --- |
