@@ -156,7 +156,7 @@ test("renders without crashing", () => {
 
 **✅ Step 4a: Test the component**
 
-We can run our test to see if the compoenent renders successfully:
+We can run our test to see if the component renders successfully.
  
 📘 **Command to execute**
 
