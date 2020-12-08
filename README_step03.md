@@ -198,6 +198,10 @@ Once the try block has executed, the id is no longer in a state of loading.
 dispatch(setIdLoading(false));
 ```
 
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js) version for easy copying.
+
+[![Code solution](./tutorial/step-3-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/7/files)
+
 ### [🔝](#)
 
 ## 4. Running TDD tests
