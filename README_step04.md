@@ -16,13 +16,13 @@ In this **step 4** we will:
 + Build a test to try out the functionality of NewGame.js
 
 **We will cover:**
-1. [Setup your environment](#1-setup-your-environment)
-2. [Import our Redux artifacts](#2-import-our-redux-artifacts)
-3. [Use hooks to connect our compoonent to our Redux Store](#3-use-hooks-to-connect-our-compoonent-to-our-redux-store)
-4. [Updating the UI](#4-updating-the-ui)
-5. [Running TDD tests](#5-running-tdd-tests)
-6. [Merge back to master](#6-merge-back-to-master)
-7. [Verify your deployment in Netlify](#7-verify-your-deployment-in-netlify)
+
+1. [Import our Redux artifacts](#1-import-our-redux-artifacts)
+2. [Use hooks to connect our compoonent to our Redux Store](#2-use-hooks-to-connect-our-compoonent-to-our-redux-store)
+3. [Updating the UI](#3-updating-the-ui)
+4. [Running TDD tests](#4-running-tdd-tests)
+5. [Merge back to master](#5-merge-back-to-master)
+6. [Verify your deployment in Netlify](#6-verify-your-deployment-in-netlify)
 
 React is a popular open-source, front end, JavaScript library for building user interfaces or UI components. React makes user interfaces very easy to build by cutting each page into pieces called **components**. A React component is a bit of code that represents a piece of the page. Each component is a JavaScript function that returns a piece of code that represents a piece of a web page.
 
