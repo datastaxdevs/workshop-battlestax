@@ -62,7 +62,7 @@ import { selectGame, createGame } from "../../../store/gameSlice";
 
 React Hooks allow you to access things like state, React lifecycle methods, and other goodies in function components that were previously only available in class components. 
 
-`useSelector()` is a React Hook which allows you to extract data from the Redux store state, using a selector function. It takes in selector functio argument (in this case `selectGame`) that returns the part of the state that you want.
+`useSelector()` is a React Hook which allows you to extract data from the Redux store state, using a selector function. It takes in selector function argument (in this case `selectGame`) that returns the part of the state that you want.
 
 `useDispatch()` is a React Hook that allows us to dispatch actions from our React component. Recall the `createGame` function we created in the last step.
 
@@ -82,7 +82,9 @@ const { id, idError, idLoading } = useSelector(selectGame);
 
 **✅ Step 4a: Display game id in the UI**
 
-When our game id is set, we want to show it in the UI. If the `id` is present, it will be rendered in the view. If not, `"----"` will show up.
+When our game id is set, we want to show it in the UI. If the `id` is present, it will be rendered in the view. If not, `"----"` will show up. 
+
+The starter code only renders `"----"` to the view. Let's modify it to include `id` as well.
 
 📘 **Code to copy**
 
@@ -93,22 +95,37 @@ When our game id is set, we want to show it in the UI. If the `id` is present, i
 
 **✅ Step 3b: Enable create game button**
 
-We also need to change our button to create a new game and also make it disabled while a request is taking place. 
+We also need to change our button to create a new game and also make it disabled while a request is taking place. Add functionality to disable the button during a request.
+
+Here is the initial button:
+```javascript
+<Button
+    style={{ marginTop: 32, marginBottom: 32 }}
+    disableElevation
+    size="large"
+    variant="contained"
+    color="primary"
+>
+```
+
+Now add more functionality to the button by concatenating in `disabled` and `onClick` code.
 
 📘 **Code to copy**
 
 ```javascript
 {/* let's make our button create a new game*/}
 <Button
+...concat_start...
   disabled={idLoading}
   onClick={() => {
     dispatch(createGame());
-  }} ...
+  }}
+...concat_end...
 ```
 
 **✅ Step 3c: Show errors in the UI**
 
-Finally, let's show any errors
+Finally, let's show any errors.
 
 📘 **Code to copy**
 

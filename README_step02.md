@@ -93,7 +93,7 @@ First things first, we need to get the values we are going to use for our variab
 
 _The following instructions are the same whether using GitPod or a local IDE._
 
-✔  Ensure that you are in the ??battlestax??? directory
+✔  Ensure that you are in the root ./battlestax directory
 
 ✔  Copy and paste the contents of the `.env.template` file into an `.env` file:
 
@@ -101,7 +101,9 @@ _The following instructions are the same whether using GitPod or a local IDE._
 
 `cat .env.example > .env`
 
-✔ The `.env` file allows us to customize our own environmental variables. We set our Astra credentials to env variables, which are outside of our program. Fill in the `.env` file variables with the Astra variables you made a copy of above:
+✔ The `.env` file allows us to customize our own environmental variables. We set our Astra credentials to env variables, which are outside of our program. Fill in the `.env` file variables with the Astra variables you made a copy of above. 
+
+*To edit the `.env` file either double click on it in the file explorer in GitPod or use your favorite editor to make the changes. Up to you. Don't forget to save.*
 
 **_If you used different values for your database you will need to use those instead, otherwise just use the values we've provided._**
 
@@ -166,7 +168,7 @@ You don't have to do that ever again, we promise. From now on anytime you deploy
 
 Now that we have **ALLLLL** of our environment vars set and our game document store, let's start building our basic `insertGame` serverless function, in the `function/insertGame.js` file. 
 
-First, we need to declare `gameId` and `gamePayload` variables. We know each game is associated with it's own unique game id, and during game play we can anticipate getting a payload from the user.
+<!-- First, we need to declare `gameId` and `gamePayload` variables. We know each game is associated with it's own unique game id, and during game play we can anticipate getting a payload from the user.
 
 📘 **Code to copy**
 
@@ -175,6 +177,7 @@ First, we need to declare `gameId` and `gamePayload` variables. We know each gam
 let gameId;
 let gamePayload;
 ```
+-->
 
 From Netlify, you get your `gameId` parameter from the path of the incoming REST call, and parse our event body that is associated with it as the `gamePayload`.
 By default, Netlify puts your function at the path `/.netlify/function/insertGame`.

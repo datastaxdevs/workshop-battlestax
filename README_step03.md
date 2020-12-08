@@ -141,9 +141,9 @@ export const createGame = () => {
 
 ```javascript
 // let's set the id state back to the defaults
-    dispatch(setIdLoading(true));
-    dispatch(setIdError(""));
-    dispatch(setId(""));
+dispatch(setIdLoading(true));
+dispatch(setIdError(""));
+dispatch(setId(""));
 ```
 
 
@@ -184,7 +184,7 @@ While we are at it, let's be sure to handle any potential errors that may arise,
 
 ```javascript
 // let's set the id error if there is one
-      dispatch(setIdError(e.message));
+dispatch(setIdError(e.message));
 ```
 
 **✅ Step 3d: Set id state to not loading**
@@ -223,7 +223,7 @@ it("should set a game id", () => {
     const nextState = reducer(initialState, setId(gameId));
     const rootState = { game: nextState };
     expect(selectGame(rootState).id).toEqual(gameId);
-  });
+});
 ```
 
 ✔️  _TEST 3_: If a new game is in the process of loading, the state needs to be made aware of it.
