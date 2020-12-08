@@ -29,7 +29,7 @@ The Lobby and Player clients stay connected, as once the state is updated, it wi
 
 ![state-flow](./tutorial/state-flow.png)
 
-For a **FULL** code solution to this section **`right-click`** the image below and choose **`Open Link in New Tab`**.
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js) version for easy copying.
 
 [![Code solution](./tutorial/step-3-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/7/files)
 
