@@ -30,7 +30,7 @@ React is a popular open-source, front end, JavaScript library for building user 
 
 ![hooks](./tutorial/hooks.png)
 
-For a **FULL** code solution to this section **`right-click`** the image below and choose **`Open Link in New Tab`**.
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/63cc39025063de2cd04ac188baeaa1a576c954c7/src/pages/Lobby/NewGame/NewGame.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/63cc39025063de2cd04ac188baeaa1a576c954c7/src/pages/Lobby/NewGame/NewGame.js) version for easy copying.
 
 [![Code solution](./tutorial/step-4-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/8/files)
 
@@ -135,6 +135,10 @@ Finally, let's show any errors.
   <Typography color="textSecondary">Error: {idError}</Typography>
 )}
 ```
+
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/63cc39025063de2cd04ac188baeaa1a576c954c7/src/pages/Lobby/NewGame/NewGame.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/63cc39025063de2cd04ac188baeaa1a576c954c7/src/pages/Lobby/NewGame/NewGame.js) version for easy copying.
+
+[![Code solution](./tutorial/step-4-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/8/files)
 
 ### [🔝](#)
 

@@ -34,7 +34,7 @@ _ehem...for those of you familiar with Apache Cassandra, yes, I just said you co
 
 ![Document API Flow](./tutorial/document-api.png?raw=true)
 
-For a **FULL** code solution to this section **`right-click`** the image below and choose **`Open Link in New Tab`**.
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js) version for easy copying.
 
 [![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/2/files)
 
@@ -261,7 +261,8 @@ Finally, we are going to try to take all our configuration infomation stored in 
 };
 ```
 
-For a **FULL** code solution to this section **`right-click`** the image below and choose **`Open Link in New Tab`**.
+
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js) version for easy copying.
 
 [![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/2/files)
 
