@@ -21,6 +21,8 @@ The REST API is `stateless`, and therefore helps functions scale horizontally. H
 3. [Merge back to master](#3-merge-back-to-master)
 4. [Check your deployment in Netlify](#4-check-your-deployment-in-netlify)
 
+For a **FULL** code solution to this section **`click`** [HERE](https://github.com/DataStax-Academy/battlestax/blob/058a4d280beb9a98f2aa3afd12bc54e6873e3107/functions/helloWorld.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/058a4d280beb9a98f2aa3afd12bc54e6873e3107/functions/helloWorld.js) version for easy copying.
+
 ---
 
 ## 1. Setup your environment
@@ -140,6 +142,8 @@ Using your new terminal, execute the following command to get your helloWorld en
 `{"hello":"world"}`
 
 This is our **serverless** function giving us back the "Hello World" example.
+
+For a **FULL** code solution to this section **`click`** [HERE](https://github.com/DataStax-Academy/battlestax/blob/058a4d280beb9a98f2aa3afd12bc54e6873e3107/functions/helloWorld.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/058a4d280beb9a98f2aa3afd12bc54e6873e3107/functions/helloWorld.js) version for easy copying.
 
 **✅ Step 2c: Run the existing unit tests**
 
