@@ -48,7 +48,7 @@ For a **FULL** code solution to this section **`click`** the image below or just
 |**✅ Step 1a. Register (if needed) and Sign In to Astra** :<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>You can use your `Github`, `Google` accounts or register with an `email`.<br/>Make sure to chose a password with minimum 8 characters, containing upper and lowercase letters, at least one number and special character<br/><br/>- [Registration Page](https://dtsx.io/workshop)<br/>[Authentication Page](https://dtsx.io/workshop)<br/>![Login Image](https://github.com/datastaxdevs/shared-assets/blob/master/astra/signin-raw.png?raw=true)<br/></details>|
+|<details><summary><i>🖱️ Click me to show details</i></summary><br/>You can use your `Github`, `Google` accounts or register with an `email`.<br/>Make sure to chose a password with minimum 8 characters, containing upper and lowercase letters, at least one number and special character<br/><br/>[Authentication Page](https://dtsx.io/workshop)<br/>![Login Image](https://github.com/datastaxdevs/shared-assets/blob/master/astra/signin-raw.png?raw=true)<br/></details>|
 
 |**✅ Step 1b. Choose the free plan and select your region**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
