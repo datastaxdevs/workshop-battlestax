@@ -8,7 +8,7 @@
 
 **Objectives** 
 
-**Redux Tool Kit (RTK)** tremendously simplifies using Redux, elminating most of the issues most people have when using it. We will use RTK for state management on the Client and see how it is working with Astra.
+**Redux Tool Kit (RTK)** tremendously simplifies using Redux, eliminating most of the issues most people have when using it. We will use RTK for state management on the Client and see how it is working with Astra.
 
 In this **step 3** we will:
 - Build out the game slice boilerplate code by implementing one reducer, exporting an action and a selector
