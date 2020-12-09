@@ -79,7 +79,7 @@ Brace yourselves, everybody goes to [https://battlestax-workshop.netlify.app/](h
 
 ## 🗓️ Table of Contents
 
-*All the tutorials and readme files are on the **master**. The **bootstraping** step is mandatory for you do the exercises. Then, checkout the branch you need to jump to any step. Get a look at all branches [here](https://github.com/DataStax-Academy/battlestax/branches)*
+*All the tutorials and readme files are on the **master**. Start there and then follow each step to get everything hooked up. Get a look at all branches [here](https://github.com/DataStax-Academy/battlestax/branches)*
 
 - **Bootstraping**
   - 📚 [What is the JAMStack](./README_JAM.md)
