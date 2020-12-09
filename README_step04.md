@@ -57,7 +57,7 @@ import { selectGame, createGame } from "../../../store/gameSlice";
 
 ### [🔝](#)
 
-## 2. Use hooks to connect our compoonent to our Redux Store
+## 2. Use hooks to connect our component to our Redux Store
 
 React Hooks allow you to access things like state, React lifecycle methods, and other goodies in function components that were previously only available in class components. 
 
