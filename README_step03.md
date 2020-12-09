@@ -42,6 +42,16 @@ Let's use the  Redux Toolkit to build out the game slice that will set the game 
 
 ![gameslice-ide](./tutorial/gameslice-ide.png)
 
+First things first, we'll need to generate a game ID a little later in the code and to help with that we need to import the util/random library. Add the import for **`generateGameId`** after **`createSlice`**.
+
+📘 **Code to copy**
+
+```javascript
+import { createSlice } from "@reduxjs/toolkit";
+import { generateGameId } from "../util/random";
+
+```
+
 Lets discuss some of the parameters in `createSlice`.
 
 * `initialState` - The initial state value for this slice of state.
