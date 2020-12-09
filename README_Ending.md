@@ -2,9 +2,7 @@
 
 ## Follow us, talk about us
 
-<a href="https://twitter.com/intent/tweet?url=https://github.com/DataStax-Academy/battlestax&text=I attented a great workshop with #JAMStack and the new Datastore #Astra">
-  <img src="./tutorial/share-on-twitter.png" ?>
-</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DataStax-Academy/battlestax/blob/master/README.md">Facebook</a>
 
 - Subscribe to the youtube Channel
 - register to the discord
