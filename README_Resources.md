@@ -6,7 +6,7 @@ Congratulations, you made it to the end. We have plenty of resources for you to 
 
 ## Resources
 
-1. [Source code](https://github.com/DataStax-Academy/battlestax/tree/full-game) of the full game
+1. [Source code](https://github.com/datastaxdevs/workshop-battlestax/tree/full-game) of the full game
 
 2. [Start Practical Trainings on [Datastax /Dev](https://www.datastax.com/dev) with Katacoda
 3. Subscribe to the [DataStax Developer Youtube Channel](https://www.youtube.com/channel/UCAIQY251avaMv7bBv5PCo-A) for more content
@@ -30,11 +30,11 @@ Congratulations, you made it to the end. We have plenty of resources for you to 
 
 ## 💚 Share the love
 
-<a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DataStax-Academy/battlestax/blob/master/README.md"><img src="./tutorial/share-facebook.png"/></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/datastaxdevs/workshop-battlestax/blob/master/README.md"><img src="./tutorial/share-facebook.png"/></a>
 
-<a href="https://twitter.com/intent/tweet?url=https://github.com/DataStax-Academy/battlestax/blob/master/README.md&text=I attended a wonderful workshop today introducing #Cassandra with #React and #netlify #JAMStack, thank you @Datastax, @clunven, @sonicdmg"><img src="./tutorial/share-twitter.png"/></a>
+<a href="https://twitter.com/intent/tweet?url=https://github.com/datastaxdevs/workshop-battlestax/blob/master/README.md&text=I attended a wonderful workshop today introducing #Cassandra with #React and #netlify #JAMStack, thank you @Datastax, @clunven, @sonicdmg"><img src="./tutorial/share-twitter.png"/></a>
 
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/DataStax-Academy/battlestax/blob/master/README.md&title=&summary=I attended a wonderful workshop today introducing #Cassandra with #React and #netlify #JAMStack, thank you @Datastax, @clunven, @sonicdmg&source="><img src="./tutorial/share-linkedin.png"/></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/datastaxdevs/workshop-battlestax/blob/master/README.md&title=&summary=I attended a wonderful workshop today introducing #Cassandra with #React and #netlify #JAMStack, thank you @Datastax, @clunven, @sonicdmg&source="><img src="./tutorial/share-linkedin.png"/></a>
 
 
 ## 🧑🏻‍🤝‍🧑🏽 Let's get in touch

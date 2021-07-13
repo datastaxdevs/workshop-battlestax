@@ -28,9 +28,9 @@ The Lobby and Player clients stay connected, as once the state is updated, it wi
 
 ![state-flow](./tutorial/state-flow.png)
 
-For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js) version for easy copying.
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/datastaxdevs/workshop-battlestax/blob/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js). You can also use the [RAW](https://raw.githubusercontent.com/datastaxdevs/workshop-battlestax/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js) version for easy copying.
 
-[![Code solution](./tutorial/step-3-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/7/files)
+[![Code solution](./tutorial/step-3-code-solution.png?raw=true)](https://github.com/datastaxdevs/workshop-battlestax/pull/7/files)
 
 **_Don't forget to SAVE your changes or enable autosave in GitPod._**
 
@@ -207,9 +207,9 @@ Once the try block has executed, the id is no longer in a state of loading.
 dispatch(setIdLoading(false));
 ```
 
-For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js) version for easy copying.
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/datastaxdevs/workshop-battlestax/blob/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js). You can also use the [RAW](https://raw.githubusercontent.com/datastaxdevs/workshop-battlestax/1aa9e7ac7e3c6840a79b68bd93f62de45b826559/src/store/gameSlice.js) version for easy copying.
 
-[![Code solution](./tutorial/step-3-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/7/files)
+[![Code solution](./tutorial/step-3-code-solution.png?raw=true)](https://github.com/datastaxdevs/workshop-battlestax/pull/7/files)
 
 ### [🔝](#)
 
@@ -292,7 +292,7 @@ Now, we can run our tests using `npm test src/store/gameSlice.test.js` to see th
 
 ### [🔝](#)
 
-Ok, wonderful! If your gameSlice tests are passing then move to the next section. You can always reference the FULL code [HERE](https://github.com/DataStax-Academy/battlestax/pull/7/files).
+Ok, wonderful! If your gameSlice tests are passing then move to the next section. You can always reference the FULL code [HERE](https://github.com/datastaxdevs/workshop-battlestax/pull/7/files).
 
 ---
 🏠 **Back** to [Table of Contents](./README.md#%EF%B8%8F-table-of-contents) or **move** to the next section **=>** [Bind Redux to the User Interface](./README_step04.md)

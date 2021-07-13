@@ -22,7 +22,7 @@ We're going to start with just the basics and then build up our capabilities fro
 
 ## 1. Create your `BattleStax` repository
 
-*The very first thing we want to do is create a copy of the BattleStax repository into **YOUR** GitHub account. This is important because as part of this workshop you will deploy the BattleStax application to production and will need your own repository to do so. To do this we will fork the DataStax-Academy/battlestax repo.*
+*The very first thing we want to do is create a copy of the BattleStax repository into **YOUR** GitHub account. This is important because as part of this workshop you will deploy the BattleStax application to production and will need your own repository to do so. To do this we will fork the datastaxdevs/workshop-battlestax repo.*
 
 **✅ Step 1a. Launch the BattleStax repo into another tab**
 
@@ -45,7 +45,7 @@ It should only take a moment for **GitHub** to generate a new repository in your
 
 **✅ Step 1c. Navigate back to your place in the docs**
 
-✔ Once complete you should now have your own battlestax repo within YOUR account. Notice both the GitHub org is no longer `DataStax-Academy` and the text `forked from DataStax-Academy/battlestax`.
+✔ Once complete you should now have your own battlestax repo within YOUR account. Notice both the GitHub org is no longer `DataStax-Academy` and the text `forked from datastaxdevs/workshop-battlestax`.
 
 >![Template create repo](./tutorial/github-fork-repo-complete.png?raw=true)
 

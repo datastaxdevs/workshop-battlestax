@@ -79,7 +79,7 @@ Brace yourselves, everybody goes to [https://battlestax-workshop.netlify.app/](h
 
 ## 🗓️ Table of Contents
 
-*All the tutorials and readme files are on the **master**. Start there and then follow each step to get everything hooked up. Get a look at all branches [here](https://github.com/DataStax-Academy/battlestax/branches)*
+*All the tutorials and readme files are on the **master**. Start there and then follow each step to get everything hooked up. Get a look at all branches [here](https://github.com/datastaxdevs/workshop-battlestax/branches)*
 
 - **Bootstraping**
   - 📚 [What is the JAMStack](./README_JAM.md)
@@ -97,7 +97,7 @@ Brace yourselves, everybody goes to [https://battlestax-workshop.netlify.app/](h
   - ⚒️ [Bind Redux to the User Interface](./README_step04.md) (*branch: `step-4`*)
 - **What's NEXT ?** *(not the framework* 😈)
   - 📚 [Extra Resources and certifications](./README_Resources.md)   
-  - 💚 [Share the love](https://github.com/DataStax-Academy/battlestax/blob/master/README_Resources.md#-share-the-love)
+  - 💚 [Share the love](https://github.com/datastaxdevs/workshop-battlestax/blob/master/README_Resources.md#-share-the-love)
 
 *click the image to start !*
 

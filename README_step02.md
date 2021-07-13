@@ -33,9 +33,9 @@ _ehem...for those of you familiar with Apache Cassandra, yes, I just said you co
 
 ![Document API Flow](./tutorial/document-api.png?raw=true)
 
-For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js) version for easy copying.
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/datastaxdevs/workshop-battlestax/blob/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js). You can also use the [RAW](https://raw.githubusercontent.com/datastaxdevs/workshop-battlestax/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js) version for easy copying.
 
-[![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/2/files)
+[![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/datastaxdevs/workshop-battlestax/pull/2/files)
 
 **_Don't forget to SAVE your changes or enable autosave in GitPod._**
 
@@ -53,12 +53,12 @@ For a **FULL** code solution to this section **`click`** the image below or just
 |**✅ Step 1b. Choose the free plan and select your region**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>![my-pic](https://github.com/DataStax-Academy/battlestax/blob/master/tutorial/creatastra-1.png?raw=true)<br/>- **Select the free tier**: 5GB storage, no obligation<br/>- **Select the region**: This is the region where your database will reside physically (choose one close to you or your users). For people in EMEA please use `europe-west1` idea here is to reduce latency.<br/></details>|
+|<details><summary><i>🖱️ Click me to show details</i></summary><br/>![my-pic](https://github.com/datastaxdevs/workshop-battlestax/blob/master/tutorial/creatastra-1.png?raw=true)<br/>- **Select the free tier**: 5GB storage, no obligation<br/>- **Select the region**: This is the region where your database will reside physically (choose one close to you or your users). For people in EMEA please use `europe-west1` idea here is to reduce latency.<br/></details>|
 
 |**✅ Step 1c. Configure and create your database**<br/>![.](./tutorial/line.png?raw=true)|
 |:---|
 ||
-|<details><summary><i>🖱️ Click me to show details</i></summary><br/>You will find below which values to enter for each field.<br/><br/>![my-pic](https://github.com/DataStax-Academy/battlestax/blob/master/tutorial/creatastra-2.png?raw=true)<br/>- **Fill in the database name** - `battlestax_db.` While Astra allows you to fill in these fields with values of your own choosing, please follow our reccomendations to make the rest of the exercises easier to follow. If you don't, you are on your own! :)<br/>- **Fill in the keyspace name** - `battlestax`. It's really important that you use the name battlestax here in order for all the exercises to work well. We realize you want to be creative, but please just roll with this one today.<br/>- **Fill in the Database User name** - `battle_user`. Note the user name is case-sensitive. Please use the case we suggest here.<br/>- **Fill in the password** - `battle_password1`. Fill in both the password and the confirmation fields. Note that the password is also case-sensitive. Please use the case we suggest here.<br/>- **Create the database**. Review all the fields to make sure they are as shown, and click the **`Create Database`** button.<br/><br/>You will see your new database `Pending` in the Dashboard.<br/>![my-pic](https://github.com/DataStax-Academy/battlestax/blob/master/tutorial/creatastra-3.png?raw=true)<br/><br/>The status will change to `Active` when the database is ready, this will only take 2-3 minutes. You will also receive an email when it is ready.<br/></details>|
+|<details><summary><i>🖱️ Click me to show details</i></summary><br/>You will find below which values to enter for each field.<br/><br/>![my-pic](https://github.com/datastaxdevs/workshop-battlestax/blob/master/tutorial/creatastra-2.png?raw=true)<br/>- **Fill in the database name** - `battlestax_db.` While Astra allows you to fill in these fields with values of your own choosing, please follow our reccomendations to make the rest of the exercises easier to follow. If you don't, you are on your own! :)<br/>- **Fill in the keyspace name** - `battlestax`. It's really important that you use the name battlestax here in order for all the exercises to work well. We realize you want to be creative, but please just roll with this one today.<br/>- **Fill in the Database User name** - `battle_user`. Note the user name is case-sensitive. Please use the case we suggest here.<br/>- **Fill in the password** - `battle_password1`. Fill in both the password and the confirmation fields. Note that the password is also case-sensitive. Please use the case we suggest here.<br/>- **Create the database**. Review all the fields to make sure they are as shown, and click the **`Create Database`** button.<br/><br/>You will see your new database `Pending` in the Dashboard.<br/>![my-pic](https://github.com/datastaxdevs/workshop-battlestax/blob/master/tutorial/creatastra-3.png?raw=true)<br/><br/>The status will change to `Active` when the database is ready, this will only take 2-3 minutes. You will also receive an email when it is ready.<br/></details>|
 
 ## 2. Setup your environment
 
@@ -261,9 +261,9 @@ Finally, we are going to try to take all our configuration infomation stored in 
 ```
 
 
-For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/DataStax-Academy/battlestax/blob/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js). You can also use the [RAW](https://raw.githubusercontent.com/DataStax-Academy/battlestax/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js) version for easy copying.
+For a **FULL** code solution to this section **`click`** the image below or just go [HERE](https://github.com/datastaxdevs/workshop-battlestax/blob/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js). You can also use the [RAW](https://raw.githubusercontent.com/datastaxdevs/workshop-battlestax/0443dc38b0b31cc4b82d54f0624e822cd1a00398/functions/insertGame.js) version for easy copying.
 
-[![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/DataStax-Academy/battlestax/pull/2/files)
+[![Code solution](./tutorial/step-1-code-solution.png?raw=true)](https://github.com/datastaxdevs/workshop-battlestax/pull/2/files)
 
 ## 6. Running TDD tests
 

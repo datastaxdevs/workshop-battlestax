@@ -2,7 +2,7 @@
 
 ## Follow us, talk about us
 
-<a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DataStax-Academy/battlestax/blob/master/README.md">Facebook</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/datastaxdevs/workshop-battlestax/blob/master/README.md">Facebook</a>
 
 - Subscribe to the youtube Channel
 - register to the discord
